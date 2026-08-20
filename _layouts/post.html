@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="post container prose">
+  <header class="post-header">
+    <div class="eyebrow">Tech Note</div>
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+      {% if page.reading_time %}<span>· {{ page.reading_time }}분</span>{% endif %}
+    </p>
+    {% if page.categories %}
+    <div class="tag-row">
+      {% for category in page.categories %}<span class="tag">{{ category }}</span>{% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  <div class="post-content">{{ content }}</div>
+  <footer class="post-footer">
+    <a href="{{ '/archive/' | relative_url }}">← 모든 글 보기</a>
+  </footer>
+</article>
+

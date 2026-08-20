@@ -1,0 +1,28 @@
+title: "DH Shin · Tech Notes"
+description: "수학과 통계에서 AI Agent와 제조업 프로젝트까지, 배우고 만든 것을 기록합니다."
+lang: ko-KR
+timezone: Asia/Seoul
+url: "https://dhshin96.github.io"
+baseurl: ""
+author:
+  name: "DH Shin"
+  github: "dhshin96"
+
+permalink: /posts/:title/
+future: false
+show_excerpts: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "DH Shin"
+

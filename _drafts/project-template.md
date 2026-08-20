@@ -2,7 +2,7 @@
 layout: post
 title: "[프로젝트] 프로젝트 이름"
 date: 2026-08-20 09:00:00 +0900
-categories: [커리어·프로젝트, 제조업]
+categories: [프로젝트와 성장, 산업 AI]
 tags: [portfolio, project]
 description: "프로젝트가 해결한 문제와 핵심 성과를 한 문장으로"
 reading_time: 10
@@ -40,4 +40,3 @@ reading_time: 10
 ## 회고
 
 잘된 점, 한계, 다음 실험을 솔직하게 기록합니다.
-

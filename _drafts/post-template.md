@@ -2,7 +2,7 @@
 layout: post
 title: "글 제목"
 date: 2026-08-20 09:00:00 +0900
-categories: [머신러닝]
+categories: [학습과 모델링]
 tags: [키워드1, 키워드2]
 description: "검색 결과와 공유 카드에 표시할 한 문장 요약"
 reading_time: 7
@@ -35,4 +35,3 @@ reading_time: 7
 ## 참고 자료
 
 - [자료명](https://example.com)
-

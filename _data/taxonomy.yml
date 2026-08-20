@@ -1,0 +1,70 @@
+- id: foundations
+  name: 기반 지식
+  number: "01"
+  description: 모델과 시스템을 제대로 이해하기 위한 수학적·통계적 토대
+  children:
+    - name: 수리적 사고
+      topics: 선형대수 · 미적분 · 최적화 · 확률
+    - name: 통계적 추론
+      topics: 추정 · 검정 · 실험 설계 · 시계열
+
+- id: modeling
+  name: 학습과 모델링
+  number: "02"
+  description: 데이터로부터 패턴을 학습하고 성능을 검증하는 방법
+  children:
+    - name: 머신러닝
+      topics: 지도학습 · 비지도학습 · 피처 엔지니어링
+    - name: 딥러닝
+      topics: 신경망 · 비전 · 자연어 처리 · 표현 학습
+    - name: 실험과 평가
+      topics: 기준선 · 메트릭 · 오류 분석 · 재현성
+
+- id: intelligent-systems
+  name: 지능형 시스템
+  number: "03"
+  description: 생성 모델이 지식을 찾고 도구를 사용하며 행동하는 시스템
+  children:
+    - name: 생성형 AI
+      topics: LLM · 멀티모달 · 프롬프트 · 파인튜닝
+    - name: 지식과 검색
+      topics: 임베딩 · 벡터 검색 · RAG · 평가
+    - name: 에이전트
+      topics: 도구 사용 · 메모리 · 워크플로 · 멀티 에이전트
+
+- id: engineering
+  name: 개발과 제품화
+  number: "04"
+  description: 아이디어를 빠르게 구현하고 신뢰할 수 있는 제품으로 만드는 과정
+  children:
+    - name: AI 엔지니어링
+      topics: 데이터 파이프라인 · 서빙 · 관측성 · MLOps
+    - name: 프로토타이핑
+      topics: 바이브코딩 · 개발 도구 · MVP · 사용자 검증
+    - name: 운영과 개선
+      topics: 테스트 · 자동화 · 비용 · 성능 최적화
+
+- id: industrial-ai
+  name: 산업 AI
+  number: "05"
+  description: 제조 현장의 데이터와 제약 조건을 반영한 문제 해결
+  children:
+    - name: 품질 지능화
+      topics: 비전 검사 · 이상 탐지 · 불량 원인 분석
+    - name: 설비 지능화
+      topics: 상태 진단 · 예지보전 · 센서 데이터
+    - name: 공정 지능화
+      topics: 공정 최적화 · 수요 예측 · 의사결정 지원
+
+- id: projects-growth
+  name: 프로젝트와 성장
+  number: "06"
+  description: 실제로 만든 것과 일하며 배운 것을 증거 중심으로 정리한 기록
+  children:
+    - name: 프로젝트 로그
+      topics: 개인 프로젝트 · 설계 · 구현 · 배포 · 회고
+    - name: 업무 사례
+      topics: 문제 정의 · 협업 · 개선 · 비즈니스 임팩트
+    - name: 커리어 노트
+      topics: 포트폴리오 · 이직 준비 · 역량 지도 · 학습 회고
+

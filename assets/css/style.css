@@ -79,6 +79,12 @@ img { max-width: 100%; }
 .category-title > span { color: var(--accent); font-size: 12px; font-weight: 700; }
 .category-title h2 { margin: -7px 0 6px; font-size: 30px; letter-spacing: -.04em; }
 .category-title p, .coming-soon { margin: 0; color: var(--muted); font-size: 14px; }
+.category-content { min-width: 0; }
+.subtopic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 24px; }
+.subtopic { padding: 17px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.subtopic strong { display: block; margin-bottom: 5px; font-size: 15px; }
+.subtopic p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.category-posts { border-top: 1px solid var(--line); }
 .category-posts a { display: grid; grid-template-columns: 90px 1fr auto; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--line); }
 .category-posts time { color: var(--muted); font-size: 12px; }
 .project-section { padding: 70px 0 100px; }
@@ -155,6 +161,7 @@ img { max-width: 100%; }
   .section { padding: 60px 0; }
   .section-heading h2 { font-size: 31px; }
   .topic-grid, .project-board, .guide-grid { grid-template-columns: 1fr; }
+  .subtopic-grid { grid-template-columns: 1fr; }
   .topic-card { min-height: 180px; }
   .post-row { grid-template-columns: 1fr auto; }
   .post-row time { grid-column: 1 / -1; }
@@ -165,4 +172,3 @@ img { max-width: 100%; }
   .archive-list a span { grid-column: 2; }
   .footer-inner { align-items: start; flex-direction: column; }
 }
-

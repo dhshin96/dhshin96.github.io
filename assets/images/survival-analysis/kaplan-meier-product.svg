@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" role="img" aria-labelledby="title desc">
+  <title id="title">Kaplan-Meier 생존확률의 곱 계산</title>
+  <desc id="desc">시간 2와 시간 4의 위험집합 및 사건 수로 조건부 생존 비율을 계산하고 곱한다.</desc>
+  <rect width="920" height="460" rx="28" fill="#fffefa"/>
+  <text x="460" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1b211d">사건 시점마다 살아남은 비율을 이어서 곱하기</text>
+  <rect x="48" y="105" width="240" height="218" rx="22" fill="#edf6f0" stroke="#b9daca"/>
+  <text x="168" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#176b52">시간 2</text>
+  <text x="168" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#3e4640">위험집합 n₁ = 8</text>
+  <text x="168" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#3e4640">사건 수 d₁ = 1</text>
+  <line x1="92" y1="238" x2="244" y2="238" stroke="#b9daca"/>
+  <text x="168" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1b211d">1 − 1/8 = 7/8</text>
+  <text x="332" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#e9783d">×</text>
+  <rect x="376" y="105" width="240" height="218" rx="22" fill="#f1efe9" stroke="#dcded7"/>
+  <text x="496" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#3e4640">시간 4</text>
+  <text x="496" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#3e4640">위험집합 n₂ = 6</text>
+  <text x="496" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#3e4640">사건 수 d₂ = 2</text>
+  <line x1="420" y1="238" x2="572" y2="238" stroke="#dcded7"/>
+  <text x="496" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1b211d">1 − 2/6 = 4/6</text>
+  <text x="660" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#e9783d">=</text>
+  <rect x="704" y="105" width="168" height="218" rx="22" fill="#176b52"/>
+  <text x="788" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">시간 4의</text>
+  <text x="788" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">생존확률</text>
+  <text x="788" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#ffffff">0.583</text>
+  <text x="788" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#d9eadf">7/8 × 4/6</text>
+  <rect x="150" y="362" width="620" height="58" rx="16" fill="#fff3ec"/>
+  <text x="460" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#b44c1f">검열된 대상은 검열 전까지만 위험집합 n에 포함된다.</text>
+</svg>

@@ -1,230 +1,256 @@
 ---
-title: "생존분석 로드맵: 검열 데이터에서 Cox 모델까지, 12단계 커리큘럼"
+title: "생존분석 입문 1: 검열과 생존함수, Kaplan–Meier부터 Python 실습까지"
 date: 2026-08-23 09:30:00 +0900
 categories: [기반 지식, 학습과 모델링]
-tags: [생존분석, survival-analysis, Kaplan-Meier, Cox-model, 검열, 커리큘럼]
-description: "생존분석 입문자를 위한 12단계 로드맵. 검열, Kaplan–Meier, Cox 모형, 경쟁위험과 Survival ML을 비즈니스 실습으로 배웁니다."
-reading_time: 19
-series: "생존분석: 사건이 일어날 때까지"
-level: "입문 → 심화"
+tags: [생존분석, survival-analysis, 검열, 생존함수, Kaplan-Meier, Python]
+description: "생존분석을 처음 공부하는 사람을 위한 첫 수업. 사건 발생 시간, 우측 검열, 생존함수와 Kaplan–Meier 추정량을 그림과 Python 실습으로 배웁니다."
+reading_time: 12
+series: "처음 시작하는 생존분석"
+level: "입문"
 math: true
 ---
 
-> **이 글의 한 문장 요약:** 생존분석은 “사건이 발생했는가?”뿐 아니라 “언제 발생했으며, 아직 관측되지 않은 대상을 어떻게 다룰 것인가?”에 답하는 통계적 언어다.
+> **이번 글의 목표:** 생존분석에서 시간과 검열을 함께 다루는 이유를 이해하고, 작은 자료의 Kaplan–Meier 생존확률을 손과 Python으로 계산한다.
 
-## 분류 모델 대신 생존분석이 필요한 순간
+생존분석을 한 번도 공부하지 않았다고 가정하고 시작해 보자. 미적분이나 회귀분석을 몰라도 괜찮다. 확률과 곱셈의 의미만 알면 이번 글을 따라갈 수 있다.
 
-다음 문제의 공통점은 무엇일까?
+## 1. 생존분석은 무엇을 공부할까?
 
-- 통신 고객이 **언제 해지할 것인가?**
-- 반도체 설비가 **언제 고장날 것인가?**
-- 제조 공정의 부품이 **얼마나 오래 정상 상태를 유지할 것인가?**
-- 환자가 치료 후 **얼마 동안 재발 없이 지낼 것인가?**
+보통의 분류 문제는 사건이 발생했는지를 묻는다.
 
-모두 사건 발생까지의 시간이 핵심이다. 90일 이탈 여부만 분류하면 91일째 이탈과 3년 뒤 이탈을 같은 0으로 취급할 수 있고, 관찰이 끝날 때까지 이탈하지 않은 고객의 정보도 제대로 사용하지 못한다. 생존분석은 시간과 **검열(censoring)**을 함께 모델링한다.
+- 사건이 발생했다: 1
+- 사건이 발생하지 않았다: 0
 
-## 이 커리큘럼의 목표
+생존분석은 여기에 **시간**을 추가한다.
 
-12개 단계를 마치면 다음을 수행할 수 있어야 한다.
+> 사건이 발생했는가? 발생했다면 언제인가? 아직 발생하지 않았다면 얼마 동안 관찰했는가?
 
-1. 이벤트, 시간 원점, 관찰 종료와 검열 규칙을 명확히 정의한다.
-2. 생존함수, 위험함수, 누적위험함수의 관계를 설명한다.
-3. Kaplan–Meier 곡선과 log-rank 검정을 올바르게 해석한다.
-4. Cox 비례위험 모형을 적합하고 비례위험 가정을 진단한다.
-5. 시간가변 공변량, 경쟁위험, 반복 사건을 구분한다.
-6. Survival ML 모델을 검열을 고려한 지표로 평가한다.
-7. 통신 이탈·설비 고장 문제를 운영 가능한 위험 정책으로 전환한다.
+여기서 사건은 반드시 죽음을 뜻하지 않는다. 연구 목적에 따라 질병 재발, 계약 종료, 시험 합격, 서비스 탈퇴처럼 관심 있는 변화가 모두 사건이 될 수 있다. 그래서 생존분석은 **사건 발생까지의 시간 분석(time-to-event analysis)**이라고도 부른다.
 
-## 12단계 생존분석 커리큘럼
+### 0과 1만으로는 부족한 이유
 
-| 단계 | 핵심 이론 | 실습 | 현업 산출물 |
-| --- | --- | --- | --- |
-| 1. 사건과 시간 | time-to-event, 시간 원점, 검열·절단 | 고객 이탈 데이터 스키마 | 관찰 설계서 |
-| 2. 세 함수 | $S(t)$, $h(t)$, $H(t)$의 관계 | 지수분포 생존 자료 생성 | 위험 해석 노트 |
-| 3. Kaplan–Meier | product-limit 추정량, 중앙생존시간 | KM 곡선 직접 계산 | 코호트 생존 리포트 |
-| 4. 집단 비교 | log-rank, 층화, 다중 비교 | 요금제별 이탈 곡선 비교 | 세그먼트 비교표 |
-| 5. Cox 모형 | partial likelihood, hazard ratio | 공변량 포함 Cox 회귀 | 효과·불확실성 표 |
-| 6. 가정 진단 | 비례위험, Schoenfeld 잔차 | 시간에 따라 변하는 효과 확인 | 모형 진단서 |
-| 7. 복잡한 관찰 | 좌측 절단, 시간가변 공변량 | 요금제 변경 이력 long format | 데이터 변환 명세 |
-| 8. 경쟁위험 | cause-specific hazard, CIF, Fine–Gray | 해지·요금제 변경 동시 분석 | 경쟁 사건 리포트 |
-| 9. 반복·다상태 | recurrent events, multi-state | 정상→경고→고장 전이 | 상태 전이 대시보드 |
-| 10. 모수 모형 | Weibull, log-normal, AFT | 수명 분포와 가속계수 | 수명 예측 리포트 |
-| 11. Survival ML | RSF, boosting, neural survival | 비선형 위험 예측 | 모델 비교표 |
-| 12. 평가와 운영 | C-index, IPCW, Brier, calibration | 시점별 성능·드리프트 | 배치 정책과 모니터링 계획 |
+두 사람 모두 관찰 기간 안에 사건이 없었다고 하자. 한 사람은 2개월만 관찰했고 다른 사람은 2년 동안 관찰했다. 둘을 똑같은 0으로 기록하면 두 사람이 제공한 시간 정보를 잃는다.
 
-## 1강: 검열을 이해하면 절반은 끝난다
+생존분석은 사건 여부와 관찰 시간을 함께 사용해 이 차이를 보존한다.
 
-### 1. 최소 데이터 구조
+## 2. 생존 자료를 이루는 두 개의 값
 
-생존 자료의 최소 단위는 보통 다음 두 열이다.
+가장 기본적인 생존 자료에는 대상마다 두 값이 필요하다.
 
-| 변수 | 의미 |
-| --- | --- |
-| `duration` | 시간 원점부터 사건 또는 마지막 관찰까지의 시간 |
-| `event` | 사건이 관찰됐으면 1, 검열됐으면 0 |
+| 변수 | 의미 | 예시 |
+| --- | --- | --- |
+| `time` | 시작점부터 사건 또는 마지막 관찰까지의 시간 | 4개월 |
+| `event` | 사건을 관측했으면 1, 관측하지 못했으면 0 | 1 또는 0 |
 
-통신 이탈 분석이라면 시간 원점은 가입일 또는 분석 코호트 진입일, 사건은 해지, 검열은 관찰 종료일까지 유지 중인 상태가 될 수 있다. 설비 분석이라면 설치 또는 정비 완료 시점, 사건은 고장, 검열은 정상 운전 중인 관찰 종료다.
+예를 들어 `(time=4, event=1)`은 4개월째 사건이 발생했다는 뜻이다. `(time=4, event=0)`은 4개월까지는 사건이 없었지만 그 이후 결과는 모른다는 뜻이다. 두 기록은 같은 4개월이라도 전혀 다른 정보를 담는다.
 
-### 2. 우측 검열과 절단은 다르다
+시간을 재기 시작하는 기준은 **시간 원점(time origin)**이라고 한다. 모든 대상에게 같은 기준을 사용해야 한다. 어떤 대상은 등록일부터, 다른 대상은 첫 측정일부터 시간을 세면 서로 비교할 수 없다.
 
-- **우측 검열**: 사건이 마지막 관찰 시점보다 뒤에 있다는 것만 안다.
-- **좌측 검열**: 사건이 어떤 시점 이전에 발생했다는 것만 안다.
-- **구간 검열**: 사건이 두 관찰 시점 사이에 발생했다.
-- **좌측 절단**: 특정 진입 시점까지 살아남은 대상만 표본에 포함된다.
+## 3. 검열: 사건이 없었다가 아니라 아직 모른다
 
-검열은 결과값 0이 아니다. “아직 사건을 보지 못했다”는 부분 정보다. 검열 대상을 단순 비사건으로 바꾸면 관찰 기간이 긴 대상과 짧은 대상을 공정하게 비교할 수 없다.
+연구가 끝났거나, 대상이 더 이상 관찰되지 않거나, 사건이 일어나기 전에 추적이 중단될 수 있다. 이때 실제 사건 시간 전체를 알 수 없다.
 
-### 3. 생존함수, 위험함수, 누적위험함수
+관찰 종료 시점의 오른쪽에 사건이 있을 수 있다는 정보만 남는 경우를 **우측 검열(right censoring)**이라고 한다.
 
-사건 시간 $T$에 대해 생존함수는 시점 $t$를 넘어 생존할 확률이다.
+<figure class="study-figure">
+  <img src="{{ '/assets/images/survival-analysis/censoring-timeline.svg' | relative_url }}" alt="네 대상의 관찰 시간선에서 사건이 관측된 경우와 우측 검열된 경우를 비교하는 그림">
+  <figcaption>그림 1. 주황색 원은 관측한 사건, 회색 ×는 마지막 관찰 시점의 우측 검열을 뜻한다.</figcaption>
+</figure>
+
+그림에서 B는 3개월째 검열되었다. B의 사건 시간이 3개월이라는 뜻이 아니다. 정확히 알 수 있는 것은 다음뿐이다.
+
+$$
+T_B > 3
+$$
+
+즉 B가 **적어도 3개월 동안은 사건 없이 지냈다**는 정보다. 검열된 대상을 단순히 삭제하면 이 유용한 정보가 사라지고, 검열 시점에 사건이 없었다고 확정해도 잘못된 결론이 된다.
+
+### 이번 글에서 다루는 검열
+
+검열에는 좌측 검열과 구간 검열도 있지만, 첫 글에서는 가장 흔한 우측 검열만 다룬다. Kaplan–Meier 방법은 검열된 대상도 검열 직전까지 계산에 포함한다.
+
+## 4. 생존함수: 특정 시점을 넘어갈 확률
+
+사건이 발생할 때까지 걸리는 시간을 확률변수 $T$라고 하자. **생존함수(survival function)**는 사건 없이 시점 $t$를 넘어갈 확률이다.
 
 $$
 S(t)=P(T>t)
 $$
 
-위험함수는 $t$까지 사건이 없었다는 조건에서 바로 다음 순간 사건이 발생할 순간 위험률이다.
+예를 들어 $S(6)=0.7$이라면 다음처럼 해석한다.
+
+> 모집단의 70%가 6이라는 시간 단위를 넘어설 때까지 사건을 경험하지 않는다.
+
+생존함수에는 세 가지 기본 성질이 있다.
+
+1. 시작 시점의 생존확률은 보통 1이다.
+2. 시간이 지날수록 생존확률은 그대로이거나 낮아진다.
+3. 사건이 발생한 시점에서 곡선이 아래로 내려간다.
+
+<figure class="study-figure">
+  <img src="{{ '/assets/images/survival-analysis/survival-function.svg' | relative_url }}" alt="시간이 지날수록 계단 모양으로 감소하는 Kaplan-Meier 생존함수와 검열 표시를 보여주는 그림">
+  <figcaption>그림 2. Kaplan–Meier 곡선은 사건 시점에 내려가고, 검열 시점에는 높이가 변하지 않는다.</figcaption>
+</figure>
+
+검열 표시에서 곡선이 내려가지 않는 이유는 그 시점에 사건이 관측되지 않았기 때문이다. 다만 검열된 대상은 그 이후의 계산 대상에서는 빠진다.
+
+## 5. Kaplan–Meier 추정량의 핵심 아이디어
+
+실제 모집단의 $S(t)$는 알 수 없으므로 표본으로 추정해야 한다. Kaplan–Meier 추정량은 각 사건 시점까지 살아남을 조건부 확률을 차례로 곱한다.
+
+사건이 발생한 시점 $t_j$에서 다음 두 수를 센다.
+
+- $n_j$: 사건 직전에 아직 관찰 중이고 사건도 없었던 대상 수, 즉 **위험집합(at-risk set)**
+- $d_j$: 그 시점에 사건이 발생한 대상 수
+
+그 시점을 통과해 생존할 비율은 다음과 같다.
 
 $$
-h(t)=\lim_{\Delta t\to 0}
-\frac{P(t\le T<t+\Delta t\mid T\ge t)}{\Delta t}
+1-\frac{d_j}{n_j}
 $$
 
-누적위험함수 $H(t)=\int_0^t h(u)du$와 생존함수는 다음 관계를 갖는다.
+지금까지의 비율을 모두 곱하면 Kaplan–Meier 생존확률이 된다.
 
 $$
-S(t)=\exp\{-H(t)\}
+\widehat S(t)
+=\prod_{t_j\le t}
+\left(1-\frac{d_j}{n_j}\right)
 $$
 
-위험률 0.2를 “20%가 사건을 경험한다”로 해석하면 안 된다. 위험은 확률이 아니라 시간당 순간 발생률이다. Cox 모형의 hazard ratio도 특정 시점의 생존확률 비가 아니다.
+<figure class="study-figure">
+  <img src="{{ '/assets/images/survival-analysis/kaplan-meier-product.svg' | relative_url }}" alt="시간 2와 시간 4의 위험집합과 사건 수를 이용해 Kaplan-Meier 생존확률을 곱으로 계산하는 그림">
+  <figcaption>그림 3. 사건 시점마다 살아남은 비율을 이전 생존확률에 이어 곱한다.</figcaption>
+</figure>
 
-## Kaplan–Meier 추정량
+Kaplan과 Meier가 1958년에 제안한 이 방법은 특정한 생존시간 분포를 미리 가정하지 않는 비모수 추정법이다.
 
-사건이 일어난 고유 시점을 $t_1<t_2<\cdots$라 하자. 시점 $t_j$ 직전에 위험집합에 남은 수를 $n_j$, 그 시점의 사건 수를 $d_j$라 하면 Kaplan–Meier 추정량은 다음과 같다.
+## 6. 작은 자료로 직접 계산하기
+
+다음은 8명을 관찰한 가상 자료다. `●`는 사건, `×`는 검열을 뜻한다.
+
+| 대상 | 관찰 시간 | 상태 |
+| --- | ---: | --- |
+| A | 2 | 사건 ● |
+| B | 3 | 검열 × |
+| C | 4 | 사건 ● |
+| D | 4 | 사건 ● |
+| E | 6 | 검열 × |
+| F | 7 | 사건 ● |
+| G | 8 | 검열 × |
+| H | 10 | 사건 ● |
+
+### 시간 2
+
+처음에는 8명 모두 위험집합에 있다. 시간 2에 한 명이 사건을 경험한다.
 
 $$
-\widehat S(t)=\prod_{t_j\le t}\left(1-\frac{d_j}{n_j}\right)
+\widehat S(2)=1\times\left(1-\frac{1}{8}\right)=0.875
 $$
 
-검열 대상은 검열 전까지 위험집합에 기여하고 이후 빠진다. Kaplan과 Meier의 1958년 [원 논문](https://doi.org/10.1080/01621459.1958.10501452)은 불완전한 관측에서 분포 형태를 가정하지 않고 생존함수를 추정하는 product-limit 방법을 제시했다.
+### 시간 4
 
-## 첫 실습: 통신 고객 이탈 시간을 직접 추정하기
+시간 2의 사건 한 명과 시간 3의 검열 한 명이 빠져 위험집합은 6명이다. 시간 4에는 사건이 2개다.
 
-먼저 합성 고객 자료를 만든다. `event_time`은 실제 이탈 시간, `censor_time`은 관찰 가능한 마지막 시간이다. 우리가 보는 것은 둘 중 작은 값이다.
+$$
+\widehat S(4)
+=0.875\times\left(1-\frac{2}{6}\right)
+=0.583
+$$
+
+시간 3의 검열에서는 생존확률을 떨어뜨리지 않았다. 다만 B는 시간 4의 위험집합에는 들어가지 않는다. 이것이 검열을 계산에 반영하는 핵심 방식이다.
+
+## 7. 첫 Python 실습: Kaplan–Meier 직접 구현하기
+
+이제 같은 계산을 `numpy`로 구현해 보자. 별도의 생존분석 라이브러리는 필요하지 않다.
 
 ```python
 import numpy as np
-import pandas as pd
 
-rng = np.random.default_rng(42)
-n = 500
+# 8명의 마지막 관찰 시간
+time = np.array([2, 3, 4, 4, 6, 7, 8, 10])
 
-# 프리미엄 요금제 고객의 이탈률이 더 낮은 합성 상황
-premium = rng.binomial(1, 0.45, n)
-rate = 0.12 * np.exp(-0.5 * premium)
-event_time = rng.exponential(1 / rate)
-censor_time = rng.uniform(3, 18, n)
+# 사건을 관측했으면 1, 검열됐으면 0
+event = np.array([1, 0, 1, 1, 0, 1, 0, 1])
 
-df = pd.DataFrame({
-    "time": np.minimum(event_time, censor_time),
-    "event": (event_time <= censor_time).astype(int),
-    "premium": premium,
-})
-
-print(df.head())
-print("관찰된 이탈 비율:", df["event"].mean().round(3))
-```
-
-이제 Kaplan–Meier 곱을 직접 계산한다.
-
-```python
-rows = []
 survival = 1.0
-event_times = np.sort(df.loc[df["event"] == 1, "time"].unique())
+rows = []
+
+# 생존확률은 사건이 발생한 시점에서만 변한다.
+event_times = np.unique(time[event == 1])
 
 for t in event_times:
-    at_risk = (df["time"] >= t).sum()
-    events = ((df["time"] == t) & (df["event"] == 1)).sum()
-    survival *= 1 - events / at_risk
-    rows.append((t, at_risk, events, survival))
+    # 시점 t 직전까지 사건이나 검열로 빠지지 않은 대상
+    at_risk = np.sum(time >= t)
 
-km = pd.DataFrame(
-    rows,
-    columns=["time", "at_risk", "events", "survival"],
-)
+    # 시점 t에 관측된 사건 수
+    deaths = np.sum((time == t) & (event == 1))
 
-median_survival = km.loc[km["survival"] <= 0.5, "time"].min()
-print(km.head())
-print(f"추정 중앙생존시간: {median_survival:.2f}")
+    # 조건부 생존확률을 누적해서 곱한다.
+    survival *= 1 - deaths / at_risk
+    rows.append((t, at_risk, deaths, survival))
+
+print("time  at_risk  events  survival")
+for t, n, d, s in rows:
+    print(f"{t:>4}  {n:>7}  {d:>6}  {s:>8.3f}")
+
+# 생존확률이 처음 0.5 이하가 되는 시점
+median = next(t for t, _, _, s in rows if s <= 0.5)
+print(f"중앙생존시간: {median}")
 ```
 
-시드가 같다면 관찰된 사건 비율은 약 `0.598`, 중앙생존시간은 약 `7.01`이다. 중앙생존시간은 생존확률이 처음 0.5 이하가 되는 시점이다. 곡선이 관찰 기간 안에 0.5 아래로 내려가지 않으면 중앙값은 추정되지 않는다.
+실행 결과는 다음과 같다.
 
-실무에서는 공식 문서의 API를 사용한다.
-
-```python
-from lifelines import KaplanMeierFitter
-
-kmf = KaplanMeierFitter(label="전체 고객")
-kmf.fit(df["time"], event_observed=df["event"])
-
-print(kmf.median_survival_time_)
-kmf.plot_survival_function()
+```text
+time  at_risk  events  survival
+   2        8       1     0.875
+   4        6       2     0.583
+   7        3       1     0.389
+  10        1       1     0.000
+중앙생존시간: 7
 ```
 
-`KaplanMeierFitter.fit(durations, event_observed)`와 `median_survival_time_`의 의미는 [lifelines 공식 문서](https://lifelines.readthedocs.io/en/stable/fitters/univariate/KaplanMeierFitter.html)에서 확인할 수 있다.
+### 결과를 한 줄씩 해석하기
 
-## 비즈니스 해석에서 자주 틀리는 지점
+1. 시간 2 직전에는 8명이 관찰 대상이며, 사건 1개 후 생존확률은 0.875다.
+2. 시간 3에 검열된 한 명은 시간 4의 위험집합에서 빠져 `at_risk=6`이 된다.
+3. 시간 7의 생존확률은 약 0.389이므로 7을 넘어 사건 없이 지낼 확률을 약 38.9%로 추정한다.
+4. **중앙생존시간**은 생존확률이 처음 0.5 이하가 되는 시점이므로 7이다.
 
-1. **검열을 비사건으로 처리한다**: 관찰이 일찍 끝난 대상을 장기 생존자로 잘못 분류한다.
-2. **시간 원점이 섞여 있다**: 가입일 기준 고객과 캠페인 시작일 기준 고객을 같은 duration으로 비교한다.
-3. **미래 정보를 공변량에 넣는다**: 사건 이후 또는 예측 시점 이후의 정보를 사용하면 누수가 발생한다.
-4. **hazard ratio를 확률 비로 읽는다**: Cox 계수는 다른 공변량이 같을 때의 순간 위험 비다.
-5. **비례위험 가정을 확인하지 않는다**: 효과가 시간에 따라 변하면 단일 hazard ratio가 현상을 숨긴다.
-6. **경쟁 사건을 검열로 처리한다**: 요금제 변경이 해지를 막는 별도 사건이라면 단순 검열 가정이 맞지 않을 수 있다.
+표본이 매우 작기 때문에 이 숫자를 일반적인 결론으로 해석해서는 안 된다. 이번 실습의 목적은 Kaplan–Meier 계산 순서를 이해하는 것이다.
 
-## 교수 관점과 팀장 관점의 합격 기준
+### 한 가지 중요한 가정
 
-**이론 합격 기준**
+Kaplan–Meier 추정에는 검열된 대상도 같은 시점까지 관찰된 다른 대상과 비슷한 사건 위험을 가졌다는 **독립 검열(independent censoring)** 가정이 필요하다. 상태가 악화된 사람만 선택적으로 추적에서 빠지는 상황이라면 이 가정이 깨질 수 있고, 단순한 Kaplan–Meier 곡선이 생존확률을 올바르게 나타내지 못할 수 있다.
 
-- $S(t)$, $h(t)$, $H(t)$의 차이와 관계를 설명한다.
-- 검열과 절단을 구분하고 독립 검열 가정을 명시한다.
-- Kaplan–Meier 위험집합을 손으로 계산한다.
-- Cox 비례위험 가정을 잔차와 시간 상호작용으로 진단한다.
+## 8. 직접 바꿔 보는 연습
 
-**실무 합격 기준**
+### 연습 1: 검열을 사건으로 바꾸기
 
-- 시간 원점, 사건, 관찰 종료, 재진입 규칙을 데이터 추출 전에 합의한다.
-- 전체 곡선뿐 아니라 관심 시점의 생존확률과 신뢰구간을 보고한다.
-- 모델 평가 시 일반 분류 AUC만 쓰지 않고 검열을 고려한 지표를 쓴다.
-- 위험 점수를 실제 접촉 용량, 정비 슬롯, 비용 함수와 연결한다.
+B의 `event`를 0에서 1로 바꿔 보자. 시간 3에 곡선이 새로 내려가면서 이후 생존확률과 중앙생존시간이 어떻게 달라지는지 확인한다.
 
-Survival ML에서는 C-index 하나만으로 충분하지 않다. [scikit-survival 공식 평가 가이드](https://scikit-survival.readthedocs.io/en/v0.25.0/user_guide/evaluating-survival-models.html)는 시간의존 AUC와 Brier score를 함께 다루며, Brier score는 생존확률의 판별력과 보정을 시간별로 평가하는 데 유용하다.
+### 연습 2: 마지막 대상 검열하기
 
-## 심화 단계에서 만나게 될 모델
+H의 `event`를 1에서 0으로 바꿔 보자. 마지막 생존확률이 0까지 내려가지 않는 이유를 설명해 본다.
 
-- **Cox 비례위험 모형**: $h(t\mid x)=h_0(t)\exp(x^T\beta)$로, 기저위험함수를 특정하지 않고 partial likelihood로 회귀계수를 추정한다. 출발점은 Cox의 [1972년 논문](https://doi.org/10.1111/j.2517-6161.1972.tb00899.x)이다.
-- **비례위험 진단**: `lifelines`의 [`check_assumptions`](https://lifelines.readthedocs.io/en/latest/jupyter_notebooks/Proportional%20hazard%20assumption.html)은 시간가변 계수에 대한 검정과 scaled Schoenfeld residual plot을 제공한다.
-- **경쟁위험**: 사건별 cause-specific hazard와 누적발생함수(CIF)를 구분한다. Fine–Gray 모형은 [1999년 원 논문](https://doi.org/10.1080/01621459.1999.10474144)을 참고한다.
-- **Random Survival Forest**: 비선형성과 상호작용을 학습하는 트리 앙상블이다. Ishwaran 등의 [2008년 논문](https://doi.org/10.1214/08-AOAS169)이 고전적 참고자료다.
+### 연습 3: 한 행씩 손으로 계산하기
 
-## 연습문제
+시간 7에서 위험집합이 왜 3명인지 원자료의 대상 이름을 직접 적어 본다. 검열된 대상이 언제까지 위험집합에 기여하는지 확인하는 연습이다.
 
-1. 합성 데이터에서 프리미엄·일반 요금제별 Kaplan–Meier 곡선을 따로 계산한다.
-2. 검열 시간을 모두 6개월 이하로 줄였을 때 중앙생존시간이 어떻게 변하는지 확인한다.
-3. 반도체 설비 데이터를 가정해 시간 원점, 사건, 우측 검열, 좌측 절단의 예를 각각 정의한다.
-4. “90일 이탈 분류”와 “이탈 시간 생존모형”이 만드는 비즈니스 액션의 차이를 적는다.
+## 9. 이번 글에서 꼭 기억할 다섯 문장
+
+1. 생존분석은 사건 여부뿐 아니라 사건 발생까지의 시간을 함께 다룬다.
+2. 검열은 사건이 없었다는 뜻이 아니라 마지막 관찰 이후는 모른다는 뜻이다.
+3. 생존함수 $S(t)$는 시점 $t$를 넘어 사건 없이 지낼 확률이다.
+4. Kaplan–Meier 추정량은 사건 시점별 조건부 생존 비율을 차례로 곱한다.
+5. 검열된 대상은 검열 전까지 위험집합에 포함되고 그 이후에는 빠진다.
 
 ## 다음 글
 
-다음 글에서는 Kaplan–Meier 곡선의 신뢰구간과 log-rank 검정을 다룬다. 그 다음 Cox 모형의 hazard ratio를 해석하고, 비례위험 가정이 깨질 때 층화·시간 상호작용·AFT 모형 중 무엇을 선택할지 비교할 예정이다.
+다음 글에서는 Kaplan–Meier 곡선을 직접 그려 보고 두 집단의 곡선을 비교한다. 생존확률의 신뢰구간, 중앙생존시간, log-rank 검정을 순서대로 공부할 예정이다. Cox 비례위험 모형과 위험함수는 그다음 단계에서 별도의 글로 다룬다.
 
-정책이나 처치가 사건 발생 시간에 미치는 효과까지 질문하고 싶다면 [인과추론 로드맵]({{ '/posts/causal-inference-roadmap/' | relative_url }})도 함께 읽어 보자.
+개입의 효과를 비교하는 기초부터 공부하고 싶다면 [인과추론 입문 1]({{ '/posts/causal-inference-roadmap/' | relative_url }})도 함께 읽을 수 있다.
 
 ## 참고 자료
 
-- E. L. Kaplan, Paul Meier (1958), [*Nonparametric Estimation from Incomplete Observations*](https://doi.org/10.1080/01621459.1958.10501452).
-- D. R. Cox (1972), [*Regression Models and Life-Tables*](https://doi.org/10.1111/j.2517-6161.1972.tb00899.x).
-- Jason P. Fine, Robert J. Gray (1999), [*A Proportional Hazards Model for the Subdistribution of a Competing Risk*](https://doi.org/10.1080/01621459.1999.10474144).
-- Hemant Ishwaran et al. (2008), [*Random Survival Forests*](https://doi.org/10.1214/08-AOAS169).
-- [lifelines KaplanMeierFitter 공식 문서](https://lifelines.readthedocs.io/en/stable/fitters/univariate/KaplanMeierFitter.html).
-- [scikit-survival 모델 평가 공식 가이드](https://scikit-survival.readthedocs.io/en/v0.25.0/user_guide/evaluating-survival-models.html).
+- E. L. Kaplan, Paul Meier (1958), [*Nonparametric Estimation from Incomplete Observations*](https://doi.org/10.1080/01621459.1958.10501452), 불완전한 관측에서 생존함수를 추정하는 product-limit 방법의 원 논문이다.
+- [lifelines KaplanMeierFitter 공식 문서](https://lifelines.readthedocs.io/en/stable/fitters/univariate/KaplanMeierFitter.html), 실제 라이브러리에서 생존함수와 중앙생존시간을 계산할 때 참고할 수 있다.

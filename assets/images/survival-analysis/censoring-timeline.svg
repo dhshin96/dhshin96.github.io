@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 500" role="img" aria-labelledby="title desc">
+  <title id="title">사건과 우측 검열의 관찰 시간선</title>
+  <desc id="desc">네 대상의 시작점부터 사건 또는 마지막 관찰 시점까지의 시간을 보여준다.</desc>
+  <rect width="920" height="500" rx="28" fill="#fffefa"/>
+  <text x="460" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1b211d">사건까지의 시간과 우측 검열</text>
+  <line x1="170" y1="438" x2="845" y2="438" stroke="#89908b" stroke-width="2"/>
+  <text x="170" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#68706a">시작 0</text>
+  <text x="845" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#68706a">관찰 시간 →</text>
+  <g font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1b211d">
+    <text x="82" y="132">대상 A</text><text x="82" y="222">대상 B</text><text x="82" y="312">대상 C</text><text x="82" y="402">대상 D</text>
+  </g>
+  <g stroke="#176b52" stroke-width="8" stroke-linecap="round">
+    <line x1="170" y1="125" x2="305" y2="125"/>
+    <line x1="170" y1="215" x2="372" y2="215"/>
+    <line x1="170" y1="305" x2="507" y2="305"/>
+    <line x1="170" y1="395" x2="642" y2="395"/>
+  </g>
+  <g fill="#e9783d" stroke="#fffefa" stroke-width="5">
+    <circle cx="305" cy="125" r="18"/><circle cx="507" cy="305" r="18"/>
+  </g>
+  <g stroke="#68706a" stroke-width="7" stroke-linecap="round">
+    <line x1="358" y1="201" x2="386" y2="229"/><line x1="386" y1="201" x2="358" y2="229"/>
+    <line x1="628" y1="381" x2="656" y2="409"/><line x1="656" y1="381" x2="628" y2="409"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="15">
+    <text x="305" y="92" text-anchor="middle" fill="#b44c1f" font-weight="700">사건 관측</text>
+    <text x="372" y="180" text-anchor="middle" fill="#68706a" font-weight="700">우측 검열</text>
+    <text x="507" y="272" text-anchor="middle" fill="#b44c1f" font-weight="700">사건 관측</text>
+    <text x="642" y="360" text-anchor="middle" fill="#68706a" font-weight="700">우측 검열</text>
+  </g>
+  <rect x="688" y="92" width="172" height="93" rx="16" fill="#edf6f0" stroke="#b9daca"/>
+  <text x="774" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#176b52">검열의 정보</text>
+  <text x="774" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#3e4640">그 시점까지는</text>
+  <text x="774" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#3e4640">사건이 없었다</text>
+</svg>

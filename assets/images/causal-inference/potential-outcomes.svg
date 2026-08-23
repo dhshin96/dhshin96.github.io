@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" role="img" aria-labelledby="title desc">
+  <title id="title">두 잠재적 결과와 하나의 관측 결과</title>
+  <desc id="desc">같은 사람에게 처리한 세계와 처리하지 않은 세계의 결과가 모두 가능하지만 실제로는 둘 중 하나만 관측한다.</desc>
+  <defs>
+    <marker id="green-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#176b52"/></marker>
+    <marker id="gray-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#89908b"/></marker>
+  </defs>
+  <rect width="920" height="470" rx="28" fill="#fffefa"/>
+  <text x="460" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1b211d">같은 학생에게 가능한 두 개의 세계</text>
+  <circle cx="145" cy="235" r="64" fill="#1b211d"/>
+  <text x="145" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fffefa">학생 i</text>
+  <text x="145" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#dcded7">출발점은 같음</text>
+  <path d="M210 218C285 190 294 143 359 138" fill="none" stroke="#176b52" stroke-width="5" marker-end="url(#green-arrow)"/>
+  <path d="M210 252C285 280 294 327 359 332" fill="none" stroke="#89908b" stroke-width="5" marker-end="url(#gray-arrow)"/>
+  <rect x="378" y="87" width="218" height="105" rx="18" fill="#d9eadf"/>
+  <text x="487" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#176b52">처리한 세계 T=1</text>
+  <text x="487" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#1b211d">Yᵢ(1)</text>
+  <rect x="378" y="279" width="218" height="105" rx="18" fill="#eeece6"/>
+  <text x="487" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#68706a">처리하지 않은 세계 T=0</text>
+  <text x="487" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#1b211d">Yᵢ(0)</text>
+  <path d="M600 139H674" fill="none" stroke="#176b52" stroke-width="4" marker-end="url(#green-arrow)"/>
+  <path d="M600 331H674" fill="none" stroke="#89908b" stroke-width="4" marker-end="url(#gray-arrow)"/>
+  <rect x="693" y="83" width="176" height="113" rx="18" fill="#176b52"/>
+  <text x="781" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">관측됨</text>
+  <text x="781" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#d9eadf">둘 중 하나만 현실</text>
+  <rect x="693" y="275" width="176" height="113" rx="18" fill="#ffffff" stroke="#b7bcb8" stroke-width="3" stroke-dasharray="8 7"/>
+  <text x="781" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#68706a">반사실</text>
+  <text x="781" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#68706a">동시에 볼 수 없음</text>
+  <text x="460" y="439" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#b44c1f">개인 인과효과 Yᵢ(1) − Yᵢ(0)는 직접 관측할 수 없다.</text>
+</svg>

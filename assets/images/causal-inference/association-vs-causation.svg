@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-labelledby="title desc">
+  <title id="title">상관관계와 인과관계 비교</title>
+  <desc id="desc">상관관계는 두 변수가 함께 움직이는지 관찰하고, 인과관계는 한 변수를 바꾸었을 때 결과가 변하는지 묻는다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#176b52"/></marker></defs>
+  <rect width="920" height="430" rx="28" fill="#fffefa"/>
+  <rect x="38" y="42" width="394" height="346" rx="22" fill="#f1efe9" stroke="#dcded7"/>
+  <rect x="488" y="42" width="394" height="346" rx="22" fill="#edf6f0" stroke="#b9daca"/>
+  <text x="235" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#1b211d">상관관계</text>
+  <text x="685" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#1b211d">인과관계</text>
+  <circle cx="150" cy="210" r="62" fill="#d9eadf"/><circle cx="320" cy="210" r="62" fill="#f7d7c6"/>
+  <text x="150" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#176b52">공부 시간</text>
+  <text x="150" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#3e4640">늘어남</text>
+  <text x="320" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#b44c1f">시험 점수</text>
+  <text x="320" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#3e4640">높아짐</text>
+  <path d="M213 191C238 171 254 171 278 191" fill="none" stroke="#68706a" stroke-width="4" stroke-dasharray="8 8"/>
+  <path d="M278 229C254 249 238 249 213 229" fill="none" stroke="#68706a" stroke-width="4" stroke-dasharray="8 8"/>
+  <text x="235" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#3e4640">“둘이 함께 움직이는가?”</text>
+  <circle cx="600" cy="210" r="62" fill="#176b52"/><circle cx="770" cy="210" r="62" fill="#e9783d"/>
+  <text x="600" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">공부 시간</text>
+  <text x="600" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">직접 늘림</text>
+  <text x="770" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">시험 점수</text>
+  <text x="770" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">결과 확인</text>
+  <path d="M664 210H697" fill="none" stroke="#176b52" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="685" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#3e4640">“하나를 바꾸면 다른 하나가 변하는가?”</text>
+</svg>

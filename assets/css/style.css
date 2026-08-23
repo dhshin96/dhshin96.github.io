@@ -174,5 +174,9 @@ img { max-width: 100%; }
   .project-placeholder.featured { grid-row: auto; min-height: 370px; }
   .archive-list a { grid-template-columns: 58px 1fr; }
   .archive-list a span { grid-column: 2; }
+  .study-figure { overflow-x: auto; padding-bottom: 5px; }
+  .study-figure img { width: 620px; max-width: none; }
+  .study-figure figcaption { position: sticky; left: 0; width: 100%; text-align: left; }
+  .study-figure::after { content: "↔ 그림을 좌우로 밀어 자세히 볼 수 있습니다."; display: block; position: sticky; left: 0; width: 100%; color: var(--accent); font-size: 12px; }
   .footer-inner { align-items: start; flex-direction: column; }
 }

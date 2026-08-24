@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">준비도로 교란된 학습법 효과의 인과 DAG</title>
+  <desc id="desc">준비도 L에서 새 학습법 A와 시험 점수 Y로 화살표가 나가고, 새 학습법 A에서 시험 점수 Y로 화살표가 이어진다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#176b52"/>
+    </marker>
+  </defs>
+  <rect width="760" height="420" rx="24" fill="#fffefa"/>
+  <text x="380" y="48" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#1b211d">처리와 결과를 잇는 두 경로</text>
+  <path d="M230 180 C330 104 430 104 530 180" fill="none" stroke="#176b52" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M350 320 C294 320 230 292 205 220" fill="none" stroke="#176b52" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M410 320 C472 320 530 282 555 220" fill="none" stroke="#176b52" stroke-width="4" marker-end="url(#arrow)"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" text-anchor="middle">
+    <circle cx="190" cy="195" r="66" fill="#d9eadf" stroke="#176b52" stroke-width="3"/>
+    <text x="190" y="190" font-size="28" font-weight="700" fill="#176b52">A</text>
+    <text x="190" y="218" font-size="16" fill="#3e4640">새 학습법</text>
+    <circle cx="570" cy="195" r="66" fill="#fce5d8" stroke="#e9783d" stroke-width="3"/>
+    <text x="570" y="190" font-size="28" font-weight="700" fill="#b74f1e">Y</text>
+    <text x="570" y="218" font-size="16" fill="#3e4640">시험 점수</text>
+    <circle cx="380" cy="320" r="66" fill="#eef0eb" stroke="#68706a" stroke-width="3"/>
+    <text x="380" y="315" font-size="28" font-weight="700" fill="#3e4640">L</text>
+    <text x="380" y="343" font-size="16" fill="#3e4640">사전 준비도</text>
+  </g>
+  <text x="380" y="94" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" font-weight="700" fill="#176b52">알고 싶은 인과 경로 A → Y</text>
+  <text x="380" y="402" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" font-weight="700" fill="#68706a">열린 뒷문 경로 A ← L → Y</text>
+</svg>

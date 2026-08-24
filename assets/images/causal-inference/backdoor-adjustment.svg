@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">준비도 조정으로 뒷문 경로 막기</title>
+  <desc id="desc">준비도 L에 조건화 표시가 있고 A에서 L을 거쳐 Y로 이어지는 경로는 점선과 차단 표시로 막혔지만 A에서 Y로 향하는 인과 경로는 열려 있다.</desc>
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#176b52"/>
+    </marker>
+  </defs>
+  <rect width="760" height="430" rx="24" fill="#fffefa"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="380" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#1b211d">L로 조정해 뒷문 경로 차단</text>
+    <path d="M230 170 C330 96 430 96 530 170" fill="none" stroke="#176b52" stroke-width="5" marker-end="url(#arrow2)"/>
+    <path d="M350 314 C300 314 240 284 205 210" fill="none" stroke="#aeb4ad" stroke-width="4" stroke-dasharray="9 8" marker-end="url(#arrow2)"/>
+    <path d="M410 314 C468 314 530 278 555 210" fill="none" stroke="#aeb4ad" stroke-width="4" stroke-dasharray="9 8" marker-end="url(#arrow2)"/>
+    <circle cx="190" cy="185" r="62" fill="#d9eadf" stroke="#176b52" stroke-width="3"/>
+    <text x="190" y="181" text-anchor="middle" font-size="28" font-weight="700" fill="#176b52">A</text>
+    <text x="190" y="209" text-anchor="middle" font-size="16" fill="#3e4640">새 학습법</text>
+    <circle cx="570" cy="185" r="62" fill="#fce5d8" stroke="#e9783d" stroke-width="3"/>
+    <text x="570" y="181" text-anchor="middle" font-size="28" font-weight="700" fill="#b74f1e">Y</text>
+    <text x="570" y="209" text-anchor="middle" font-size="16" fill="#3e4640">시험 점수</text>
+    <rect x="311" y="245" width="138" height="138" rx="22" fill="#fffefa" stroke="#e9783d" stroke-width="4"/>
+    <circle cx="380" cy="314" r="54" fill="#eef0eb" stroke="#68706a" stroke-width="3"/>
+    <text x="380" y="310" text-anchor="middle" font-size="28" font-weight="700" fill="#3e4640">L</text>
+    <text x="380" y="337" text-anchor="middle" font-size="15" fill="#3e4640">사전 준비도</text>
+    <path d="M292 270 L468 358 M468 270 L292 358" stroke="#e9783d" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+    <text x="380" y="92" text-anchor="middle" font-size="15" font-weight="700" fill="#176b52">인과 경로는 남긴다</text>
+    <text x="380" y="416" text-anchor="middle" font-size="15" font-weight="700" fill="#b74f1e">조건화한 L이 뒷문 경로를 막는다</text>
+  </g>
+</svg>

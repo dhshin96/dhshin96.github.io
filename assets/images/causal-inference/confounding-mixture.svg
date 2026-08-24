@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">처리군과 대조군의 준비도 구성 차이</title>
+  <desc id="desc">처리군은 높은 준비도가 80퍼센트이고 대조군은 높은 준비도가 20퍼센트여서 전체 평균 비교가 왜곡된다.</desc>
+  <rect width="760" height="430" rx="24" fill="#fffefa"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="380" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#1b211d">전체 평균에는 집단 구성의 차이도 섞인다</text>
+    <text x="90" y="112" font-size="18" font-weight="700" fill="#1b211d">처리군 A=1</text>
+    <rect x="220" y="82" width="400" height="48" rx="10" fill="#d9eadf"/>
+    <rect x="220" y="82" width="80" height="48" rx="10" fill="#e3e5df"/>
+    <text x="260" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#3e4640">낮음 20%</text>
+    <text x="460" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#176b52">높음 80%</text>
+    <text x="650" y="112" font-size="18" font-weight="700" fill="#176b52">평균 81</text>
+    <text x="90" y="202" font-size="18" font-weight="700" fill="#1b211d">대조군 A=0</text>
+    <rect x="220" y="172" width="400" height="48" rx="10" fill="#d9eadf"/>
+    <rect x="220" y="172" width="320" height="48" rx="10" fill="#e3e5df"/>
+    <text x="380" y="202" text-anchor="middle" font-size="15" font-weight="700" fill="#3e4640">낮음 80%</text>
+    <text x="580" y="202" text-anchor="middle" font-size="15" font-weight="700" fill="#176b52">높음 20%</text>
+    <text x="650" y="202" font-size="18" font-weight="700" fill="#176b52">평균 64</text>
+    <rect x="86" y="270" width="588" height="104" rx="18" fill="#fce5d8" stroke="#e9783d" stroke-width="2"/>
+    <text x="380" y="308" text-anchor="middle" font-size="18" font-weight="700" fill="#b74f1e">조정 전 차이: 81 − 64 = 17점</text>
+    <text x="380" y="340" text-anchor="middle" font-size="16" fill="#3e4640">학습법 효과 5점 + 준비도 구성에서 온 차이 12점</text>
+    <text x="380" y="408" text-anchor="middle" font-size="14" fill="#68706a">같은 준비도 안에서 비교해야 학습법의 효과를 분리할 수 있다.</text>
+  </g>
+</svg>

@@ -1,9 +1,9 @@
 ---
-title: "생존분석 입문 1: 검열과 생존함수, Kaplan–Meier부터 Python 실습까지"
+title: "생존분석 입문 ①: 검열 데이터 계산법과 Kaplan–Meier Python 실습"
 date: 2026-08-23 09:30:00 +0900
 categories: [기반 지식, 학습과 모델링]
 tags: [생존분석, survival-analysis, 검열, 생존함수, Kaplan-Meier, Python]
-description: "생존분석을 처음 공부하는 사람을 위한 첫 수업. 사건 발생 시간, 우측 검열, 생존함수와 Kaplan–Meier 추정량을 그림과 Python 실습으로 배웁니다."
+description: "검열된 데이터로 생존확률을 어떻게 계산할까요? 생존분석 입문자가 우측 검열, 생존함수와 Kaplan–Meier를 그림과 Python 실습으로 배웁니다."
 reading_time: 12
 series: "처음 시작하는 생존분석"
 level: "입문"
@@ -32,6 +32,11 @@ math: true
 두 사람 모두 관찰 기간 안에 사건이 없었다고 하자. 한 사람은 2개월만 관찰했고 다른 사람은 2년 동안 관찰했다. 둘을 똑같은 0으로 기록하면 두 사람이 제공한 시간 정보를 잃는다.
 
 생존분석은 사건 여부와 관찰 시간을 함께 사용해 이 차이를 보존한다.
+
+<aside class="related-reading">
+  <strong>질문부터 구분하기</strong>
+  <p>“사건이 언제 발생하는가?”는 생존분석의 질문이다. “어떤 개입 때문에 사건 시점이 달라지는가?”처럼 원인과 효과를 묻고 있다면 먼저 <a href="{{ '/posts/causal-inference-roadmap/' | relative_url }}">상관관계와 인과관계, ATE를 설명한 인과추론 입문</a>을 읽으면 두 질문의 차이가 선명해진다.</p>
+</aside>
 
 ## 2. 생존 자료를 이루는 두 개의 값
 
@@ -247,8 +252,6 @@ H의 `event`를 1에서 0으로 바꿔 보자. 마지막 생존확률이 0까지
 ## 다음 글
 
 다음 글에서는 Kaplan–Meier 곡선을 직접 그려 보고 두 집단의 곡선을 비교한다. 생존확률의 신뢰구간, 중앙생존시간, log-rank 검정을 순서대로 공부할 예정이다. Cox 비례위험 모형과 위험함수는 그다음 단계에서 별도의 글로 다룬다.
-
-개입의 효과를 비교하는 기초부터 공부하고 싶다면 [인과추론 입문 1]({{ '/posts/causal-inference-roadmap/' | relative_url }})도 함께 읽을 수 있다.
 
 ## 참고 자료
 

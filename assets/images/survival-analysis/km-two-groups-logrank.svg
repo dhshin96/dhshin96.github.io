@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 500" role="img" aria-labelledby="title desc">
+  <title id="title">두 집단의 Kaplan-Meier 생존곡선 비교</title>
+  <desc id="desc">A와 B 집단의 계단형 생존곡선에서 A의 중앙생존시간은 7, B는 9이며 후반에는 위험집합이 작아짐을 보여준다.</desc>
+  <rect width="920" height="500" rx="28" fill="#fffefa"/>
+  <text x="460" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1b211d">곡선의 높이와 불확실성을 함께 읽기</text>
+
+  <line x1="92" y1="82" x2="92" y2="400" stroke="#3e4640" stroke-width="2"/>
+  <line x1="92" y1="400" x2="850" y2="400" stroke="#3e4640" stroke-width="2"/>
+  <line x1="92" y1="241" x2="850" y2="241" stroke="#c8cbc5" stroke-width="2" stroke-dasharray="7 7"/>
+  <text x="72" y="89" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="#3e4640">1.0</text>
+  <text x="72" y="247" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="#3e4640">0.5</text>
+  <text x="72" y="405" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="#3e4640">0.0</text>
+  <text x="32" y="245" transform="rotate(-90 32 245)" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#3e4640">생존확률</text>
+  <text x="470" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#3e4640">시간</text>
+
+  <path d="M92 82 H230 V122 H299 V162 H437 V209 H575 V273 H713 V400 H850" fill="none" stroke="#e9783d" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M92 82 H437 V127 H575 V182 H713 V255 H850 V400" fill="none" stroke="#176b52" stroke-width="5" stroke-linejoin="round"/>
+
+  <g stroke="#e9783d" stroke-width="3">
+    <path d="M360 174 l10 10 m0 -10 l-10 10"/>
+    <path d="M498 221 l10 10 m0 -10 l-10 10"/>
+    <path d="M636 285 l10 10 m0 -10 l-10 10"/>
+  </g>
+  <g stroke="#176b52" stroke-width="3">
+    <path d="M360 74 l10 10 m0 -10 l-10 10"/>
+    <path d="M498 119 l10 10 m0 -10 l-10 10"/>
+    <path d="M636 174 l10 10 m0 -10 l-10 10"/>
+    <path d="M774 247 l10 10 m0 -10 l-10 10"/>
+  </g>
+
+  <line x1="575" y1="241" x2="575" y2="400" stroke="#e9783d" stroke-width="2" stroke-dasharray="5 6"/>
+  <line x1="713" y1="241" x2="713" y2="400" stroke="#176b52" stroke-width="2" stroke-dasharray="5 6"/>
+  <text x="575" y="423" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#b44c1f">A 중앙값 7</text>
+  <text x="713" y="423" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#176b52">B 중앙값 9</text>
+
+  <rect x="650" y="96" width="166" height="72" rx="15" fill="#ffffff" stroke="#dcded7"/>
+  <line x1="671" y1="120" x2="706" y2="120" stroke="#e9783d" stroke-width="5"/>
+  <text x="720" y="126" font-family="Arial, sans-serif" font-size="16" fill="#3e4640">집단 A</text>
+  <line x1="671" y1="146" x2="706" y2="146" stroke="#176b52" stroke-width="5"/>
+  <text x="720" y="152" font-family="Arial, sans-serif" font-size="16" fill="#3e4640">집단 B</text>
+
+  <rect x="165" y="454" width="590" height="30" rx="12" fill="#edf6f0"/>
+  <text x="460" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#176b52">×는 검열이다. 오른쪽으로 갈수록 남은 위험집합이 작아져 곡선이 더 불안정하다.</text>
+</svg>

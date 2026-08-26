@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-labelledby="title desc">
+  <title id="title">콜라이더 조건화 전후의 경로 비교</title>
+  <desc id="desc">왼쪽은 A와 U의 공통 결과 S가 경로를 막는 모습이고, 오른쪽은 S에 조건화하여 A와 U 사이에 비인과적 연관성이 생긴 모습이다. U는 Y의 원인이다.</desc>
+  <defs>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#176b52"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#68706a"/>
+    </marker>
+  </defs>
+  <rect width="900" height="480" rx="24" fill="#fffefa"/>
+  <path d="M450 42 V438" stroke="#d9ddd7" stroke-width="2"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="225" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#1b211d">조건화 전: 닫힌 경로</text>
+    <text x="675" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#1b211d">S에 조건화: 열린 경로</text>
+
+    <g>
+      <path d="M135 155 L207 245" fill="none" stroke="#68706a" stroke-width="4" marker-end="url(#arrow-gray)"/>
+      <path d="M315 155 L243 245" fill="none" stroke="#68706a" stroke-width="4" marker-end="url(#arrow-gray)"/>
+      <path d="M330 135 C382 135 392 206 362 278" fill="none" stroke="#176b52" stroke-width="4" marker-end="url(#arrow-green)"/>
+      <circle cx="115" cy="125" r="48" fill="#d9eadf" stroke="#176b52" stroke-width="3"/>
+      <circle cx="335" cy="125" r="48" fill="#eef0eb" stroke="#68706a" stroke-width="3"/>
+      <circle cx="225" cy="275" r="48" fill="#fce5d8" stroke="#e9783d" stroke-width="3"/>
+      <circle cx="345" cy="325" r="48" fill="#d9eadf" stroke="#176b52" stroke-width="3"/>
+      <text x="115" y="134" text-anchor="middle" font-size="28" font-weight="700" fill="#176b52">A</text>
+      <text x="335" y="134" text-anchor="middle" font-size="28" font-weight="700" fill="#3e4640">U</text>
+      <text x="225" y="284" text-anchor="middle" font-size="28" font-weight="700" fill="#b74f1e">S</text>
+      <text x="345" y="334" text-anchor="middle" font-size="28" font-weight="700" fill="#176b52">Y</text>
+      <path d="M213 211 L237 235 M237 211 L213 235" stroke="#e9783d" stroke-width="7" stroke-linecap="round"/>
+      <text x="225" y="405" text-anchor="middle" font-size="16" font-weight="700" fill="#68706a">A와 U 사이 경로를 S가 차단</text>
+    </g>
+
+    <g>
+      <path d="M585 155 L657 245" fill="none" stroke="#68706a" stroke-width="4" marker-end="url(#arrow-gray)"/>
+      <path d="M765 155 L693 245" fill="none" stroke="#68706a" stroke-width="4" marker-end="url(#arrow-gray)"/>
+      <path d="M780 135 C832 135 842 206 812 278" fill="none" stroke="#176b52" stroke-width="4" marker-end="url(#arrow-green)"/>
+      <path d="M608 98 C650 66 700 66 742 98" fill="none" stroke="#e9783d" stroke-width="4" stroke-dasharray="8 7"/>
+      <circle cx="565" cy="125" r="48" fill="#d9eadf" stroke="#176b52" stroke-width="3"/>
+      <circle cx="785" cy="125" r="48" fill="#eef0eb" stroke="#68706a" stroke-width="3"/>
+      <rect x="618" y="218" width="114" height="114" rx="18" fill="#fffefa" stroke="#e9783d" stroke-width="4"/>
+      <circle cx="675" cy="275" r="43" fill="#fce5d8" stroke="#e9783d" stroke-width="3"/>
+      <circle cx="795" cy="325" r="48" fill="#d9eadf" stroke="#176b52" stroke-width="3"/>
+      <text x="565" y="134" text-anchor="middle" font-size="28" font-weight="700" fill="#176b52">A</text>
+      <text x="785" y="134" text-anchor="middle" font-size="28" font-weight="700" fill="#3e4640">U</text>
+      <text x="675" y="284" text-anchor="middle" font-size="28" font-weight="700" fill="#b74f1e">S</text>
+      <text x="795" y="334" text-anchor="middle" font-size="28" font-weight="700" fill="#176b52">Y</text>
+      <text x="675" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#b74f1e">새 비인과적 연관성</text>
+      <text x="675" y="405" text-anchor="middle" font-size="16" font-weight="700" fill="#b74f1e">조건화가 A–U 경로를 연다</text>
+    </g>
+    <text x="450" y="456" text-anchor="middle" font-size="15" fill="#3e4640">DAG: A → S ← U → Y</text>
+  </g>
+</svg>

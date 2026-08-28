@@ -157,7 +157,7 @@ $A\leftarrow L\rightarrow Y$와 $A\rightarrow S\leftarrow U\rightarrow Y$를 나
 
 ## 다음 글
 
-다음 글에서는 처리 이후에 생기는 **매개변수(mediator)**를 배운다. 총효과와 직접효과가 어떻게 다른지, 매개변수를 무심코 통제하면 왜 알고 싶은 효과의 일부를 제거하는지 살펴볼 예정이다.
+다음 글에서는 처리 이후에 생기는 **매개변수(mediator)**를 배운다. [인과추론 입문 ④: 매개변수 통제와 총효과·직접효과 구분하기]({{ '/posts/causal-mediator-effects/' | relative_url }})에서 총효과 10점을 직접효과 4점과 간접효과 6점으로 나누고, 매개변수 통제가 분석 질문을 어떻게 바꾸는지 확인한다.
 
 ## 참고 자료
 

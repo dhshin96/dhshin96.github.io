@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 500" role="img" aria-labelledby="title desc">
+  <title id="title">시간에 따라 내려가는 Schoenfeld 잔차</title>
+  <desc id="desc">사건 순서 1부터 20까지의 Schoenfeld 잔차가 초반 양수에서 후반 음수로 이동하며, 점선을 따라 하향 추세를 보인다.</desc>
+  <rect width="920" height="500" rx="28" fill="#fffefa"/>
+  <text x="460" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1b211d">잔차가 시간과 무관하면 0 주변에 흩어진다</text>
+
+  <line x1="92" y1="82" x2="92" y2="400" stroke="#3e4640" stroke-width="2"/>
+  <line x1="92" y1="400" x2="850" y2="400" stroke="#3e4640" stroke-width="2"/>
+  <line x1="92" y1="244" x2="850" y2="244" stroke="#8a918b" stroke-width="2" stroke-dasharray="7 7"/>
+  <text x="33" y="241" transform="rotate(-90 33 241)" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#3e4640">Schoenfeld 잔차</text>
+  <text x="471" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#3e4640">사건 순서</text>
+  <text x="72" y="249" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="#606760">0</text>
+  <text x="92" y="421" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#606760">1</text>
+  <text x="850" y="421" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#606760">20</text>
+
+  <path d="M112 156 L832 348" fill="none" stroke="#e9783d" stroke-width="4" stroke-dasharray="10 8"/>
+  <g fill="#176b52" stroke="#ffffff" stroke-width="2">
+    <circle cx="112" cy="166" r="7"/><circle cx="150" cy="160" r="7"/><circle cx="188" cy="153" r="7"/>
+    <circle cx="226" cy="146" r="7"/><circle cx="264" cy="137" r="7"/><circle cx="302" cy="127" r="7"/>
+    <circle cx="340" cy="115" r="7"/><circle cx="378" cy="101" r="7"/>
+    <circle cx="416" cy="296" r="7"/><circle cx="454" cy="300" r="7"/><circle cx="492" cy="305" r="7"/>
+    <circle cx="530" cy="311" r="7"/><circle cx="568" cy="318" r="7"/><circle cx="606" cy="327" r="7"/>
+    <circle cx="644" cy="339" r="7"/><circle cx="682" cy="354" r="7"/><circle cx="720" cy="376" r="7"/>
+    <circle cx="758" cy="392" r="7"/><circle cx="796" cy="244" r="7"/><circle cx="834" cy="244" r="7"/>
+  </g>
+
+  <rect x="115" y="455" width="690" height="29" rx="12" fill="#edf6f0"/>
+  <text x="460" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#176b52">초반 평균 0.450 → 후반 평균 -0.375 · 시간 상관 -0.756</text>
+</svg>

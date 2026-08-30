@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">두 개의 최소 충분 조정 집합</title>
+  <desc id="desc">처리 A와 결과 Y 사이에 C와 L을 지나는 뒷문 경로와 U를 지나는 뒷문 경로가 있다. 첫 경로는 C 또는 L로, 둘째 경로는 U로 막아 C와 U 또는 L과 U를 최소 충분 조정 집합으로 고른다.</desc>
+  <defs>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#176b52"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#e9783d"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7a817c"/>
+    </marker>
+  </defs>
+  <rect width="960" height="600" rx="24" fill="#fffefa"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="480" y="48" text-anchor="middle" font-size="25" font-weight="700" fill="#1b211d">모든 뒷문 경로를 막되 중복 변수는 뺀다</text>
+
+    <path d="M171 186 L269 274" fill="none" stroke="#e9783d" stroke-width="5" marker-end="url(#arrow-orange)"/>
+    <path d="M184 150 L346 116" fill="none" stroke="#e9783d" stroke-width="5" marker-end="url(#arrow-orange)"/>
+    <path d="M424 129 C528 149 610 211 671 269" fill="none" stroke="#e9783d" stroke-width="5" marker-end="url(#arrow-orange)"/>
+    <path d="M176 410 L270 326" fill="none" stroke="#e9783d" stroke-width="5" marker-end="url(#arrow-orange)"/>
+    <path d="M184 438 C394 506 573 442 677 338" fill="none" stroke="#e9783d" stroke-width="5" marker-end="url(#arrow-orange)"/>
+    <path d="M352 300 L661 300" fill="none" stroke="#176b52" stroke-width="6" marker-end="url(#arrow-green)"/>
+    <path d="M730 151 L730 244" fill="none" stroke="#7a817c" stroke-width="4" marker-end="url(#arrow-gray)"/>
+
+    <g>
+      <circle cx="130" cy="150" r="54" fill="#fce5d8" stroke="#e9783d" stroke-width="4"/>
+      <text x="130" y="143" text-anchor="middle" font-size="28" font-weight="700" fill="#b74f1e">C</text>
+      <text x="130" y="171" text-anchor="middle" font-size="14" fill="#3e4640">기초 준비도</text>
+    </g>
+    <g>
+      <circle cx="390" cy="108" r="54" fill="#fce5d8" stroke="#e9783d" stroke-width="4"/>
+      <text x="390" y="101" text-anchor="middle" font-size="28" font-weight="700" fill="#b74f1e">L</text>
+      <text x="390" y="129" text-anchor="middle" font-size="14" fill="#3e4640">사전 문제풀이</text>
+    </g>
+    <g>
+      <circle cx="130" cy="438" r="54" fill="#fce5d8" stroke="#e9783d" stroke-width="4"/>
+      <text x="130" y="431" text-anchor="middle" font-size="28" font-weight="700" fill="#b74f1e">U</text>
+      <text x="130" y="459" text-anchor="middle" font-size="14" fill="#3e4640">학습 의욕</text>
+    </g>
+    <g>
+      <circle cx="300" cy="300" r="55" fill="#d9eadf" stroke="#176b52" stroke-width="4"/>
+      <text x="300" y="293" text-anchor="middle" font-size="29" font-weight="700" fill="#176b52">A</text>
+      <text x="300" y="321" text-anchor="middle" font-size="14" fill="#3e4640">새 학습법</text>
+    </g>
+    <g>
+      <circle cx="720" cy="300" r="55" fill="#d9eadf" stroke="#176b52" stroke-width="4"/>
+      <text x="720" y="293" text-anchor="middle" font-size="29" font-weight="700" fill="#176b52">Y</text>
+      <text x="720" y="321" text-anchor="middle" font-size="14" fill="#3e4640">시험 점수</text>
+    </g>
+    <g>
+      <circle cx="730" cy="100" r="50" fill="#eef0eb" stroke="#7a817c" stroke-width="3"/>
+      <text x="730" y="94" text-anchor="middle" font-size="27" font-weight="700" fill="#59605b">W</text>
+      <text x="730" y="121" text-anchor="middle" font-size="13" fill="#59605b">결과의 원인</text>
+    </g>
+
+    <rect x="252" y="510" width="208" height="54" rx="27" fill="#d9eadf"/>
+    <text x="356" y="544" text-anchor="middle" font-size="20" font-weight="700" fill="#176b52">최소 집합 {C, U}</text>
+    <rect x="500" y="510" width="208" height="54" rx="27" fill="#d9eadf"/>
+    <text x="604" y="544" text-anchor="middle" font-size="20" font-weight="700" fill="#176b52">최소 집합 {L, U}</text>
+  </g>
+</svg>

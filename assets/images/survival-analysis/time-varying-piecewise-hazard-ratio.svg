@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 500" role="img" aria-labelledby="title desc">
+  <title id="title">상수 위험비와 구간별 시간가변 위험비 비교</title>
+  <desc id="desc">상수 Cox 모형은 전체 기간의 위험비를 0.932로 표시하고, 시간가변 효과 모형은 시간 10까지 2.068, 이후 0.364인 계단형 위험비를 표시한다.</desc>
+  <rect width="920" height="500" rx="28" fill="#fffefa"/>
+  <text x="460" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1b211d">한 숫자가 시간대별 반대 효과를 가릴 수 있다</text>
+
+  <line x1="94" y1="82" x2="94" y2="400" stroke="#3e4640" stroke-width="2"/>
+  <line x1="94" y1="400" x2="850" y2="400" stroke="#3e4640" stroke-width="2"/>
+  <line x1="94" y1="272" x2="850" y2="272" stroke="#8a918b" stroke-width="2" stroke-dasharray="7 7"/>
+  <text x="36" y="241" transform="rotate(-90 36 241)" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#3e4640">위험비 HR(t)</text>
+  <text x="472" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#3e4640">시간</text>
+
+  <g font-family="Arial, sans-serif" font-size="14" fill="#606760">
+    <text x="76" y="405" text-anchor="end">0</text>
+    <text x="76" y="277" text-anchor="end">1</text>
+    <text x="76" y="149" text-anchor="end">2</text>
+    <text x="94" y="421" text-anchor="middle">0</text>
+    <text x="472" y="421" text-anchor="middle">10</text>
+    <text x="850" y="421" text-anchor="middle">20</text>
+  </g>
+
+  <line x1="472" y1="82" x2="472" y2="400" stroke="#b7bdb8" stroke-width="2" stroke-dasharray="6 7"/>
+  <text x="484" y="101" font-family="Arial, sans-serif" font-size="14" fill="#606760">경계 t=10</text>
+
+  <path d="M112 281 L832 281" fill="none" stroke="#6f7680" stroke-width="4" stroke-dasharray="10 8"/>
+  <rect x="620" y="245" width="196" height="29" rx="12" fill="#eef0f2"/>
+  <text x="718" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#505760">상수 HR = 0.932</text>
+
+  <path d="M112 136 L472 136 L472 353 L832 353" fill="none" stroke="#176b52" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="472" cy="136" r="7" fill="#176b52" stroke="#fff" stroke-width="2"/>
+  <circle cx="472" cy="353" r="7" fill="#176b52" stroke="#fff" stroke-width="2"/>
+  <rect x="160" y="93" width="214" height="31" rx="12" fill="#edf6f0"/>
+  <text x="267" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#176b52">초반 HR = 2.068</text>
+  <rect x="555" y="359" width="214" height="31" rx="12" fill="#edf6f0"/>
+  <text x="662" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#176b52">후반 HR = 0.364</text>
+
+  <text x="460" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#176b52">상호작용 계수: beta = 0.727 · gamma = -1.737</text>
+</svg>

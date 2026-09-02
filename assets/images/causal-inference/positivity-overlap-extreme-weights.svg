@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">겹침 부족과 극단 역확률 가중치</title>
+  <desc id="desc">준비도가 낮은 층에는 처리군 40명과 대조군 60명이 있지만 준비도가 높은 층에는 처리군 99명과 대조군 1명만 있다. 높은 준비도 대조군 한 명의 역확률 가중치는 100이다.</desc>
+  <defs>
+    <linearGradient id="treated" x1="0" x2="1">
+      <stop offset="0" stop-color="#176b52"/>
+      <stop offset="1" stop-color="#2b9171"/>
+    </linearGradient>
+    <linearGradient id="control" x1="0" x2="1">
+      <stop offset="0" stop-color="#e9783d"/>
+      <stop offset="1" stop-color="#f2a06f"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" rx="24" fill="#fffefa"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="480" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#1b211d">확률이 0에 가까우면 한 관측치의 무게가 커진다</text>
+    <g transform="translate(80 108)">
+      <rect width="370" height="378" rx="22" fill="#f3f6f1" stroke="#cbd5cd" stroke-width="2"/>
+      <text x="185" y="46" text-anchor="middle" font-size="23" font-weight="700" fill="#26312a">준비도 낮음: 겹침 충분</text>
+      <text x="185" y="76" text-anchor="middle" font-size="17" fill="#59605b">성향점수 e(0) = 0.40</text>
+      <rect x="50" y="112" width="108" height="150" rx="14" fill="url(#treated)"/>
+      <text x="104" y="180" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">40명</text>
+      <text x="104" y="211" text-anchor="middle" font-size="16" fill="#ffffff">처리군</text>
+      <rect x="212" y="112" width="108" height="200" rx="14" fill="url(#control)"/>
+      <text x="266" y="205" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">60명</text>
+      <text x="266" y="236" text-anchor="middle" font-size="16" fill="#ffffff">대조군</text>
+      <text x="104" y="344" text-anchor="middle" font-size="17" font-weight="700" fill="#176b52">가중치 2.50</text>
+      <text x="266" y="344" text-anchor="middle" font-size="17" font-weight="700" fill="#b74f1e">가중치 1.67</text>
+    </g>
+    <g transform="translate(510 108)">
+      <rect width="370" height="378" rx="22" fill="#fff2e9" stroke="#efbf9f" stroke-width="2"/>
+      <text x="185" y="46" text-anchor="middle" font-size="23" font-weight="700" fill="#26312a">준비도 높음: 겹침 부족</text>
+      <text x="185" y="76" text-anchor="middle" font-size="17" fill="#59605b">성향점수 e(1) = 0.99</text>
+      <rect x="50" y="112" width="108" height="220" rx="14" fill="url(#treated)"/>
+      <text x="104" y="215" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">99명</text>
+      <text x="104" y="246" text-anchor="middle" font-size="16" fill="#ffffff">처리군</text>
+      <rect x="212" y="309" width="108" height="23" rx="11" fill="url(#control)"/>
+      <text x="266" y="292" text-anchor="middle" font-size="21" font-weight="700" fill="#b74f1e">1명</text>
+      <text x="104" y="360" text-anchor="middle" font-size="17" font-weight="700" fill="#176b52">가중치 1.01</text>
+      <rect x="199" y="344" width="134" height="43" rx="21" fill="#e9783d"/>
+      <text x="266" y="372" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">가중치 100</text>
+    </g>
+    <rect x="170" y="524" width="620" height="48" rx="24" fill="#fce5d8"/>
+    <text x="480" y="555" text-anchor="middle" font-size="20" font-weight="700" fill="#9a431d">계산은 가능하지만 대조군 정보가 한 사람에게 집중된다</text>
+  </g>
+</svg>

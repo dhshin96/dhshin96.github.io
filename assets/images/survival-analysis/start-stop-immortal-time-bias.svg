@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">불멸시간 편향과 시작–종료 자료 비교</title>
+  <desc id="desc">왼쪽은 미래에 치료받은 A와 B의 치료 전 시간을 처음부터 치료군으로 잘못 분류한다. 오른쪽은 각 사람의 시간선을 치료 시점에서 나누어 치료 전은 비노출, 치료 후는 노출로 기록한다.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fbf9}.panel{fill:#fff;stroke:#c7d8cf;stroke-width:2}.head{font:700 24px sans-serif;fill:#173f35}.sub{font:400 15px sans-serif;fill:#526a63}.label{font:700 16px sans-serif;fill:#264b41}.tick{font:400 13px sans-serif;fill:#657972}.axis{stroke:#a9bdb5;stroke-width:2}.pre{stroke:#4f8f79;stroke-width:14;stroke-linecap:round}.post{stroke:#e09b52;stroke-width:14;stroke-linecap:round}.wrong{stroke:#e09b52;stroke-width:14;stroke-linecap:round;stroke-dasharray:9 7}.event{fill:#b74d4d}.censor{fill:#fff;stroke:#3f6f60;stroke-width:3}.cut{stroke:#b97735;stroke-width:2;stroke-dasharray:5 5}.note{font:700 14px sans-serif;fill:#a45f22}.legend{font:400 14px sans-serif;fill:#405a52}
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="540" rx="24"/>
+  <text class="head" x="48" y="48">미래의 노출을 과거에 붙이지 않기</text>
+  <text class="sub" x="48" y="76">같은 추적시간도 상태를 언제 바꾸느냐에 따라 다른 집단의 시간이 된다.</text>
+
+  <rect class="panel" x="40" y="105" width="410" height="330" rx="18"/>
+  <text class="head" x="65" y="142">잘못된 고정 분류</text>
+  <text class="sub" x="65" y="169">언젠가 치료받으면 시간 0부터 치료군</text>
+  <line class="axis" x1="125" y1="205" x2="405" y2="205"/>
+  <line class="axis" x1="125" y1="285" x2="405" y2="285"/>
+  <line class="axis" x1="125" y1="365" x2="405" y2="365"/>
+  <text class="label" x="75" y="211">A</text><text class="label" x="75" y="291">B</text><text class="label" x="75" y="371">C</text>
+  <line class="wrong" x1="125" y1="205" x2="405" y2="205"/>
+  <line class="wrong" x1="125" y1="285" x2="349" y2="285"/>
+  <line class="pre" x1="125" y1="365" x2="209" y2="365"/>
+  <circle class="event" cx="405" cy="205" r="9"/><rect class="censor" x="341" y="277" width="16" height="16"/>
+  <circle class="event" cx="209" cy="365" r="9"/>
+  <line class="cut" x1="293" y1="185" x2="293" y2="225"/><line class="cut" x1="237" y1="265" x2="237" y2="305"/>
+  <text class="note" x="252" y="244">실제 치료 6</text><text class="note" x="196" y="324">실제 치료 4</text>
+
+  <rect class="panel" x="490" y="105" width="430" height="330" rx="18"/>
+  <text class="head" x="515" y="142">올바른 시작–종료 분류</text>
+  <text class="sub" x="515" y="169">치료 시점 전은 0, 이후는 1</text>
+  <line class="axis" x1="575" y1="205" x2="875" y2="205"/>
+  <line class="axis" x1="575" y1="285" x2="875" y2="285"/>
+  <line class="axis" x1="575" y1="365" x2="875" y2="365"/>
+  <text class="label" x="525" y="211">A</text><text class="label" x="525" y="291">B</text><text class="label" x="525" y="371">C</text>
+  <line class="pre" x1="575" y1="205" x2="755" y2="205"/><line class="post" x1="755" y1="205" x2="875" y2="205"/>
+  <line class="pre" x1="575" y1="285" x2="695" y2="285"/><line class="post" x1="695" y1="285" x2="815" y2="285"/>
+  <line class="pre" x1="575" y1="365" x2="665" y2="365"/>
+  <line class="cut" x1="755" y1="185" x2="755" y2="225"/><line class="cut" x1="695" y1="265" x2="695" y2="305"/>
+  <circle class="event" cx="875" cy="205" r="9"/><rect class="censor" x="807" y="277" width="16" height="16"/>
+  <circle class="event" cx="665" cy="365" r="9"/>
+  <text class="tick" x="565" y="399">0</text><text class="tick" x="745" y="244">6</text><text class="tick" x="865" y="244">10</text>
+  <text class="tick" x="685" y="324">4</text><text class="tick" x="805" y="324">8</text><text class="tick" x="655" y="399">3</text>
+
+  <line class="pre" x1="105" y1="482" x2="155" y2="482"/><text class="legend" x="168" y="487">비노출 구간</text>
+  <line class="post" x1="300" y1="482" x2="350" y2="482"/><text class="legend" x="363" y="487">노출 구간</text>
+  <circle class="event" cx="518" cy="482" r="8"/><text class="legend" x="535" y="487">사건</text>
+  <rect class="censor" x="626" y="474" width="16" height="16"/><text class="legend" x="653" y="487">검열</text>
+  <text class="legend" x="756" y="487">구간 표기: (start, stop]</text>
+</svg>

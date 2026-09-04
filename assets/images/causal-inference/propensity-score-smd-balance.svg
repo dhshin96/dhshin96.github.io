@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">성향점수 가중 전후의 공변량 균형</title>
+  <desc id="desc">가중 전 처리군의 높은 준비도 비율은 66.7퍼센트, 대조군은 25퍼센트로 SMD가 0.92다. 가중 후 두 집단의 비율은 모두 50퍼센트가 되어 SMD가 0이다.</desc>
+  <defs>
+    <linearGradient id="treated" x1="0" x2="1">
+      <stop offset="0" stop-color="#176b52"/>
+      <stop offset="1" stop-color="#2b9171"/>
+    </linearGradient>
+    <linearGradient id="control" x1="0" x2="1">
+      <stop offset="0" stop-color="#e9783d"/>
+      <stop offset="1" stop-color="#f2a06f"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" rx="24" fill="#fffefa"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="480" y="50" text-anchor="middle" font-size="27" font-weight="700" fill="#1b211d">가중치 계산 뒤에는 공변량 균형을 확인한다</text>
+    <g transform="translate(70 92)">
+      <rect width="380" height="408" rx="22" fill="#fff2e9" stroke="#efbf9f" stroke-width="2"/>
+      <text x="190" y="44" text-anchor="middle" font-size="23" font-weight="700" fill="#26312a">가중 전</text>
+      <text x="190" y="75" text-anchor="middle" font-size="18" fill="#9a431d">|SMD| = 0.92</text>
+      <line x1="68" y1="318" x2="332" y2="318" stroke="#9aa39d" stroke-width="2"/>
+      <rect x="90" y="151" width="78" height="167" rx="12" fill="url(#treated)"/>
+      <rect x="212" y="255" width="78" height="63" rx="12" fill="url(#control)"/>
+      <text x="129" y="139" text-anchor="middle" font-size="20" font-weight="700" fill="#176b52">66.7%</text>
+      <text x="251" y="243" text-anchor="middle" font-size="20" font-weight="700" fill="#b74f1e">25.0%</text>
+      <text x="129" y="350" text-anchor="middle" font-size="17" fill="#26312a">처리군</text>
+      <text x="251" y="350" text-anchor="middle" font-size="17" fill="#26312a">대조군</text>
+      <text x="190" y="387" text-anchor="middle" font-size="17" fill="#59605b">높은 준비도 비율이 다르다</text>
+    </g>
+    <path d="M466 295 H494" stroke="#59605b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M488 285 L500 295 L488 305" fill="none" stroke="#59605b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(510 92)">
+      <rect width="380" height="408" rx="22" fill="#f3f6f1" stroke="#cbd5cd" stroke-width="2"/>
+      <text x="190" y="44" text-anchor="middle" font-size="23" font-weight="700" fill="#26312a">역확률 가중 후</text>
+      <text x="190" y="75" text-anchor="middle" font-size="18" fill="#176b52">|SMD| = 0.00</text>
+      <line x1="68" y1="318" x2="332" y2="318" stroke="#9aa39d" stroke-width="2"/>
+      <rect x="90" y="193" width="78" height="125" rx="12" fill="url(#treated)"/>
+      <rect x="212" y="193" width="78" height="125" rx="12" fill="url(#control)"/>
+      <text x="129" y="181" text-anchor="middle" font-size="20" font-weight="700" fill="#176b52">50.0%</text>
+      <text x="251" y="181" text-anchor="middle" font-size="20" font-weight="700" fill="#b74f1e">50.0%</text>
+      <text x="129" y="350" text-anchor="middle" font-size="17" fill="#26312a">처리군</text>
+      <text x="251" y="350" text-anchor="middle" font-size="17" fill="#26312a">대조군</text>
+      <text x="190" y="387" text-anchor="middle" font-size="17" fill="#59605b">가중된 분포가 같아졌다</text>
+    </g>
+    <rect x="180" y="530" width="600" height="46" rx="23" fill="#e4f2eb"/>
+    <text x="480" y="560" text-anchor="middle" font-size="19" font-weight="700" fill="#176b52">결과를 보기 전에 처리 전 공변량의 균형을 진단한다</text>
+  </g>
+</svg>

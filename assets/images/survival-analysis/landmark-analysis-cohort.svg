@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">랜드마크 시간 4에서 분석 대상을 다시 만드는 과정</title>
+  <desc id="desc">시간 0의 10명 중 시간 4 전에 사건이 발생한 G와 H를 제외한다. 시간 4까지 치료받은 A, B, C, I 네 명은 노출군, D, E, F, J 네 명은 비노출군으로 고정하고 시간 8까지의 사건을 비교한다.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fbf9}.panel{fill:#fff;stroke:#c7d8cf;stroke-width:2}.head{font:700 24px sans-serif;fill:#173f35}.sub{font:400 15px sans-serif;fill:#526a63}.label{font:700 16px sans-serif;fill:#264b41}.small{font:400 14px sans-serif;fill:#526a63}.count{font:700 22px sans-serif;fill:#173f35}.axis{stroke:#9db4ab;stroke-width:3}.landmark{stroke:#b97735;stroke-width:3;stroke-dasharray:7 6}.exposed{fill:#e8f4ef;stroke:#4f8f79;stroke-width:2}.unexposed{fill:#fff2e5;stroke:#d18b45;stroke-width:2}.excluded{fill:#f7eaea;stroke:#b75b5b;stroke-width:2}.event{fill:#b74d4d}.arrow{stroke:#66877c;stroke-width:3;fill:none;marker-end:url(#tip)}.note{font:700 14px sans-serif;fill:#a45f22}
+    </style>
+    <marker id="tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#66877c"/></marker>
+  </defs>
+  <rect class="bg" width="960" height="560" rx="24"/>
+  <text class="head" x="48" y="48">시간 4에서 과거만 보고 새 출발선 만들기</text>
+  <text class="sub" x="48" y="76">랜드마크 전 사건은 제외하고, 그 시점의 치료 상태로 이후 위험을 비교한다.</text>
+
+  <rect class="panel" x="42" y="108" width="250" height="330" rx="18"/>
+  <text class="label" x="67" y="143">시간 0: 전체 코호트</text>
+  <text class="count" x="67" y="180">10명</text>
+  <line class="axis" x1="74" y1="232" x2="254" y2="232"/>
+  <text class="small" x="67" y="213">0</text><text class="small" x="243" y="213">8</text>
+  <line class="landmark" x1="164" y1="198" x2="164" y2="386"/>
+  <text class="note" x="133" y="408">랜드마크 4</text>
+  <circle class="event" cx="108" cy="270" r="9"/><text class="small" x="125" y="275">H: 시간 2 사건</text>
+  <circle class="event" cx="130" cy="315" r="9"/><text class="small" x="147" y="320">G: 시간 3 사건</text>
+  <text class="small" x="67" y="362">나머지 8명은 시간 4 도달</text>
+
+  <path class="arrow" d="M 312 274 L 365 274"/>
+  <text class="small" x="308" y="251">시간 4에서</text>
+  <text class="small" x="312" y="295">표본 재구성</text>
+
+  <rect class="panel" x="390" y="108" width="528" height="330" rx="18"/>
+  <text class="label" x="415" y="143">시간 4: 사건 없이 남은 8명</text>
+  <rect class="exposed" x="415" y="170" width="220" height="210" rx="16"/>
+  <text class="label" x="437" y="204">치료군 A(4)=1</text>
+  <text class="count" x="437" y="240">A · B · C · I</text>
+  <text class="small" x="437" y="275">시간 4까지 치료 시작</text>
+  <text class="small" x="437" y="313">시간 8까지 사건 2명</text>
+  <text class="label" x="437" y="348">위험 2/4 = 0.500</text>
+
+  <rect class="unexposed" x="665" y="170" width="228" height="210" rx="16"/>
+  <text class="label" x="687" y="204">비치료군 A(4)=0</text>
+  <text class="count" x="687" y="240">D · E · F · J</text>
+  <text class="small" x="687" y="275">시간 4까지 치료 없음</text>
+  <text class="small" x="687" y="313">시간 8까지 사건 2명</text>
+  <text class="label" x="687" y="348">위험 2/4 = 0.500</text>
+  <text class="note" x="676" y="406">D의 시간 5 치료는 분류에 쓰지 않음</text>
+
+  <rect class="excluded" x="188" y="466" width="584" height="58" rx="14"/>
+  <text class="label" x="214" y="501">제외: G, H</text>
+  <text class="small" x="323" y="501">시간 4 이전 사건 → 랜드마크 이후 위험집합에 들어갈 수 없음</text>
+</svg>

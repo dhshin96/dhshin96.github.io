@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">최근접 이웃 매칭과 캘리퍼</title>
+  <desc id="desc">처리군과 대조군의 성향점수를 연결한다. 가까운 다섯 쌍은 거리가 0.01이라 허용되고, 0.95와 0.65의 먼 쌍은 거리 0.30으로 캘리퍼 0.05를 넘어 제외된다.</desc>
+  <defs>
+    <linearGradient id="treated" x1="0" x2="1">
+      <stop offset="0" stop-color="#176b52"/>
+      <stop offset="1" stop-color="#2b9171"/>
+    </linearGradient>
+    <linearGradient id="control" x1="0" x2="1">
+      <stop offset="0" stop-color="#e9783d"/>
+      <stop offset="1" stop-color="#f2a06f"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="620" rx="24" fill="#fffefa"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="480" y="48" text-anchor="middle" font-size="27" font-weight="700" fill="#1b211d">가장 가까워도 캘리퍼 밖이면 짝짓지 않는다</text>
+    <text x="245" y="92" text-anchor="middle" font-size="21" font-weight="700" fill="#176b52">처리군 성향점수</text>
+    <text x="715" y="92" text-anchor="middle" font-size="21" font-weight="700" fill="#b74f1e">대조군 성향점수</text>
+    <g stroke="#7b8b81" stroke-width="4" stroke-linecap="round">
+      <line x1="315" y1="132" x2="645" y2="132"/>
+      <line x1="315" y1="202" x2="645" y2="202"/>
+      <line x1="315" y1="272" x2="645" y2="272"/>
+      <line x1="315" y1="342" x2="645" y2="342"/>
+      <line x1="315" y1="412" x2="645" y2="412"/>
+    </g>
+    <g stroke="#c54d3e" stroke-width="4" stroke-dasharray="11 9" stroke-linecap="round">
+      <line x1="315" y1="482" x2="645" y2="482"/>
+    </g>
+    <g fill="url(#treated)">
+      <circle cx="285" cy="132" r="29"/><circle cx="285" cy="202" r="29"/><circle cx="285" cy="272" r="29"/>
+      <circle cx="285" cy="342" r="29"/><circle cx="285" cy="412" r="29"/><circle cx="285" cy="482" r="29"/>
+    </g>
+    <g fill="url(#control)">
+      <circle cx="675" cy="132" r="29"/><circle cx="675" cy="202" r="29"/><circle cx="675" cy="272" r="29"/>
+      <circle cx="675" cy="342" r="29"/><circle cx="675" cy="412" r="29"/><circle cx="675" cy="482" r="29"/>
+    </g>
+    <g fill="#ffffff" font-size="17" font-weight="700" text-anchor="middle">
+      <text x="285" y="138">0.20</text><text x="285" y="208">0.30</text><text x="285" y="278">0.40</text>
+      <text x="285" y="348">0.50</text><text x="285" y="418">0.60</text><text x="285" y="488">0.95</text>
+      <text x="675" y="138">0.19</text><text x="675" y="208">0.29</text><text x="675" y="278">0.39</text>
+      <text x="675" y="348">0.49</text><text x="675" y="418">0.59</text><text x="675" y="488">0.65</text>
+    </g>
+    <g font-size="17" font-weight="700" text-anchor="middle">
+      <text x="480" y="124" fill="#176b52">거리 0.01</text>
+      <text x="480" y="194" fill="#176b52">거리 0.01</text>
+      <text x="480" y="264" fill="#176b52">거리 0.01</text>
+      <text x="480" y="334" fill="#176b52">거리 0.01</text>
+      <text x="480" y="404" fill="#176b52">거리 0.01</text>
+      <text x="480" y="474" fill="#c54d3e">거리 0.30 · 제외</text>
+    </g>
+    <rect x="155" y="545" width="650" height="48" rx="24" fill="#e4f2eb"/>
+    <text x="480" y="576" text-anchor="middle" font-size="19" font-weight="700" fill="#176b52">캘리퍼 0.05: 6쌍에서 5쌍, SMD 0.28에서 0.07</text>
+  </g>
+</svg>

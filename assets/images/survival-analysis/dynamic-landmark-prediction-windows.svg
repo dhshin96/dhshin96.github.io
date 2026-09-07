@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">세 랜드마크 시점의 동적 생존예측 창</title>
+  <desc id="desc">시간 2, 4, 6에서 길이 4인 예측창을 각각 시간 6, 8, 10까지 이동한다. 각 시점의 대상 수와 조건부 생존확률은 8명과 0.750, 7명과 0.514, 5명과 0.300이다.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fbf9}.panel{fill:#fff;stroke:#c7d8cf;stroke-width:2}.head{font:700 24px sans-serif;fill:#173f35}.sub{font:400 15px sans-serif;fill:#526a63}.label{font:700 17px sans-serif;fill:#264b41}.small{font:400 14px sans-serif;fill:#526a63}.value{font:700 20px sans-serif;fill:#173f35}.axis{stroke:#9db4ab;stroke-width:4}.window{stroke:#4f8f79;stroke-width:10;stroke-linecap:round}.landmark{stroke:#b97735;stroke-width:3;stroke-dasharray:7 6}.dot{fill:#b97735}.end{fill:#4f8f79}.note{font:700 14px sans-serif;fill:#a45f22}
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="560" rx="24"/>
+  <text class="head" x="48" y="48">현재를 옮기면 같은 길이의 미래 창도 함께 이동한다</text>
+  <text class="sub" x="48" y="76">각 랜드마크에서 아직 사건 없이 남은 대상만으로 다음 4시간 생존확률을 다시 계산한다.</text>
+
+  <rect class="panel" x="42" y="105" width="876" height="112" rx="18"/>
+  <text class="label" x="68" y="139">랜드마크 s=2</text>
+  <text class="small" x="68" y="166">대상 8명</text>
+  <line class="axis" x1="260" y1="158" x2="830" y2="158"/>
+  <line class="window" x1="374" y1="158" x2="602" y2="158"/>
+  <line class="landmark" x1="374" y1="126" x2="374" y2="191"/>
+  <circle class="dot" cx="374" cy="158" r="9"/><circle class="end" cx="602" cy="158" r="9"/>
+  <text class="note" x="354" y="205">2</text><text class="small" x="584" y="205">끝점 6</text>
+  <text class="value" x="705" y="150">S=0.750</text><text class="small" x="705" y="178">4시간 위험 0.250</text>
+
+  <rect class="panel" x="42" y="237" width="876" height="112" rx="18"/>
+  <text class="label" x="68" y="271">랜드마크 s=4</text>
+  <text class="small" x="68" y="298">대상 7명</text>
+  <line class="axis" x1="260" y1="290" x2="830" y2="290"/>
+  <line class="window" x1="488" y1="290" x2="716" y2="290"/>
+  <line class="landmark" x1="488" y1="258" x2="488" y2="323"/>
+  <circle class="dot" cx="488" cy="290" r="9"/><circle class="end" cx="716" cy="290" r="9"/>
+  <text class="note" x="468" y="337">4</text><text class="small" x="698" y="337">끝점 8</text>
+  <text class="value" x="760" y="282">S=0.514</text><text class="small" x="760" y="310">위험 0.486</text>
+
+  <rect class="panel" x="42" y="369" width="876" height="112" rx="18"/>
+  <text class="label" x="68" y="403">랜드마크 s=6</text>
+  <text class="small" x="68" y="430">대상 5명</text>
+  <line class="axis" x1="260" y1="422" x2="830" y2="422"/>
+  <line class="window" x1="602" y1="422" x2="830" y2="422"/>
+  <line class="landmark" x1="602" y1="390" x2="602" y2="455"/>
+  <circle class="dot" cx="602" cy="422" r="9"/><circle class="end" cx="830" cy="422" r="9"/>
+  <text class="note" x="582" y="469">6</text><text class="small" x="795" y="469">끝점 10</text>
+  <text class="value" x="688" y="414">S=0.300</text><text class="small" x="688" y="442">위험 0.700</text>
+
+  <rect x="186" y="506" width="588" height="34" rx="12" fill="#e8f4ef"/>
+  <text class="small" x="218" y="528">주황색 점 = 예측 시점 s · 초록색 선 = 같은 길이 w=4의 미래 예측창</text>
+</svg>

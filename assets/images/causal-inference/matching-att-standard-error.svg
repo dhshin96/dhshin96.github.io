@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">매칭 쌍에서 ATT와 표준오차를 계산하는 흐름</title>
+  <desc id="desc">다섯 매칭 쌍의 처리군과 대조군 결과를 빼 쌍별 차이를 만들고, 그 평균 6점과 표준오차 0.71점을 계산한다.</desc>
+  <rect width="960" height="560" rx="28" fill="#f8fafc"/>
+  <text x="480" y="54" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="28" font-weight="700" fill="#0f172a">매칭 쌍을 유지해 ATT와 표준오차 계산하기</text>
+
+  <rect x="54" y="92" width="360" height="390" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="234" y="130" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#334155">1. 쌍마다 결과 차이 만들기</text>
+  <text x="127" y="169" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#1d4ed8">처리군</text>
+  <text x="235" y="169" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#047857">대조군</text>
+  <text x="350" y="169" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#7c3aed">차이</text>
+
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" font-size="18" text-anchor="middle">
+    <g fill="#eff6ff" stroke="#93c5fd"><rect x="82" y="190" width="90" height="44" rx="10"/><rect x="82" y="244" width="90" height="44" rx="10"/><rect x="82" y="298" width="90" height="44" rx="10"/><rect x="82" y="352" width="90" height="44" rx="10"/><rect x="82" y="406" width="90" height="44" rx="10"/></g>
+    <g fill="#ecfdf5" stroke="#6ee7b7"><rect x="190" y="190" width="90" height="44" rx="10"/><rect x="190" y="244" width="90" height="44" rx="10"/><rect x="190" y="298" width="90" height="44" rx="10"/><rect x="190" y="352" width="90" height="44" rx="10"/><rect x="190" y="406" width="90" height="44" rx="10"/></g>
+    <g fill="#f5f3ff" stroke="#c4b5fd"><rect x="305" y="190" width="90" height="44" rx="10"/><rect x="305" y="244" width="90" height="44" rx="10"/><rect x="305" y="298" width="90" height="44" rx="10"/><rect x="305" y="352" width="90" height="44" rx="10"/><rect x="305" y="406" width="90" height="44" rx="10"/></g>
+    <g fill="#1e3a8a"><text x="127" y="218">82</text><text x="127" y="272">74</text><text x="127" y="326">91</text><text x="127" y="380">78</text><text x="127" y="434">86</text></g>
+    <g fill="#065f46"><text x="235" y="218">76</text><text x="235" y="272">70</text><text x="235" y="326">83</text><text x="235" y="380">73</text><text x="235" y="434">79</text></g>
+    <g fill="#5b21b6" font-weight="700"><text x="350" y="218">6</text><text x="350" y="272">4</text><text x="350" y="326">8</text><text x="350" y="380">5</text><text x="350" y="434">7</text></g>
+  </g>
+
+  <path d="M438 286 H506" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M494 274 L510 286 L494 298" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="536" y="118" width="370" height="152" rx="22" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="721" y="160" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#3730a3">2. 차이의 평균</text>
+  <text x="721" y="208" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26" font-weight="700" fill="#312e81">ATT = 6.0점</text>
+  <text x="721" y="240" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#475569">(6 + 4 + 8 + 5 + 7) ÷ 5</text>
+
+  <rect x="536" y="302" width="370" height="152" rx="22" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+  <text x="721" y="344" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#9a3412">3. 차이의 변동</text>
+  <text x="721" y="392" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="26" font-weight="700" fill="#7c2d12">쌍 기준 SE = 0.71점</text>
+  <text x="721" y="424" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#475569">차이의 표준편차 1.58 ÷ √5</text>
+
+  <rect x="208" y="508" width="544" height="34" rx="17" fill="#0f172a"/>
+  <text x="480" y="531" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#ffffff">효과도 불확실성도 같은 매칭 쌍을 단위로 계산한다</text>
+</svg>

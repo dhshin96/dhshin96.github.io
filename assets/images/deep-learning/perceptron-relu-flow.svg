@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 410" role="img" aria-labelledby="title desc">
+  <title id="title">두 입력의 가중합과 ReLU 변환</title>
+  <desc id="desc">가중치 2와 -1 및 편향 -0.5를 고정한다. 입력 1,0의 가중합은 1.5이고 ReLU 출력은 1.5다. 입력 0,1의 가중합은 -1.5이고 ReLU 출력은 0이다.</desc>
+  <rect width="920" height="410" rx="20" fill="#f8fbf9"/>
+  <text x="36" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#183d32">같은 가중치, 다른 입력: z = 2x₁ − x₂ − 0.5</text>
+  <text x="36" y="82" font-family="Arial, sans-serif" font-size="16" fill="#36574c">가중합 z를 계산한 다음 ReLU(z) = max(0, z)를 적용</text>
+  <rect x="34" y="116" width="852" height="116" rx="16" fill="#e7f3ec" stroke="#acd4ba"/>
+  <text x="56" y="157" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#183d32">입력 (1, 0)</text>
+  <text x="240" y="157" font-family="Arial, sans-serif" font-size="19" fill="#183d32">2×1 − 1×0 − 0.5</text>
+  <path d="M466 151h52" stroke="#477e64" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="536" y="157" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#183d32">z = 1.5</text>
+  <path d="M642 151h42" stroke="#477e64" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="700" y="157" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#146749">ReLU = 1.5</text>
+  <text x="56" y="198" font-family="Arial, sans-serif" font-size="16" fill="#36574c">양수 구간: 가중합을 그대로 출력</text>
+  <rect x="34" y="252" width="852" height="116" rx="16" fill="#edf2f7" stroke="#b9c9d8"/>
+  <text x="56" y="293" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#253f57">입력 (0, 1)</text>
+  <text x="240" y="293" font-family="Arial, sans-serif" font-size="19" fill="#253f57">2×0 − 1×1 − 0.5</text>
+  <path d="M466 287h52" stroke="#637e99" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="536" y="293" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#253f57">z = −1.5</text>
+  <path d="M642 287h42" stroke="#637e99" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="700" y="293" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#255f8c">ReLU = 0</text>
+  <text x="56" y="334" font-family="Arial, sans-serif" font-size="16" fill="#4c657c">음수 구간: 0으로 바꿔 출력</text>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#637e99"/></marker></defs>
+</svg>

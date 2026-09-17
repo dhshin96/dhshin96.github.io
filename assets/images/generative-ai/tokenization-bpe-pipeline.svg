@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">문장에서 토큰과 정수 ID로 이어지는 토큰화 흐름</title>
+  <desc id="desc">입력 문장 토큰화 토큰 문장이 네 개의 서브워드 토큰으로 나뉜 뒤 정수 ID 3, 2, 0, 1로 변환된다.</desc>
+  <rect width="1200" height="640" rx="28" fill="#f8fafc"/>
+  <text x="70" y="82" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700" fill="#0f172a">토큰화: 문자열 → 토큰 → 정수 ID</text>
+  <text x="70" y="122" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="19" fill="#475569">학습된 병합 규칙과 어휘표가 같은 문장을 모델이 읽을 숫자열로 바꾼다.</text>
+
+  <rect x="70" y="190" width="300" height="190" rx="22" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="100" y="235" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="18" font-weight="700" fill="#475569">1. 입력 문자열</text>
+  <text x="100" y="308" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700" fill="#0f172a">토큰화 토큰 문장</text>
+
+  <path d="M390 285 H460" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+  <path d="M450 272 L467 285 L450 298" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="403" y="255" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#2563eb">BPE 규칙</text>
+
+  <rect x="480" y="190" width="300" height="190" rx="22" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+  <text x="510" y="235" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="18" font-weight="700" fill="#1d4ed8">2. 서브워드 토큰</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" text-anchor="middle">
+    <rect x="510" y="275" width="96" height="50" rx="12" fill="#dbeafe"/>
+    <text x="558" y="307" fill="#1e3a8a">토큰화</text>
+    <rect x="616" y="275" width="82" height="50" rx="12" fill="#dbeafe"/>
+    <text x="657" y="307" fill="#1e3a8a">토큰</text>
+    <rect x="708" y="275" width="42" height="50" rx="12" fill="#dbeafe"/>
+    <text x="729" y="307" fill="#1e3a8a">문</text>
+    <rect x="708" y="335" width="42" height="50" rx="12" fill="#dbeafe"/>
+    <text x="729" y="367" fill="#1e3a8a">장</text>
+  </g>
+
+  <path d="M800 285 H870" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+  <path d="M860 272 L877 285 L860 298" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="808" y="255" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#2563eb">어휘표</text>
+
+  <rect x="890" y="190" width="240" height="190" rx="22" fill="#f0fdf4" stroke="#4ade80" stroke-width="2"/>
+  <text x="920" y="235" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="18" font-weight="700" fill="#15803d">3. 정수 ID</text>
+  <text x="1010" y="315" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="38" font-weight="700" text-anchor="middle" fill="#14532d">[3, 2, 0, 1]</text>
+
+  <rect x="70" y="455" width="1060" height="115" rx="18" fill="#0f172a"/>
+  <text x="100" y="500" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="19" font-weight="700" fill="#93c5fd">기억할 점</text>
+  <text x="100" y="540" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" fill="#f8fafc">ID의 숫자 크기에는 의미가 없다. 각 숫자는 임베딩 표에서 한 행을 찾는 주소다.</text>
+</svg>

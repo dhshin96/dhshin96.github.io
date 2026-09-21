@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="510" viewBox="0 0 960 510" role="img" aria-labelledby="title desc">
+  <title id="title">지도학습에서 특성과 두 종류의 레이블</title>
+  <desc id="desc">공부 시간 1, 2, 3, 4시간을 점수 40, 50, 60, 70점과 통과 여부에 연결한다. 새로운 2.6시간은 가장 가까운 3시간 행에서 점수 60점과 통과를 예측한다.</desc>
+  <rect width="960" height="510" fill="#f8fafc"/>
+  <text x="40" y="51" fill="#0f172a" font-family="Arial, sans-serif" font-size="26" font-weight="700">같은 입력, 다른 두 정답</text>
+  <text x="40" y="82" fill="#475569" font-family="Arial, sans-serif" font-size="16">합성 예제 4개 · 새 입력 2.6시간</text>
+  <rect x="40" y="110" width="880" height="278" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="41" y="111" width="878" height="54" rx="15" fill="#e2e8f0"/>
+  <text x="100" y="145" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">특성 x</text>
+  <text x="407" y="145" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">점수 레이블 · 회귀</text>
+  <text x="697" y="145" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">통과 레이블 · 분류</text>
+  <path d="M300 165V388 M635 165V388 M41 220H919 M41 276H919 M41 332H919" stroke="#cbd5e1"/>
+  <rect x="42" y="278" width="876" height="53" fill="#dbeafe"/>
+  <g fill="#1e293b" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">
+    <text x="170" y="202">1시간</text><text x="470" y="202">40점</text><text x="772" y="202">미통과</text>
+    <text x="170" y="258">2시간</text><text x="470" y="258">50점</text><text x="772" y="258">미통과</text>
+    <text x="170" y="314" font-weight="700">3시간</text><text x="470" y="314" font-weight="700">60점</text><text x="772" y="314" font-weight="700">통과</text>
+    <text x="170" y="370">4시간</text><text x="470" y="370">70점</text><text x="772" y="370">통과</text>
+  </g>
+  <path d="M160 405V435H470" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#2563eb"/></marker></defs>
+  <text x="40" y="462" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="20" font-weight="700">새 입력 2.6시간 → 가장 가까운 3시간 행 → 60점 / 통과</text>
+  <text x="40" y="489" fill="#475569" font-family="Arial, sans-serif" font-size="15">두 결과 모두 관측값이 아니라 기존 행을 이용해 만든 예측값</text>
+</svg>

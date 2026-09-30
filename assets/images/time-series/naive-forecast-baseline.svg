@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">일반 나이브와 계절 나이브 기준선 비교</title>
+  <desc id="desc">1월부터 9월까지 훈련값을 파란 선으로 표시하고, 10월부터 12월까지 실제값은 주황색, 마지막 값 116을 유지하는 일반 나이브는 보라색, 4개월 전 값을 쓰는 계절 나이브는 초록색 점선으로 표시한다. 일반 나이브 MAE는 6.67, 계절 나이브 MAE는 8.00이다.</desc>
+  <rect width="960" height="540" rx="20" fill="#f8fbf9"/>
+  <text x="42" y="48" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183d32">나이브 기준선: 단순한 규칙을 같은 테스트 구간에서 비교</text>
+  <text x="42" y="78" font-family="Arial, sans-serif" font-size="16" fill="#49665d">훈련 1~9월 · 테스트 10~12월 · 값이 낮을수록 좋은 MAE</text>
+
+  <rect x="70" y="112" width="600" height="310" rx="14" fill="#eaf4f8"/>
+  <rect x="670" y="112" width="220" height="310" rx="14" fill="#fff1df"/>
+  <line x1="70" y1="422" x2="890" y2="422" stroke="#91a79f" stroke-width="2"/>
+  <line x1="70" y1="112" x2="70" y2="422" stroke="#91a79f" stroke-width="2"/>
+  <line x1="670" y1="112" x2="670" y2="422" stroke="#d6802d" stroke-width="3" stroke-dasharray="8 7"/>
+
+  <g font-family="Arial, sans-serif" font-size="13" fill="#536b63">
+    <text x="38" y="410">100</text><text x="38" y="330">110</text><text x="38" y="250">120</text><text x="38" y="170">130</text>
+  </g>
+  <g stroke="#d5dfdb" stroke-width="1">
+    <line x1="70" y1="406" x2="890" y2="406"/><line x1="70" y1="326" x2="890" y2="326"/>
+    <line x1="70" y1="246" x2="890" y2="246"/><line x1="70" y1="166" x2="890" y2="166"/>
+  </g>
+
+  <path d="M70 406 L145 366 L220 326 L295 366 L370 342 L445 302 L520 262 L595 302 L670 278"
+        fill="none" stroke="#176b8a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M745 238 L820 198 L890 238" fill="none" stroke="#d2691e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M670 278 L745 278 L820 278 L890 278" fill="none" stroke="#7651a8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M745 302 L820 262 L890 302" fill="none" stroke="#3d8b61" stroke-width="4" stroke-dasharray="9 6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="#176b8a">
+    <circle cx="70" cy="406" r="5"/><circle cx="145" cy="366" r="5"/><circle cx="220" cy="326" r="5"/>
+    <circle cx="295" cy="366" r="5"/><circle cx="370" cy="342" r="5"/><circle cx="445" cy="302" r="5"/>
+    <circle cx="520" cy="262" r="5"/><circle cx="595" cy="302" r="5"/><circle cx="670" cy="278" r="5"/>
+  </g>
+  <g fill="#d2691e"><circle cx="745" cy="238" r="6"/><circle cx="820" cy="198" r="6"/><circle cx="890" cy="238" r="6"/></g>
+  <g fill="#7651a8"><circle cx="745" cy="278" r="5"/><circle cx="820" cy="278" r="5"/><circle cx="890" cy="278" r="5"/></g>
+  <g fill="#3d8b61"><circle cx="745" cy="302" r="5"/><circle cx="820" cy="262" r="5"/><circle cx="890" cy="302" r="5"/></g>
+
+  <g font-family="Arial, sans-serif" font-size="13" fill="#536b63" text-anchor="middle">
+    <text x="70" y="446">1</text><text x="145" y="446">2</text><text x="220" y="446">3</text>
+    <text x="295" y="446">4</text><text x="370" y="446">5</text><text x="445" y="446">6</text>
+    <text x="520" y="446">7</text><text x="595" y="446">8</text><text x="670" y="446">9</text>
+    <text x="745" y="446">10</text><text x="820" y="446">11</text><text x="890" y="446">12월</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="14" fill="#36574c">
+    <line x1="80" y1="484" x2="112" y2="484" stroke="#d2691e" stroke-width="5"/><text x="122" y="489">실제값</text>
+    <line x1="240" y1="484" x2="272" y2="484" stroke="#7651a8" stroke-width="4"/><text x="282" y="489">일반 나이브 · MAE 6.67</text>
+    <line x1="510" y1="484" x2="542" y2="484" stroke="#3d8b61" stroke-width="4" stroke-dasharray="8 5"/><text x="552" y="489">계절 나이브 · MAE 8.00</text>
+  </g>
+  <text x="535" y="136" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#176b8a">훈련</text>
+  <text x="792" y="136" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#b85b17">테스트</text>
+</svg>

@@ -120,7 +120,7 @@ print(f"최종 테스트 MAE: {mae(test, selected):.1f}점")
 
 ## 다음 글 예고
 
-다음 글에서는 **선형회귀**를 다룬다. 두 점을 지나는 직선의 기울기와 절편을 손으로 구하고, 예측 오차를 줄이는 직선이 무엇인지 Python으로 확인한다.
+다음 글에서는 [선형회귀의 기울기·절편과 최소제곱법]({{ '/posts/machine-learning-linear-regression-least-squares/' | relative_url }})을 다룬다. 다섯 점에 가장 잘 맞는 직선을 손으로 구하고, 예측 오차를 줄이는 기준을 Python으로 확인한다.
 
 ## 참고 자료
 

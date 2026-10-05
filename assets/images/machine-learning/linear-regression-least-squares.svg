@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">선형회귀와 최소제곱 직선</title>
+  <desc id="desc">공부 시간 1시간부터 5시간까지의 점수 다섯 점에 기울기 5.1, 절편 37.7인 최소제곱 회귀선을 그린다. 실제 점과 회귀선 사이의 잔차를 세로 점선으로 표시하고, 잔차제곱합 1.90과 학습 평균제곱오차 0.38을 제시한다.</desc>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <text x="40" y="48" fill="#0f172a" font-family="Arial, sans-serif" font-size="26" font-weight="700">다섯 점에 가장 잘 맞는 최소제곱 직선</text>
+  <text x="40" y="78" fill="#475569" font-family="Arial, sans-serif" font-size="16">공부 시간 x → 점수 y · 합성 자료</text>
+
+  <rect x="58" y="102" width="612" height="392" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <line x1="128" y1="438" x2="628" y2="438" stroke="#64748b" stroke-width="2"/>
+  <line x1="128" y1="438" x2="128" y2="138" stroke="#64748b" stroke-width="2"/>
+  <g fill="#475569" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+    <text x="208" y="462">1</text><text x="288" y="462">2</text><text x="368" y="462">3</text><text x="448" y="462">4</text><text x="528" y="462">5</text><text x="608" y="462">6</text>
+  </g>
+  <g fill="#475569" font-family="Arial, sans-serif" font-size="14" text-anchor="end">
+    <text x="116" y="406">40</text><text x="116" y="346">50</text><text x="116" y="286">60</text><text x="116" y="226">70</text>
+  </g>
+  <text x="378" y="486" fill="#334155" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">공부 시간(시간)</text>
+  <text x="80" y="285" fill="#334155" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" transform="rotate(-90 80 285)">점수(점)</text>
+
+  <line x1="192" y1="395" x2="612" y2="235" stroke="#2563eb" stroke-width="4"/>
+  <text x="405" y="220" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="18" font-weight="700">ŷ = 37.7 + 5.1x</text>
+
+  <g stroke="#f59e0b" stroke-width="3" stroke-dasharray="6 5">
+    <line x1="208" y1="388" x2="208" y2="389"/>
+    <line x1="288" y1="364" x2="288" y2="359"/>
+    <line x1="368" y1="322" x2="368" y2="328"/>
+    <line x1="448" y1="298" x2="448" y2="297"/>
+    <line x1="528" y1="268" x2="528" y2="267"/>
+  </g>
+  <g fill="#0f766e" stroke="#ffffff" stroke-width="3">
+    <circle cx="208" cy="388" r="8"/><circle cx="288" cy="364" r="8"/><circle cx="368" cy="322" r="8"/><circle cx="448" cy="298" r="8"/><circle cx="528" cy="268" r="8"/>
+  </g>
+  <text x="547" y="292" fill="#0f766e" font-family="Arial, sans-serif" font-size="15" font-weight="700">실제값</text>
+  <text x="548" y="260" fill="#d97706" font-family="Arial, sans-serif" font-size="14">점선 = 잔차</text>
+
+  <rect x="704" y="120" width="216" height="190" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="730" y="154" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="18" font-weight="700">학습 결과</text>
+  <g fill="#1e293b" font-family="Arial, sans-serif" font-size="18">
+    <text x="730" y="194">기울기</text><text x="890" y="194" text-anchor="end" font-weight="700">5.1</text>
+    <text x="730" y="230">절편</text><text x="890" y="230" text-anchor="end" font-weight="700">37.7</text>
+    <text x="730" y="266">잔차제곱합</text><text x="890" y="266" text-anchor="end" font-weight="700">1.90</text>
+  </g>
+  <line x1="730" y1="280" x2="894" y2="280" stroke="#cbd5e1"/>
+  <text x="730" y="300" fill="#166534" font-family="Arial, sans-serif" font-size="18" font-weight="700">학습 MSE</text>
+  <text x="890" y="300" fill="#166534" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="end">0.38</text>
+
+  <rect x="704" y="334" width="216" height="118" rx="14" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="730" y="368" fill="#9a3412" font-family="Arial, sans-serif" font-size="17" font-weight="700">최소제곱의 기준</text>
+  <text x="730" y="400" fill="#7c2d12" font-family="Arial, sans-serif" font-size="16">잔차를 제곱해 더한 값이</text>
+  <text x="730" y="426" fill="#7c2d12" font-family="Arial, sans-serif" font-size="16">가장 작은 직선을 선택</text>
+
+  <text x="58" y="536" fill="#475569" font-family="Arial, sans-serif" font-size="15">직선이 모든 점을 지나는 것이 아니라, 전체 잔차의 제곱을 가장 작게 만든다.</text>
+</svg>

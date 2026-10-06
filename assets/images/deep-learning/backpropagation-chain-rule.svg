@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">역전파와 연쇄법칙 계산 그래프</title>
+  <desc id="desc">위쪽은 입력 2, 가중치 3, 편향 마이너스 1에서 z 5, ReLU 출력 5, 손실 2를 구하는 순전파다. 아래쪽은 손실 기울기 마이너스 2에 국소 미분값을 곱해 가중치 기울기 마이너스 4와 편향 기울기 마이너스 2를 구하는 역전파다.</desc>
+  <rect width="980" height="560" rx="22" fill="#f8fbf9"/>
+  <text x="42" y="48" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183d32">계산 그래프를 앞으로 계산하고 뒤로 미분하기</text>
+  <text x="42" y="80" font-family="Arial, sans-serif" font-size="16" fill="#48665d">같은 경로 · 반대 방향</text>
+
+  <rect x="36" y="104" width="908" height="184" rx="18" fill="#e7f3ec" stroke="#acd4ba" stroke-width="2"/>
+  <text x="58" y="138" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#183d32">순전파 · 값을 오른쪽으로</text>
+  <rect x="58" y="164" width="174" height="88" rx="12" fill="#ffffff" stroke="#c8ded0"/>
+  <text x="76" y="192" font-family="Arial, sans-serif" font-size="16" fill="#36574c">x = 2, w = 3</text>
+  <text x="76" y="220" font-family="Arial, sans-serif" font-size="16" fill="#36574c">b = −1, y = 7</text>
+  <path d="M244 208h54" stroke="#477e64" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <rect x="312" y="164" width="164" height="88" rx="12" fill="#ffffff" stroke="#c8ded0"/>
+  <text x="332" y="192" font-family="Arial, sans-serif" font-size="16" fill="#36574c">z = wx + b</text>
+  <text x="332" y="224" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#183d32">z = 5</text>
+  <path d="M488 208h48" stroke="#477e64" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <rect x="550" y="164" width="160" height="88" rx="12" fill="#ffffff" stroke="#c8ded0"/>
+  <text x="570" y="192" font-family="Arial, sans-serif" font-size="16" fill="#36574c">a = ReLU(z)</text>
+  <text x="570" y="224" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#183d32">a = 5</text>
+  <path d="M722 208h48" stroke="#477e64" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <rect x="784" y="164" width="132" height="88" rx="12" fill="#d4eadb" stroke="#8fc5a4"/>
+  <text x="804" y="192" font-family="Arial, sans-serif" font-size="16" fill="#36574c">L = ½(a−y)²</text>
+  <text x="804" y="224" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#146749">L = 2</text>
+
+  <rect x="36" y="310" width="908" height="204" rx="18" fill="#edf2f7" stroke="#b9c9d8" stroke-width="2"/>
+  <text x="58" y="344" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#253f57">역전파 · 국소 미분값을 곱해 왼쪽으로</text>
+  <rect x="744" y="372" width="172" height="102" rx="12" fill="#ffffff" stroke="#cad7e2"/>
+  <text x="764" y="400" font-family="Arial, sans-serif" font-size="15" fill="#4c657c">∂L/∂a = a−y</text>
+  <text x="764" y="432" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#253f57">−2</text>
+  <text x="764" y="458" font-family="Arial, sans-serif" font-size="14" fill="#637e99">손실의 국소 미분</text>
+  <path d="M732 423h-54" stroke="#637e99" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <rect x="494" y="372" width="172" height="102" rx="12" fill="#ffffff" stroke="#cad7e2"/>
+  <text x="514" y="400" font-family="Arial, sans-serif" font-size="15" fill="#4c657c">× ∂a/∂z = ×1</text>
+  <text x="514" y="432" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#253f57">∂L/∂z = −2</text>
+  <text x="514" y="458" font-family="Arial, sans-serif" font-size="14" fill="#637e99">ReLU 통과</text>
+  <path d="M482 423h-54" stroke="#637e99" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <rect x="58" y="372" width="358" height="102" rx="12" fill="#dce8f2" stroke="#9fb9d0"/>
+  <text x="78" y="400" font-family="Arial, sans-serif" font-size="15" fill="#4c657c">× ∂z/∂w = ×x = ×2</text>
+  <text x="78" y="432" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#255f8c">∂L/∂w = −4</text>
+  <text x="244" y="400" font-family="Arial, sans-serif" font-size="15" fill="#4c657c">× ∂z/∂b = ×1</text>
+  <text x="244" y="432" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#255f8c">∂L/∂b = −2</text>
+  <text x="78" y="458" font-family="Arial, sans-serif" font-size="14" fill="#637e99">선형 결합의 매개변수 기울기</text>
+
+  <defs>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#477e64"/></marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#637e99"/></marker>
+  </defs>
+</svg>

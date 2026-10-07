@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">확장 창 롤링 검증의 여섯 폴드</title>
+  <desc id="desc">1월부터 6월까지를 첫 훈련 구간으로 두고, 매 폴드마다 훈련 구간에 한 달을 추가한다. 각 행에서 파란 칸은 훈련, 주황색 칸은 바로 다음 한 달의 테스트이며 7월부터 12월까지 총 여섯 번 평가한다. 절대오차는 5, 5, 3, 5, 5, 5이고 평균은 4.67이다.</desc>
+  <rect width="960" height="600" rx="20" fill="#f8fbf9"/>
+  <text x="42" y="48" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183d32">롤링 검증: 예측 기준점을 한 달씩 앞으로</text>
+  <text x="42" y="78" font-family="Arial, sans-serif" font-size="16" fill="#49665d">확장 창 · 한 단계 앞 나이브 예측 · 미래 값은 훈련에 포함하지 않음</text>
+
+  <g font-family="Arial, sans-serif" font-size="14" fill="#536b63" text-anchor="middle">
+    <text x="174" y="120">1월</text><text x="232" y="120">2월</text><text x="290" y="120">3월</text>
+    <text x="348" y="120">4월</text><text x="406" y="120">5월</text><text x="464" y="120">6월</text>
+    <text x="522" y="120">7월</text><text x="580" y="120">8월</text><text x="638" y="120">9월</text>
+    <text x="696" y="120">10월</text><text x="754" y="120">11월</text><text x="812" y="120">12월</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="15" fill="#36574c" text-anchor="end">
+    <text x="120" y="167">폴드 1</text><text x="120" y="225">폴드 2</text><text x="120" y="283">폴드 3</text>
+    <text x="120" y="341">폴드 4</text><text x="120" y="399">폴드 5</text><text x="120" y="457">폴드 6</text>
+  </g>
+
+  <g fill="#dce8e4">
+    <rect x="145" y="139" width="696" height="42" rx="7"/><rect x="145" y="197" width="696" height="42" rx="7"/>
+    <rect x="145" y="255" width="696" height="42" rx="7"/><rect x="145" y="313" width="696" height="42" rx="7"/>
+    <rect x="145" y="371" width="696" height="42" rx="7"/><rect x="145" y="429" width="696" height="42" rx="7"/>
+  </g>
+
+  <g fill="#176b8a">
+    <rect x="145" y="139" width="348" height="42" rx="7"/><rect x="145" y="197" width="406" height="42" rx="7"/>
+    <rect x="145" y="255" width="464" height="42" rx="7"/><rect x="145" y="313" width="522" height="42" rx="7"/>
+    <rect x="145" y="371" width="580" height="42" rx="7"/><rect x="145" y="429" width="638" height="42" rx="7"/>
+  </g>
+  <g fill="#d2691e">
+    <rect x="493" y="139" width="58" height="42"/><rect x="551" y="197" width="58" height="42"/>
+    <rect x="609" y="255" width="58" height="42"/><rect x="667" y="313" width="58" height="42"/>
+    <rect x="725" y="371" width="58" height="42"/><rect x="783" y="429" width="58" height="42" rx="0 7 7 0"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <text x="522" y="166">오차 5</text><text x="580" y="224">오차 5</text><text x="638" y="282">오차 3</text>
+    <text x="696" y="340">오차 5</text><text x="754" y="398">오차 5</text><text x="812" y="456">오차 5</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="15" fill="#36574c">
+    <rect x="208" y="510" width="34" height="20" rx="4" fill="#176b8a"/><text x="254" y="526">현재까지의 훈련 구간</text>
+    <rect x="500" y="510" width="34" height="20" rx="4" fill="#d2691e"/><text x="546" y="526">바로 다음 한 달의 테스트</text>
+  </g>
+  <rect x="675" y="548" width="166" height="34" rx="17" fill="#e8f0ff"/>
+  <text x="758" y="571" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#4c4a8a" text-anchor="middle">롤링 MAE = 4.67</text>
+</svg>

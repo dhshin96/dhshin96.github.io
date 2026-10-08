@@ -131,7 +131,7 @@ for token_id, token in enumerate(tokens):
 
 ## 다음 글 예고
 
-다음 글에서는 임베딩 벡터에 위치 정보를 더한 뒤 **Transformer가 한 토큰을 생성할 때 거치는 추론 흐름**을 살펴본다. 어텐션의 입력과 다음 토큰 확률이 이어지는 최소 계산을 따라간다.
+다음 글인 [생성형 AI 트랜스포머 추론 입문: 어텐션에서 다음 토큰까지]({{ '/posts/generative-ai-transformer-inference/' | relative_url }})에서는 임베딩 벡터에 위치 정보를 더한 뒤 Transformer가 한 토큰을 생성할 때 거치는 흐름을 살펴본다. 어텐션의 입력과 다음 토큰 확률이 이어지는 최소 계산을 따라간다.
 
 ## 참고 자료
 

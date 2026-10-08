@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Transformer 추론에서 다음 토큰을 생성하는 흐름</title>
+  <desc id="desc">입력 토큰 벡터가 마스킹된 셀프 어텐션에서 문맥 벡터로 합쳐지고, 선형변환과 소프트맥스를 거쳐 다음 토큰 다를 선택하는 개념도</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/>
+    </marker>
+    <style>
+      .bg{fill:#f8fafc}.box{fill:#fff;stroke:#cbd5e1;stroke-width:2}.accent{fill:#eff6ff;stroke:#2563eb;stroke-width:3}.prob{fill:#ecfdf5;stroke:#059669;stroke-width:3}.title{font:700 30px Arial,'Noto Sans KR',sans-serif;fill:#0f172a}.head{font:700 21px Arial,'Noto Sans KR',sans-serif;fill:#0f172a}.text{font:17px Arial,'Noto Sans KR',sans-serif;fill:#334155}.small{font:15px Arial,'Noto Sans KR',sans-serif;fill:#475569}.mono{font:16px Consolas,monospace;fill:#1e293b}.arrow{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="680" rx="24"/>
+  <text class="title" x="600" y="54" text-anchor="middle">한 토큰을 만드는 Transformer 추론 흐름</text>
+
+  <rect class="box" x="45" y="120" width="205" height="210" rx="18"/>
+  <text class="head" x="148" y="156" text-anchor="middle">입력 벡터</text>
+  <rect class="accent" x="75" y="180" width="145" height="38" rx="10"/>
+  <text class="mono" x="148" y="205" text-anchor="middle">v₁ = [1, 0]</text>
+  <rect class="accent" x="75" y="232" width="145" height="38" rx="10"/>
+  <text class="mono" x="148" y="257" text-anchor="middle">v₂ = [0, 1]</text>
+  <rect class="accent" x="75" y="284" width="145" height="38" rx="10"/>
+  <text class="mono" x="148" y="309" text-anchor="middle">v₃ = [1, 1]</text>
+
+  <path class="arrow" d="M250 225 H320"/>
+  <rect class="box" x="325" y="110" width="260" height="230" rx="18"/>
+  <text class="head" x="455" y="148" text-anchor="middle">마스킹된 셀프 어텐션</text>
+  <text class="text" x="455" y="186" text-anchor="middle">현재 질의와 과거 키 비교</text>
+  <text class="mono" x="455" y="226" text-anchor="middle">score = [0.707, 0.707, 1.414]</text>
+  <text class="mono" x="455" y="264" text-anchor="middle">weight = [0.248, 0.248, 0.503]</text>
+  <text class="small" x="455" y="304" text-anchor="middle">미래 위치는 인과 마스크로 제외</text>
+
+  <path class="arrow" d="M585 225 H650"/>
+  <rect class="accent" x="655" y="145" width="220" height="160" rx="18"/>
+  <text class="head" x="765" y="185" text-anchor="middle">문맥 벡터</text>
+  <text class="text" x="765" y="220" text-anchor="middle">값 벡터의 가중합</text>
+  <text class="mono" x="765" y="262" text-anchor="middle">[0.752, 0.752]</text>
+
+  <path class="arrow" d="M875 225 H940"/>
+  <rect class="box" x="945" y="125" width="210" height="200" rx="18"/>
+  <text class="head" x="1050" y="165" text-anchor="middle">출력층</text>
+  <text class="text" x="1050" y="202" text-anchor="middle">선형변환 → 로짓</text>
+  <text class="mono" x="1050" y="239" text-anchor="middle">[0.752, 0.752, 1.503]</text>
+  <text class="text" x="1050" y="282" text-anchor="middle">소프트맥스 → 확률</text>
+
+  <path class="arrow" d="M1050 325 V390"/>
+  <rect class="prob" x="815" y="400" width="340" height="145" rx="18"/>
+  <text class="head" x="985" y="440" text-anchor="middle">다음 토큰 분포</text>
+  <text class="mono" x="985" y="480" text-anchor="middle">를 0.243 · 는 0.243 · 다 0.515</text>
+  <text class="text" x="985" y="520" text-anchor="middle">탐욕 선택 → “다”</text>
+
+  <path class="arrow" d="M815 472 C650 472, 645 595, 250 595"/>
+  <rect class="accent" x="45" y="545" width="205" height="100" rx="18"/>
+  <text class="head" x="148" y="585" text-anchor="middle">입력에 이어 붙이기</text>
+  <text class="text" x="148" y="620" text-anchor="middle">… + “다” → 반복</text>
+  <text class="small" x="600" y="652" text-anchor="middle">어텐션 가중치와 다음 토큰 확률은 서로 다른 소프트맥스의 결과다.</text>
+</svg>

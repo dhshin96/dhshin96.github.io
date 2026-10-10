@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI 에이전트 루프와 상태 전이</title>
+  <desc id="desc">사용자 요청과 도구 결과가 상태에 쌓이고 모델 판단이 도구 호출이면 실행 결과를 추가해 반복하며 최종 답이면 종료하는 흐름</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#0f766e"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="#f8fafc"/>
+  <text x="60" y="68" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700" fill="#0f172a">에이전트 루프: 관찰을 상태에 넣고 다시 판단한다</text>
+  <text x="60" y="106" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="19" fill="#475569">(2 + 3) × 2 계산은 두 번의 도구 호출과 세 번의 모델 판단으로 끝난다.</text>
+
+  <rect x="60" y="160" width="300" height="410" rx="24" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="90" y="205" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#334155">상태 S<tspan baseline-shift="sub" font-size="15">t</tspan></text>
+  <rect x="90" y="235" width="240" height="65" rx="14" fill="#f1f5f9"/>
+  <text x="110" y="263" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#475569">user</text>
+  <text x="110" y="286" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#0f172a">2와 3을 더해 두 배</text>
+  <rect x="90" y="315" width="240" height="65" rx="14" fill="#eff6ff"/>
+  <text x="110" y="343" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#1d4ed8">tool call 1</text>
+  <text x="110" y="366" font-family="Consolas, monospace" font-size="16" fill="#1e3a8a">add(2, 3)</text>
+  <rect x="90" y="395" width="240" height="65" rx="14" fill="#f0fdf4"/>
+  <text x="110" y="423" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#15803d">observation 1</text>
+  <text x="110" y="447" font-family="Consolas, monospace" font-size="18" fill="#14532d">5</text>
+  <text x="90" y="505" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#64748b">호출과 관찰을 순서대로 누적</text>
+  <text x="90" y="535" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#64748b">단계 수와 상태도 함께 관리</text>
+
+  <path d="M375 300 H455" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow-blue)"/>
+  <rect x="475" y="205" width="280" height="190" rx="24" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+  <text x="505" y="250" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#1d4ed8">모델 판단 π(S<tspan baseline-shift="sub" font-size="15">t</tspan>)</text>
+  <text x="505" y="295" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="18" fill="#1e3a8a">도구가 더 필요한가?</text>
+  <text x="505" y="330" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="18" fill="#1e3a8a">아니면 답을 마칠까?</text>
+  <text x="505" y="365" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#475569">t &lt; max_steps인지도 확인</text>
+
+  <path d="M770 260 H850" stroke="#0f766e" stroke-width="5" marker-end="url(#arrow-teal)"/>
+  <text x="785" y="242" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#0f766e">도구 호출</text>
+  <rect x="870" y="170" width="270" height="180" rx="24" fill="#f0fdf4" stroke="#4ade80" stroke-width="2"/>
+  <text x="900" y="215" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#15803d">검증·실행</text>
+  <text x="900" y="258" font-family="Consolas, monospace" font-size="18" fill="#14532d">multiply(5, 2)</text>
+  <text x="900" y="298" font-family="Consolas, monospace" font-size="22" font-weight="700" fill="#14532d">observation = 10</text>
+
+  <path d="M1005 365 V620 H210 V585" fill="none" stroke="#0f766e" stroke-width="5" marker-end="url(#arrow-teal)"/>
+  <text x="475" y="646" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="18" font-weight="700" fill="#0f766e">호출과 관찰을 상태에 추가한 뒤 반복</text>
+
+  <path d="M615 410 V485" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow-blue)"/>
+  <text x="635" y="455" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#1d4ed8">최종 답</text>
+  <rect x="475" y="505" width="280" height="95" rx="20" fill="#0f172a"/>
+  <text x="505" y="545" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#93c5fd">루프 종료</text>
+  <text x="505" y="577" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#f8fafc">계산 결과는 10</text>
+</svg>

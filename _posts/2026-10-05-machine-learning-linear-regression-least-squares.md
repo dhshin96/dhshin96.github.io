@@ -127,7 +127,7 @@ print(f"6시간 예측: {predict(6, slope, intercept):.1f}점")
 
 ## 다음 글 예고
 
-다음 글에서는 **로지스틱 회귀**를 다룬다. 직선의 출력값을 0과 1 사이의 확률로 바꾸는 시그모이드 함수를 손으로 계산하고, 기준값에 따라 이진 분류가 어떻게 결정되는지 Python으로 확인한다.
+다음 글에서는 [로지스틱 회귀의 시그모이드와 로그 손실]({{ '/posts/machine-learning-logistic-regression-sigmoid-log-loss/' | relative_url }})을 다룬다. 직선의 출력값을 0과 1 사이의 확률로 바꾸고, 기준값에 따라 이진 분류가 어떻게 결정되는지 Python으로 확인한다.
 
 ## 참고 자료
 

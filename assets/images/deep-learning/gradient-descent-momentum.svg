@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" role="img" aria-labelledby="title desc">
+  <title id="title">경사하강법과 모멘텀의 6단계 이동 비교</title>
+  <desc id="desc">손실 함수 L은 2분의 1 곱하기 w 빼기 3의 제곱이고 최솟값은 w 3이다. 학습률 0.2로 6번 갱신할 때 기본 경사하강법은 w 0에서 2.2136으로 이동하고, 모멘텀 0.5는 최솟값을 지나 w 3.1512로 이동한다. 최종 손실은 각각 0.3092와 0.0114다.</desc>
+  <rect width="980" height="600" rx="22" fill="#f8fbf9"/>
+  <text x="42" y="48" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183d32">같은 기울기, 다른 이동 경로</text>
+  <text x="42" y="80" font-family="Arial, sans-serif" font-size="16" fill="#48665d">L(w) = ½(w−3)² · 시작 w = 0 · 학습률 0.2 · 6회 갱신</text>
+
+  <rect x="36" y="104" width="908" height="240" rx="18" fill="#ffffff" stroke="#c8ded0" stroke-width="2"/>
+  <line x1="86" y1="292" x2="894" y2="292" stroke="#9db5ab" stroke-width="2"/>
+  <line x1="692" y1="130" x2="692" y2="310" stroke="#84b698" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="670" y="330" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#146749">w = 3</text>
+  <text x="710" y="150" font-family="Arial, sans-serif" font-size="14" fill="#477e64">최솟값 L = 0</text>
+
+  <path d="M86 140 C220 210, 350 252, 490 274 C580 288, 650 292, 692 292 C750 292, 812 279, 894 242" fill="none" stroke="#d9e8df" stroke-width="9" stroke-linecap="round"/>
+  <text x="90" y="130" font-family="Arial, sans-serif" font-size="14" fill="#668277">손실 곡선</text>
+
+  <polyline points="86,140 207,195 304,231 382,254 445,268 495,277 533,282" fill="none" stroke="#3178a8" stroke-width="4" marker-end="url(#arrow-blue)"/>
+  <g fill="#3178a8">
+    <circle cx="86" cy="140" r="6"/><circle cx="207" cy="195" r="6"/><circle cx="304" cy="231" r="6"/><circle cx="382" cy="254" r="6"/><circle cx="445" cy="268" r="6"/><circle cx="495" cy="277" r="6"/><circle cx="533" cy="282" r="7"/>
+  </g>
+  <text x="256" y="184" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#255f8c">기본 경사하강법</text>
+  <text x="256" y="207" font-family="Arial, sans-serif" font-size="14" fill="#4c657c">현재 기울기만 사용</text>
+
+  <polyline points="86,140 207,195 365,249 509,279 618,290 687,292 723,291" fill="none" stroke="#d07a2b" stroke-width="4" marker-end="url(#arrow-orange)"/>
+  <g fill="#d07a2b">
+    <circle cx="86" cy="140" r="6"/><circle cx="207" cy="195" r="6"/><circle cx="365" cy="249" r="6"/><circle cx="509" cy="279" r="6"/><circle cx="618" cy="290" r="6"/><circle cx="687" cy="292" r="6"/><circle cx="723" cy="291" r="7"/>
+  </g>
+  <text x="522" y="212" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#a95516">모멘텀 0.5</text>
+  <text x="522" y="235" font-family="Arial, sans-serif" font-size="14" fill="#7f684f">기울기를 속도에 누적</text>
+  <path d="M687 268 C704 254, 720 255, 733 270" fill="none" stroke="#d07a2b" stroke-width="2" marker-end="url(#arrow-orange)"/>
+  <text x="738" y="267" font-family="Arial, sans-serif" font-size="14" fill="#a95516">오버슈트</text>
+
+  <rect x="36" y="368" width="432" height="180" rx="18" fill="#edf4f8" stroke="#b9cbd8" stroke-width="2"/>
+  <text x="60" y="405" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#255f8c">기본 경사하강법</text>
+  <text x="60" y="442" font-family="Arial, sans-serif" font-size="16" fill="#4c657c">w: 0.0000 → 2.2136</text>
+  <text x="60" y="474" font-family="Arial, sans-serif" font-size="16" fill="#4c657c">손실: 4.5000 → 0.3092</text>
+  <text x="60" y="516" font-family="Arial, sans-serif" font-size="14" fill="#637e99">6단계 동안 최솟값을 향해 꾸준히 이동</text>
+
+  <rect x="492" y="368" width="452" height="180" rx="18" fill="#fff3e8" stroke="#e8c5a4" stroke-width="2"/>
+  <text x="516" y="405" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#a95516">모멘텀</text>
+  <text x="516" y="442" font-family="Arial, sans-serif" font-size="16" fill="#7f684f">w: 0.0000 → 3.1512</text>
+  <text x="516" y="474" font-family="Arial, sans-serif" font-size="16" fill="#7f684f">손실: 4.5000 → 0.0114</text>
+  <text x="516" y="516" font-family="Arial, sans-serif" font-size="14" fill="#9a6a3d">5단계 w = 2.9749 뒤 누적 속도로 3을 통과</text>
+
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#3178a8"/></marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#d07a2b"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">프롬프트의 네 블록과 충족률</title>
+  <desc id="desc">왼쪽의 모호한 요청은 지시, 맥락, 입력, 출력 형식이 구분되지 않아 충족률이 0퍼센트다. 오른쪽의 구조화 요청은 네 블록을 모두 채워 충족률이 100퍼센트다.</desc>
+  <rect width="1200" height="680" rx="24" fill="#f7fafc"/>
+  <text x="54" y="58" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700" fill="#17324d">모호한 한 문장을 네 개의 계약 블록으로</text>
+  <text x="54" y="92" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#52677a">구조는 답의 품질을 보장하지 않지만, 빠진 요구사항을 실행 전에 드러낸다</text>
+
+  <rect x="54" y="132" width="366" height="456" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="82" y="176" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#334155">모호한 요청</text>
+  <rect x="82" y="208" width="310" height="86" rx="14" fill="#fff3e8" stroke="#efb27a"/>
+  <text x="237" y="244" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="19" fill="#8a4518">“어텐션을 쉽게 설명해 줘.”</text>
+  <text x="237" y="274" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#9a5b2a">행동 외의 기준은 열려 있다</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#64748b">
+    <text x="92" y="350">□ 지시의 경계</text>
+    <text x="92" y="390">□ 독자와 목적</text>
+    <text x="92" y="430">□ 처리할 자료</text>
+    <text x="92" y="470">□ 결과의 모양</text>
+  </g>
+  <rect x="82" y="506" width="310" height="54" rx="12" fill="#fee2e2"/>
+  <text x="237" y="541" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#991b1b">충족률 0/4 · 0%</text>
+
+  <path d="M447 352 H513" stroke="#476b8e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M500 338 L516 352 L500 366" fill="none" stroke="#476b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="481" y="324" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#476b8e">분해</text>
+
+  <rect x="542" y="132" width="604" height="456" rx="20" fill="#ffffff" stroke="#9cc7b5" stroke-width="2"/>
+  <text x="570" y="176" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#174a3a">구조화 요청</text>
+
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <rect x="570" y="204" width="548" height="64" rx="12" fill="#e8f2ff"/>
+    <text x="594" y="231" font-size="17" font-weight="700" fill="#1d4f78">1. 지시</text>
+    <text x="594" y="254" font-size="15" fill="#355c7a">다음 자료만 사용해 핵심 이유를 요약하세요.</text>
+    <rect x="570" y="280" width="548" height="64" rx="12" fill="#eef8f3"/>
+    <text x="594" y="307" font-size="17" font-weight="700" fill="#1f6b4f">2. 맥락</text>
+    <text x="594" y="330" font-size="15" fill="#396b58">독자는 생성형 AI를 처음 배우는 학생입니다.</text>
+    <rect x="570" y="356" width="548" height="64" rx="12" fill="#f3efff"/>
+    <text x="594" y="383" font-size="17" font-weight="700" fill="#5b3e91">3. 입력</text>
+    <text x="594" y="406" font-size="15" fill="#65537f">어텐션은 앞선 토큰의 정보를 가중합하는 계산이다.</text>
+    <rect x="570" y="432" width="548" height="64" rx="12" fill="#fff7df"/>
+    <text x="594" y="459" font-size="17" font-weight="700" fill="#865d12">4. 출력 형식</text>
+    <text x="594" y="482" font-size="15" fill="#7a632f">한국어 불릿 2개 · 각 불릿 20자 이내</text>
+  </g>
+
+  <rect x="570" y="506" width="548" height="54" rx="12" fill="#dcfce7"/>
+  <text x="844" y="541" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#166534">충족률 4/4 · 100%</text>
+  <text x="600" y="638" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#52677a">검사 대상: 네 블록의 존재 여부 · 별도 평가 대상: 사실성, 유용성, 문장 품질</text>
+</svg>

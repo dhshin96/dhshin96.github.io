@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">결정트리의 지니 불순도 기준 분할</title>
+  <desc id="desc">클래스 0이 세 개, 클래스 1이 네 개인 부모 노드가 x가 4.5 이하인지 묻는 조건으로 나뉜다. 왼쪽에는 클래스 0 세 개와 클래스 1 한 개가 있고 오른쪽에는 클래스 1 세 개만 있다. 부모 지니 불순도 0.490에서 가중 자식 불순도 0.214를 빼면 감소량은 0.276이다.</desc>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <text x="40" y="50" fill="#0f172a" font-family="Arial, sans-serif" font-size="26" font-weight="700">한 번의 질문으로 레이블 섞임 줄이기</text>
+  <text x="40" y="80" fill="#475569" font-family="Arial, sans-serif" font-size="16">고정 예시: x = 1, 2, 3, 4, 5, 6, 7 · y = 0, 0, 1, 0, 1, 1, 1</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="330" y="110" width="300" height="112" rx="16" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+    <text x="480" y="142" text-anchor="middle" fill="#334155" font-size="16">부모 노드</text>
+    <text x="480" y="176" text-anchor="middle" fill="#0f172a" font-size="23" font-weight="700">0 × 3 · 1 × 4</text>
+    <text x="480" y="204" text-anchor="middle" fill="#475569" font-size="16">지니 = 0.490</text>
+
+    <path d="M480 222 V258" stroke="#64748b" stroke-width="3"/>
+    <path d="M472 250 L480 262 L488 250" fill="none" stroke="#64748b" stroke-width="3"/>
+    <rect x="350" y="262" width="260" height="62" rx="31" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
+    <text x="480" y="301" text-anchor="middle" fill="#1e3a8a" font-size="21" font-weight="700">x ≤ 4.5 ?</text>
+
+    <path d="M425 324 C425 352 284 348 284 382" fill="none" stroke="#64748b" stroke-width="3"/>
+    <path d="M535 324 C535 352 676 348 676 382" fill="none" stroke="#64748b" stroke-width="3"/>
+    <text x="350" y="350" text-anchor="middle" fill="#475569" font-size="15">예</text>
+    <text x="610" y="350" text-anchor="middle" fill="#475569" font-size="15">아니요</text>
+
+    <rect x="120" y="382" width="328" height="118" rx="16" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+    <text x="284" y="416" text-anchor="middle" fill="#9a3412" font-size="17" font-weight="700">왼쪽 자식 · 예측 0</text>
+    <text x="284" y="451" text-anchor="middle" fill="#7c2d12" font-size="22" font-weight="700">0 × 3 · 1 × 1</text>
+    <text x="284" y="480" text-anchor="middle" fill="#9a3412" font-size="16">지니 = 0.375</text>
+
+    <rect x="512" y="382" width="328" height="118" rx="16" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+    <text x="676" y="416" text-anchor="middle" fill="#047857" font-size="17" font-weight="700">오른쪽 자식 · 예측 1</text>
+    <text x="676" y="451" text-anchor="middle" fill="#065f46" font-size="22" font-weight="700">0 × 0 · 1 × 3</text>
+    <text x="676" y="480" text-anchor="middle" fill="#047857" font-size="16">지니 = 0.000</text>
+  </g>
+
+  <rect x="230" y="520" width="500" height="28" rx="14" fill="#e2e8f0"/>
+  <text x="480" y="540" text-anchor="middle" fill="#334155" font-family="Arial, sans-serif" font-size="15" font-weight="700">가중 자식 지니 0.214 · 불순도 감소 0.490 - 0.214 = 0.276</text>
+</svg>

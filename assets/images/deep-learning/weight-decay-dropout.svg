@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" role="img" aria-labelledby="title desc">
+  <title id="title">가중치 감쇠와 드롭아웃의 작동 위치 비교</title>
+  <desc id="desc">왼쪽은 데이터 손실의 최솟값 3이 가중치 감쇠 계수 0.5를 더하면 2로 이동하는 계산이다. 오른쪽은 활성값 1, 2, 3, 4에 마스크 1, 0, 1, 0과 배율 2를 적용해 2, 0, 6, 0으로 바꾸며, 모든 마스크의 출력 합 평균은 원래 합 10과 같다.</desc>
+  <rect width="980" height="600" rx="22" fill="#f8fbf9"/>
+  <text x="42" y="48" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183d32">정규화가 개입하는 두 위치</text>
+  <text x="42" y="80" font-family="Arial, sans-serif" font-size="16" fill="#48665d">가중치 감쇠는 목적함수 · 드롭아웃은 훈련 중 활성값</text>
+
+  <rect x="36" y="108" width="436" height="430" rx="18" fill="#ffffff" stroke="#b9cbd8" stroke-width="2"/>
+  <text x="62" y="148" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#255f8c">가중치 감쇠</text>
+  <text x="62" y="179" font-family="Arial, sans-serif" font-size="15" fill="#4c657c">L_total = ½(w−3)² + 0.25w²</text>
+  <line x1="78" y1="340" x2="430" y2="340" stroke="#9db5ab" stroke-width="2"/>
+  <path d="M78 178 C150 260, 230 320, 342 340 C380 337, 410 324, 430 304" fill="none" stroke="#d7e8df" stroke-width="8"/>
+  <circle cx="342" cy="340" r="9" fill="#86a59a"/>
+  <line x1="342" y1="216" x2="342" y2="360" stroke="#86a59a" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="324" y="385" font-family="Arial, sans-serif" font-size="15" fill="#607a70">w = 3</text>
+  <text x="260" y="207" font-family="Arial, sans-serif" font-size="14" fill="#607a70">데이터 손실 최솟값</text>
+  <path d="M78 205 C145 274, 205 320, 254 340 C310 326, 373 276, 430 204" fill="none" stroke="#3178a8" stroke-width="5"/>
+  <circle cx="254" cy="340" r="10" fill="#3178a8"/>
+  <line x1="254" y1="238" x2="254" y2="360" stroke="#3178a8" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="236" y="385" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#255f8c">w = 2</text>
+  <text x="132" y="231" font-family="Arial, sans-serif" font-size="14" fill="#255f8c">벌점을 더한 최솟값</text>
+  <rect x="62" y="420" width="384" height="88" rx="14" fill="#edf4f8"/>
+  <text x="82" y="454" font-family="Arial, sans-serif" font-size="15" fill="#255f8c">기울기: (w−3) + 0.5w</text>
+  <text x="82" y="484" font-family="Arial, sans-serif" font-size="15" fill="#4c657c">큰 가중치에 비용 → 최적점 이동</text>
+
+  <rect x="496" y="108" width="448" height="430" rx="18" fill="#ffffff" stroke="#e4c7a8" stroke-width="2"/>
+  <text x="522" y="148" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#a95516">드롭아웃</text>
+  <text x="522" y="179" font-family="Arial, sans-serif" font-size="15" fill="#7f684f">p = 0.5 · 유지값은 1/(1−p) = 2배</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <circle cx="555" cy="250" r="30" fill="#fff3e8" stroke="#d07a2b" stroke-width="3"/><text x="555" y="257" font-size="18" fill="#7f4b22">1</text>
+    <circle cx="653" cy="250" r="30" fill="#f1f1f1" stroke="#a9a9a9" stroke-width="3"/><text x="653" y="257" font-size="18" fill="#777">2</text>
+    <circle cx="751" cy="250" r="30" fill="#fff3e8" stroke="#d07a2b" stroke-width="3"/><text x="751" y="257" font-size="18" fill="#7f4b22">3</text>
+    <circle cx="849" cy="250" r="30" fill="#f1f1f1" stroke="#a9a9a9" stroke-width="3"/><text x="849" y="257" font-size="18" fill="#777">4</text>
+    <text x="555" y="305" font-size="14" fill="#a95516">유지</text><text x="653" y="305" font-size="14" fill="#777">제거</text>
+    <text x="751" y="305" font-size="14" fill="#a95516">유지</text><text x="849" y="305" font-size="14" fill="#777">제거</text>
+  </g>
+  <path d="M555 324v50M653 324v50M751 324v50M849 324v50" stroke="#c89c76" stroke-width="2" marker-end="url(#arrow)"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="525" y="382" width="60" height="48" rx="10" fill="#ffe5cf"/><text x="555" y="413" font-size="18" fill="#7f4b22">2</text>
+    <rect x="623" y="382" width="60" height="48" rx="10" fill="#eeeeee"/><text x="653" y="413" font-size="18" fill="#777">0</text>
+    <rect x="721" y="382" width="60" height="48" rx="10" fill="#ffe5cf"/><text x="751" y="413" font-size="18" fill="#7f4b22">6</text>
+    <rect x="819" y="382" width="60" height="48" rx="10" fill="#eeeeee"/><text x="849" y="413" font-size="18" fill="#777">0</text>
+  </g>
+  <rect x="522" y="456" width="396" height="52" rx="14" fill="#fff3e8"/>
+  <text x="720" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#7f4b22">16개 마스크의 출력 합 평균 = 원래 합 = 10</text>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#c89c76"/></marker></defs>
+</svg>

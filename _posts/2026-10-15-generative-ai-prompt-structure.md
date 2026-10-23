@@ -135,7 +135,7 @@ print("구조화 프롬프트 길이:", len(structured_prompt))
 
 ## 다음 글 예고
 
-다음 글에서는 **구조화 출력**을 다룬다. JSON의 필드와 자료형을 먼저 정하고, 생성 결과가 스키마를 만족하는지 순수 Python으로 검사한다.
+다음 글에서는 [JSON의 필드와 자료형을 먼저 정해 구조화 출력을 검증하는 방법]({{ '/posts/generative-ai-structured-output-json-schema/' | relative_url }})을 다룬다. 순수 Python으로 생성 결과가 스키마를 만족하는지 검사한다.
 
 ## 참고 자료
 

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">JSON 구조화 출력의 스키마 검증 흐름</title>
+  <desc id="desc">네 JSON 후보를 필수 필드, 자료형, 추가 필드 규칙으로 검사한다. 정상 객체 하나는 통과하고 필드 누락, 자료형 오류, 추가 필드가 있는 세 객체는 실패한다.</desc>
+  <rect width="1200" height="680" rx="24" fill="#f7fafc"/>
+  <text x="54" y="58" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700" fill="#17324d">JSON을 읽은 뒤, 스키마로 약속을 검사한다</text>
+  <text x="54" y="92" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#52677a">문법상 올바른 JSON도 필드 누락·자료형 오류·추가 필드 때문에 거절될 수 있다</text>
+
+  <rect x="54" y="132" width="292" height="464" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="82" y="174" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#334155">JSON 후보 4개</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <rect x="82" y="204" width="236" height="68" rx="12" fill="#eef8f3"/>
+    <text x="102" y="232" font-size="17" font-weight="700" fill="#1f6b4f">정상</text>
+    <text x="102" y="255" font-size="14" fill="#396b58">필드 3개 · 자료형 일치</text>
+    <rect x="82" y="286" width="236" height="68" rx="12" fill="#fff3e8"/>
+    <text x="102" y="314" font-size="17" font-weight="700" fill="#8a4518">필드 누락</text>
+    <text x="102" y="337" font-size="14" fill="#9a5b2a">difficulty 없음</text>
+    <rect x="82" y="368" width="236" height="68" rx="12" fill="#fff3e8"/>
+    <text x="102" y="396" font-size="17" font-weight="700" fill="#8a4518">자료형 오류</text>
+    <text x="102" y="419" font-size="14" fill="#9a5b2a">1 대신 “1”</text>
+    <rect x="82" y="450" width="236" height="68" rx="12" fill="#fff3e8"/>
+    <text x="102" y="478" font-size="17" font-weight="700" fill="#8a4518">추가 필드</text>
+    <text x="102" y="501" font-size="14" fill="#9a5b2a">note가 더 있음</text>
+  </g>
+
+  <path d="M368 360 H430" stroke="#476b8e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M417 346 L433 360 L417 374" fill="none" stroke="#476b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="458" y="132" width="330" height="464" rx="20" fill="#ffffff" stroke="#9fb8d0" stroke-width="2"/>
+  <text x="486" y="174" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#1d4f78">스키마 검사표</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <circle cx="508" cy="236" r="22" fill="#e8f2ff"/>
+    <text x="508" y="243" text-anchor="middle" font-size="18" font-weight="700" fill="#1d4f78">1</text>
+    <text x="548" y="232" font-size="18" font-weight="700" fill="#334155">필수 필드</text>
+    <text x="548" y="257" font-size="15" fill="#52677a">required 키가 모두 있는가?</text>
+    <line x1="508" y1="268" x2="508" y2="300" stroke="#b9c8d6" stroke-width="3"/>
+    <circle cx="508" cy="332" r="22" fill="#f3efff"/>
+    <text x="508" y="339" text-anchor="middle" font-size="18" font-weight="700" fill="#5b3e91">2</text>
+    <text x="548" y="328" font-size="18" font-weight="700" fill="#334155">자료형과 범위</text>
+    <text x="548" y="353" font-size="15" fill="#52677a">string · integer · array</text>
+    <line x1="508" y1="364" x2="508" y2="396" stroke="#b9c8d6" stroke-width="3"/>
+    <circle cx="508" cy="428" r="22" fill="#fff7df"/>
+    <text x="508" y="435" text-anchor="middle" font-size="18" font-weight="700" fill="#865d12">3</text>
+    <text x="548" y="424" font-size="18" font-weight="700" fill="#334155">추가 필드</text>
+    <text x="548" y="449" font-size="15" fill="#52677a">정의하지 않은 키가 없는가?</text>
+  </g>
+  <rect x="486" y="506" width="274" height="54" rx="12" fill="#e8f2ff"/>
+  <text x="623" y="540" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="18" font-weight="700" fill="#1d4f78">오류 집합 |V(x)| 계산</text>
+
+  <path d="M810 360 H870" stroke="#476b8e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M857 346 L873 360 L857 374" fill="none" stroke="#476b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="898" y="132" width="248" height="464" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="926" y="174" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#334155">검사 결과</text>
+  <rect x="926" y="212" width="192" height="104" rx="14" fill="#dcfce7"/>
+  <text x="1022" y="252" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" font-weight="700" fill="#166534">통과 1개</text>
+  <text x="1022" y="282" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#28704a">오류 0개</text>
+  <rect x="926" y="342" width="192" height="148" rx="14" fill="#fee2e2"/>
+  <text x="1022" y="382" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="24" font-weight="700" fill="#991b1b">실패 3개</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#9f3333">
+    <text x="950" y="418">• 누락 1</text>
+    <text x="950" y="446">• 자료형 1</text>
+    <text x="950" y="474">• 추가 필드 1</text>
+  </g>
+  <text x="600" y="638" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#52677a">구조가 맞아도 내용의 사실성과 품질은 별도로 평가해야 한다</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" role="img" aria-labelledby="title desc">
+  <title id="title">CNN 필터가 특징 맵을 만드는 과정</title>
+  <desc id="desc">4 곱하기 4 입력 위에서 2 곱하기 2 필터가 이동한다. 첫 위치의 곱셈 합은 0이고 오른쪽으로 한 칸 이동한 위치의 합은 4다. 같은 필터로 계산한 3 곱하기 3 특징 맵의 가운데 열은 4, 5, 6이다.</desc>
+  <rect width="980" height="600" rx="22" fill="#f8fbf9"/>
+  <text x="42" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183d32">같은 필터를 공유해 특징 맵 만들기</text>
+  <text x="42" y="82" font-family="Arial, sans-serif" font-size="16" fill="#48665d">입력 4×4 · 필터 2×2 · 보폭 1 · 패딩 0 → 출력 3×3</text>
+
+  <rect x="34" y="112" width="400" height="410" rx="18" fill="#ffffff" stroke="#b9cbd8" stroke-width="2"/>
+  <text x="60" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#255f8c">입력 X</text>
+  <g font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#29485f">
+    <rect x="72" y="180" width="64" height="64" fill="#edf4f8" stroke="#9ab4c7"/><text x="104" y="220">1</text>
+    <rect x="136" y="180" width="64" height="64" fill="#edf4f8" stroke="#9ab4c7"/><text x="168" y="220">1</text>
+    <rect x="200" y="180" width="64" height="64" fill="#fff3e8" stroke="#d8a16e"/><text x="232" y="220">3</text>
+    <rect x="264" y="180" width="64" height="64" fill="#fff3e8" stroke="#d8a16e"/><text x="296" y="220">3</text>
+    <rect x="72" y="244" width="64" height="64" fill="#edf4f8" stroke="#9ab4c7"/><text x="104" y="284">1</text>
+    <rect x="136" y="244" width="64" height="64" fill="#edf4f8" stroke="#9ab4c7"/><text x="168" y="284">1</text>
+    <rect x="200" y="244" width="64" height="64" fill="#fff3e8" stroke="#d8a16e"/><text x="232" y="284">3</text>
+    <rect x="264" y="244" width="64" height="64" fill="#fff3e8" stroke="#d8a16e"/><text x="296" y="284">3</text>
+    <rect x="72" y="308" width="64" height="64" fill="#e4f0eb" stroke="#91b3a5"/><text x="104" y="348">2</text>
+    <rect x="136" y="308" width="64" height="64" fill="#e4f0eb" stroke="#91b3a5"/><text x="168" y="348">2</text>
+    <rect x="200" y="308" width="64" height="64" fill="#ffe9d5" stroke="#d8a16e"/><text x="232" y="348">5</text>
+    <rect x="264" y="308" width="64" height="64" fill="#ffe9d5" stroke="#d8a16e"/><text x="296" y="348">5</text>
+    <rect x="72" y="372" width="64" height="64" fill="#e4f0eb" stroke="#91b3a5"/><text x="104" y="412">2</text>
+    <rect x="136" y="372" width="64" height="64" fill="#e4f0eb" stroke="#91b3a5"/><text x="168" y="412">2</text>
+    <rect x="200" y="372" width="64" height="64" fill="#ffe9d5" stroke="#d8a16e"/><text x="232" y="412">5</text>
+    <rect x="264" y="372" width="64" height="64" fill="#ffe9d5" stroke="#d8a16e"/><text x="296" y="412">5</text>
+  </g>
+  <rect x="128" y="172" width="144" height="144" rx="8" fill="none" stroke="#d46b22" stroke-width="5"/>
+  <text x="60" y="478" font-family="Arial, sans-serif" font-size="15" fill="#4c657c">주황 창: 두 번째 위치의 2×2 입력 조각</text>
+  <text x="60" y="502" font-family="Arial, sans-serif" font-size="15" fill="#a95516">1(−1)+3(1)+1(−1)+3(1) = 4</text>
+
+  <path d="M444 300h55" stroke="#829e94" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="470" y="142" width="144" height="118" rx="14" fill="#fffaf5" stroke="#d8a16e" stroke-width="2"/>
+  <text x="542" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#a95516">공유 필터 K</text>
+  <g font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#7f4b22">
+    <rect x="486" y="184" width="52" height="52" fill="#ffe5cf" stroke="#d8a16e"/><text x="512" y="217">−1</text>
+    <rect x="538" y="184" width="52" height="52" fill="#fff3e8" stroke="#d8a16e"/><text x="564" y="217">1</text>
+  </g>
+  <text x="542" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#7f684f">아래 행도 −1, 1</text>
+
+  <rect x="634" y="112" width="312" height="410" rx="18" fill="#ffffff" stroke="#a8c7ba" stroke-width="2"/>
+  <text x="660" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#237257">특징 맵 Y</text>
+  <g font-family="Arial, sans-serif" font-size="19" text-anchor="middle" fill="#234d40">
+    <rect x="686" y="194" width="64" height="64" fill="#edf5f1" stroke="#91b3a5"/><text x="718" y="234">0</text>
+    <rect x="750" y="194" width="64" height="64" fill="#bfe4d4" stroke="#5f9f84"/><text x="782" y="234" font-weight="700">4</text>
+    <rect x="814" y="194" width="64" height="64" fill="#edf5f1" stroke="#91b3a5"/><text x="846" y="234">0</text>
+    <rect x="686" y="258" width="64" height="64" fill="#edf5f1" stroke="#91b3a5"/><text x="718" y="298">0</text>
+    <rect x="750" y="258" width="64" height="64" fill="#9bd4bc" stroke="#438b6d"/><text x="782" y="298" font-weight="700">5</text>
+    <rect x="814" y="258" width="64" height="64" fill="#edf5f1" stroke="#91b3a5"/><text x="846" y="298">0</text>
+    <rect x="686" y="322" width="64" height="64" fill="#edf5f1" stroke="#91b3a5"/><text x="718" y="362">0</text>
+    <rect x="750" y="322" width="64" height="64" fill="#77c4a3" stroke="#2f795b"/><text x="782" y="362" font-weight="700">6</text>
+    <rect x="814" y="322" width="64" height="64" fill="#edf5f1" stroke="#91b3a5"/><text x="846" y="362">0</text>
+  </g>
+  <rect x="662" y="424" width="256" height="68" rx="14" fill="#edf5f1"/>
+  <text x="790" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#237257">가운데 열이 세로 경계에 반응</text>
+  <text x="790" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#48665d">9개 위치 · 공유 가중치 4개</text>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#829e94"/></marker></defs>
+</svg>

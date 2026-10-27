@@ -125,7 +125,7 @@ $\lambda$와 $p$는 학습 데이터의 오차만 보고 정하면 안 된다. �
 
 ## 다음 글 예고
 
-다음 글에서는 합성곱 신경망(CNN)을 다룬다. 작은 필터가 입력의 일부를 훑으며 특징 맵을 만드는 과정을 손계산하고 Python으로 확인한다.
+다음 글에서는 [CNN의 작은 필터가 입력을 훑어 특징 맵을 만드는 과정]({{ '/posts/deep-learning-cnn-convolution-feature-map/' | relative_url }})을 손계산하고 Python으로 확인한다.
 
 ## 참고 자료
 

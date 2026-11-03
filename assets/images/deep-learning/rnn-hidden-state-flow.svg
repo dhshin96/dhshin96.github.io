@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" role="img" aria-labelledby="title desc">
+  <title id="title">RNN 은닉 상태가 세 시점에 걸쳐 전달되는 과정</title>
+  <desc id="desc">입력 1, 0, 1을 순서대로 넣는다. 각 시점에서 현재 입력과 이전 은닉 상태의 절반을 더한 뒤 하이퍼볼릭 탄젠트를 적용하여 은닉 상태 0.7616, 0.3634, 0.8280을 만든다.</desc>
+  <rect width="980" height="600" rx="22" fill="#f8fbf9"/>
+  <text x="42" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183d32">은닉 상태를 다음 시점으로 전달하기</text>
+  <text x="42" y="82" font-family="Arial, sans-serif" font-size="16" fill="#48665d">h<tspan baseline-shift="sub" font-size="12">t</tspan> = tanh(x<tspan baseline-shift="sub" font-size="12">t</tspan> + 0.5h<tspan baseline-shift="sub" font-size="12">t−1</tspan>) · 초기 상태 h<tspan baseline-shift="sub" font-size="12">0</tspan> = 0</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="54" y="154" width="250" height="300" rx="18" fill="#ffffff" stroke="#b9cbd8" stroke-width="2"/>
+    <text x="179" y="190" text-anchor="middle" font-size="19" font-weight="700" fill="#255f8c">시점 t = 1</text>
+    <rect x="94" y="218" width="170" height="50" rx="12" fill="#edf4f8"/>
+    <text x="179" y="249" text-anchor="middle" font-size="17" fill="#29485f">입력 x₁ = 1</text>
+    <text x="179" y="304" text-anchor="middle" font-size="16" fill="#48665d">tanh(1 + 0.5×0)</text>
+    <path d="M179 318v36" stroke="#829e94" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="84" y="364" width="190" height="58" rx="14" fill="#dff1e9" stroke="#79ad98"/>
+    <text x="179" y="400" text-anchor="middle" font-size="18" font-weight="700" fill="#237257">h₁ = 0.7616</text>
+
+    <rect x="365" y="154" width="250" height="300" rx="18" fill="#ffffff" stroke="#b9cbd8" stroke-width="2"/>
+    <text x="490" y="190" text-anchor="middle" font-size="19" font-weight="700" fill="#255f8c">시점 t = 2</text>
+    <rect x="405" y="218" width="170" height="50" rx="12" fill="#edf4f8"/>
+    <text x="490" y="249" text-anchor="middle" font-size="17" fill="#29485f">입력 x₂ = 0</text>
+    <text x="490" y="304" text-anchor="middle" font-size="16" fill="#48665d">tanh(0 + 0.5×0.7616)</text>
+    <path d="M490 318v36" stroke="#829e94" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="395" y="364" width="190" height="58" rx="14" fill="#dff1e9" stroke="#79ad98"/>
+    <text x="490" y="400" text-anchor="middle" font-size="18" font-weight="700" fill="#237257">h₂ = 0.3634</text>
+
+    <rect x="676" y="154" width="250" height="300" rx="18" fill="#ffffff" stroke="#b9cbd8" stroke-width="2"/>
+    <text x="801" y="190" text-anchor="middle" font-size="19" font-weight="700" fill="#255f8c">시점 t = 3</text>
+    <rect x="716" y="218" width="170" height="50" rx="12" fill="#edf4f8"/>
+    <text x="801" y="249" text-anchor="middle" font-size="17" fill="#29485f">입력 x₃ = 1</text>
+    <text x="801" y="304" text-anchor="middle" font-size="16" fill="#48665d">tanh(1 + 0.5×0.3634)</text>
+    <path d="M801 318v36" stroke="#829e94" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="706" y="364" width="190" height="58" rx="14" fill="#bfe4d4" stroke="#5f9f84"/>
+    <text x="801" y="400" text-anchor="middle" font-size="18" font-weight="700" fill="#1d674e">h₃ = 0.8280</text>
+  </g>
+
+  <path d="M274 393h91" stroke="#d46b22" stroke-width="4" marker-end="url(#orangeArrow)"/>
+  <text x="320" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#a95516">× 0.5</text>
+  <path d="M585 393h91" stroke="#d46b22" stroke-width="4" marker-end="url(#orangeArrow)"/>
+  <text x="631" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#a95516">× 0.5</text>
+
+  <rect x="184" y="492" width="612" height="68" rx="16" fill="#edf5f1"/>
+  <text x="490" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#237257">입력이 0인 둘째 시점에도 이전 상태의 흔적이 남는다.</text>
+  <text x="490" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#48665d">같은 가중치 Wₓ = 1, Wₕ = 0.5를 세 시점 모두에 공유</text>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#829e94"/></marker>
+    <marker id="orangeArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#d46b22"/></marker>
+  </defs>
+</svg>

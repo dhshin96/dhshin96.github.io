@@ -153,7 +153,7 @@ for name, data in cases.items():
 
 ## 다음 글 예고
 
-다음 글에서는 **RAG**를 다룬다. 작은 문서 조각에서 질문과 가까운 근거를 검색하고, 검색된 근거만 생성 입력에 붙이는 흐름을 순수 Python으로 재현한다.
+다음 글에서는 [**RAG가 작은 문서 조각에서 질문과 가까운 근거를 검색해 생성 입력에 붙이는 흐름**]({{ '/posts/generative-ai-rag-retrieval-grounding/' | relative_url }})을 순수 Python으로 재현한다.
 
 ## 참고 자료
 

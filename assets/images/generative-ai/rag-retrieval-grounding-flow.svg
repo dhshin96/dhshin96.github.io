@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">RAG 검색과 근거 기반 생성 흐름</title>
+  <desc id="desc">질문을 단어 벡터로 바꾸고 문서 세 개와 코사인 유사도를 계산한다. 최고 점수 0.707인 D3를 선택해 질문과 함께 생성 입력에 붙이고 한 문장 답을 만든다.</desc>
+  <rect width="1200" height="680" rx="24" fill="#f7fafc"/>
+  <text x="54" y="58" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700" fill="#17324d">RAG: 먼저 찾고, 찾은 근거를 붙여 답한다</text>
+  <text x="54" y="92" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#52677a">질문과 문서를 같은 벡터로 비교한 뒤 가장 가까운 문서만 생성 입력에 추가한다</text>
+
+  <rect x="54" y="140" width="230" height="420" rx="20" fill="#ffffff" stroke="#9fb8d0" stroke-width="2"/>
+  <text x="82" y="182" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#1d4f78">1. 질문</text>
+  <rect x="82" y="214" width="174" height="106" rx="14" fill="#e8f2ff"/>
+  <text x="169" y="250" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" font-weight="700" fill="#1d4f78">RAG · 질문</text>
+  <text x="169" y="279" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" font-weight="700" fill="#1d4f78">문서 · 검색</text>
+  <text x="169" y="365" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#52677a">단어 빈도 벡터</text>
+  <text x="169" y="394" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#52677a">길이 = 2</text>
+
+  <path d="M306 350 H352" stroke="#476b8e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M339 336 L355 350 L339 364" fill="none" stroke="#476b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="380" y="140" width="348" height="420" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="408" y="182" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#334155">2. 문서 점수 계산</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <rect x="408" y="214" width="292" height="76" rx="13" fill="#f1f5f9"/>
+    <text x="430" y="244" font-size="17" font-weight="700" fill="#475569">D1 · 토큰화</text>
+    <text x="674" y="264" text-anchor="end" font-size="22" font-weight="700" fill="#64748b">0.000</text>
+    <rect x="408" y="306" width="292" height="76" rx="13" fill="#fff7df"/>
+    <text x="430" y="336" font-size="17" font-weight="700" fill="#865d12">D2 · 임베딩</text>
+    <text x="674" y="356" text-anchor="end" font-size="22" font-weight="700" fill="#865d12">0.447</text>
+    <rect x="408" y="398" width="292" height="104" rx="13" fill="#dcfce7" stroke="#55a879" stroke-width="2"/>
+    <text x="430" y="430" font-size="17" font-weight="700" fill="#166534">D3 · RAG 검색 흐름</text>
+    <text x="674" y="454" text-anchor="end" font-size="24" font-weight="700" fill="#166534">0.707</text>
+    <text x="430" y="482" font-size="14" fill="#28704a">최고 점수 → 근거로 선택</text>
+  </g>
+
+  <path d="M750 350 H796" stroke="#476b8e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M783 336 L799 350 L783 364" fill="none" stroke="#476b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="824" y="140" width="322" height="420" rx="20" fill="#ffffff" stroke="#9fb8d0" stroke-width="2"/>
+  <text x="852" y="182" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#1d4f78">3. 근거를 붙여 생성</text>
+  <rect x="852" y="214" width="266" height="112" rx="14" fill="#eef8f3"/>
+  <text x="874" y="244" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" font-weight="700" fill="#1f6b4f">[근거] D3</text>
+  <text x="874" y="272" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="14" fill="#396b58">관련 문서 검색</text>
+  <text x="874" y="298" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="14" fill="#396b58">생성 입력 추가</text>
+  <rect x="852" y="342" width="266" height="76" rx="14" fill="#e8f2ff"/>
+  <text x="874" y="373" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" font-weight="700" fill="#1d4f78">[질문]</text>
+  <text x="874" y="398" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="14" fill="#315d80">무엇을 검색하나요?</text>
+  <rect x="852" y="434" width="266" height="68" rx="14" fill="#f3efff"/>
+  <text x="985" y="475" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" font-weight="700" fill="#5b3e91">근거에 맞춘 한 문장 답</text>
+
+  <text x="600" y="620" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#52677a">검색 점수가 높아도 사실성은 자동 보장되지 않는다 · 검색과 생성을 따로 평가한다</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI 에이전트 작업 상태와 장기 기억 흐름</title>
+  <desc id="desc">첫 실행의 작업 상태에서 저장 기준을 통과한 정보만 장기 기억에 기록하고, 다음 실행에서 질문과 관련된 기억만 회수해 새 작업 상태에 넣는 흐름</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#15803d"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="#f8fafc"/>
+  <text x="60" y="68" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="34" font-weight="700" fill="#0f172a">에이전트 메모리: 저장할 때와 꺼낼 때 선별한다</text>
+  <text x="60" y="106" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="19" fill="#475569">작업 상태는 현재 실행에 머물고, 선택된 정보만 실행을 넘어 장기 기억에 남는다.</text>
+
+  <rect x="60" y="165" width="270" height="330" rx="24" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="90" y="210" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#334155">첫 실행의 작업 상태</text>
+  <rect x="90" y="245" width="210" height="62" rx="14" fill="#f1f5f9"/>
+  <text x="112" y="273" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" font-weight="700" fill="#475569">현재 목표</text>
+  <text x="112" y="296" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#475569">사용자 선호 저장</text>
+  <rect x="90" y="325" width="210" height="128" rx="14" fill="#eff6ff"/>
+  <text x="112" y="356" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" font-weight="700" fill="#1d4ed8">관찰한 정보</text>
+  <text x="112" y="388" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#1e3a8a">• Python 예제 선호</text>
+  <text x="112" y="418" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#1e3a8a">• 짧은 설명 선호</text>
+
+  <path d="M350 330 H430" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow-blue)"/>
+  <text x="362" y="307" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#2563eb">저장</text>
+  <rect x="450" y="215" width="270" height="230" rx="24" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+  <text x="485" y="260" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#1d4ed8">저장 기준</text>
+  <text x="485" y="305" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#1e3a8a">① 다음 실행에도 유용한가</text>
+  <text x="485" y="345" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#1e3a8a">② 저장 범위가 허용됐는가</text>
+  <text x="485" y="385" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#1e3a8a">③ 출처·갱신이 가능한가</text>
+
+  <path d="M740 330 H820" stroke="#15803d" stroke-width="5" marker-end="url(#arrow-green)"/>
+  <rect x="840" y="165" width="300" height="330" rx="24" fill="#f0fdf4" stroke="#4ade80" stroke-width="2"/>
+  <text x="875" y="210" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#15803d">장기 기억 JSON</text>
+  <rect x="875" y="245" width="230" height="82" rx="14" fill="#ffffff"/>
+  <text x="895" y="277" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#166534">Python 예제를 선호함</text>
+  <text x="895" y="305" font-family="Consolas, monospace" font-size="14" fill="#166534">python, 예제</text>
+  <rect x="875" y="345" width="230" height="82" rx="14" fill="#ffffff"/>
+  <text x="895" y="377" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#166534">짧은 설명을 선호함</text>
+  <text x="895" y="405" font-family="Consolas, monospace" font-size="14" fill="#166534">설명, 길이</text>
+
+  <path d="M990 515 C990 560 850 570 720 570" fill="none" stroke="#15803d" stroke-width="5" marker-end="url(#arrow-green)"/>
+  <text x="760" y="625" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#15803d">다음 실행: 관련도 0.5 이상만 회수</text>
+  <rect x="400" y="500" width="300" height="145" rx="24" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="435" y="545" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#334155">새 작업 상태</text>
+  <text x="435" y="583" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" fill="#475569">질문: Python 예제</text>
+  <text x="435" y="615" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16" font-weight="700" fill="#166534">회수 1건 · 점수 1.0</text>
+  <rect x="60" y="625" width="280" height="52" rx="18" fill="#0f172a"/>
+  <text x="200" y="658" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" font-weight="700" fill="#f8fafc">현재 상태 ≠ 장기 기억 전체</text>
+</svg>

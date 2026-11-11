@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">상승하는 원계열과 안정된 1차 차분 비교</title>
+  <desc id="desc">위 패널은 100에서 144까지 상승하는 12개 값과 앞 6개 평균 109.67, 뒤 6개 평균 133.67을 보여 준다. 아래 패널은 3, 5, 4를 반복하는 1차 차분과 앞뒤 구간 평균 4.00을 보여 준다.</desc>
+  <rect width="960" height="600" rx="20" fill="#f8fbf9"/>
+  <text x="42" y="50" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183d32">차분은 상승하는 수준을 변화량으로 바꾼다</text>
+  <text x="42" y="80" font-family="Arial, sans-serif" font-size="16" fill="#49665d">원계열의 구간 평균은 이동하지만 1차 차분의 평균은 4.00으로 유지된다</text>
+
+  <rect x="42" y="108" width="876" height="230" rx="16" fill="#ffffff" stroke="#c9d9d3"/>
+  <text x="70" y="143" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#294d42">원계열: 시간에 따라 평균 수준이 상승</text>
+  <line x1="90" y1="292" x2="890" y2="292" stroke="#9bb2aa" stroke-width="2"/>
+  <line x1="490" y1="158" x2="490" y2="306" stroke="#c9d9d3" stroke-width="2" stroke-dasharray="6 6"/>
+  <polyline points="100,278 170,268 240,251 310,238 380,228 450,211 520,198 590,188 660,171 730,158 800,148 870,131" fill="none" stroke="#176b8a" stroke-width="4" stroke-linejoin="round"/>
+  <g fill="#176b8a" stroke="#ffffff" stroke-width="2">
+    <circle cx="100" cy="278" r="6"/><circle cx="170" cy="268" r="6"/><circle cx="240" cy="251" r="6"/><circle cx="310" cy="238" r="6"/>
+    <circle cx="380" cy="228" r="6"/><circle cx="450" cy="211" r="6"/><circle cx="520" cy="198" r="6"/><circle cx="590" cy="188" r="6"/>
+    <circle cx="660" cy="171" r="6"/><circle cx="730" cy="158" r="6"/><circle cx="800" cy="148" r="6"/><circle cx="870" cy="131" r="6"/>
+  </g>
+  <rect x="105" y="164" width="205" height="42" rx="8" fill="#e8f2f5"/>
+  <text x="208" y="181" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#176b8a">앞 6개 평균</text>
+  <text x="208" y="199" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#176b8a">109.67</text>
+  <rect x="650" y="224" width="205" height="42" rx="8" fill="#fff1e7"/>
+  <text x="752" y="241" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#9b4c16">뒤 6개 평균</text>
+  <text x="752" y="259" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#9b4c16">133.67</text>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#536b63" text-anchor="middle">
+    <text x="100" y="318">1</text><text x="240" y="318">3</text><text x="380" y="318">5</text><text x="520" y="318">7</text><text x="660" y="318">9</text><text x="800" y="318">11</text><text x="870" y="318">12</text>
+  </g>
+
+  <rect x="42" y="360" width="876" height="196" rx="16" fill="#ffffff" stroke="#c9d9d3"/>
+  <text x="70" y="395" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#294d42">1차 차분: 변화량이 4 주변에서 반복</text>
+  <line x1="100" y1="476" x2="870" y2="476" stroke="#d2691e" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="884" y="481" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#9b4c16">4.00</text>
+  <polyline points="100,512 177,440 254,476 331,512 408,440 485,476 562,512 639,440 716,476 793,512 870,440" fill="none" stroke="#176b8a" stroke-width="4" stroke-linejoin="round"/>
+  <g fill="#176b8a" stroke="#ffffff" stroke-width="2">
+    <circle cx="100" cy="512" r="6"/><circle cx="177" cy="440" r="6"/><circle cx="254" cy="476" r="6"/><circle cx="331" cy="512" r="6"/>
+    <circle cx="408" cy="440" r="6"/><circle cx="485" cy="476" r="6"/><circle cx="562" cy="512" r="6"/><circle cx="639" cy="440" r="6"/>
+    <circle cx="716" cy="476" r="6"/><circle cx="793" cy="512" r="6"/><circle cx="870" cy="440" r="6"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#536b63" text-anchor="middle">
+    <text x="100" y="538">3</text><text x="177" y="424">5</text><text x="254" y="461">4</text><text x="331" y="538">3</text><text x="408" y="424">5</text><text x="485" y="461">4</text>
+    <text x="562" y="538">3</text><text x="639" y="424">5</text><text x="716" y="461">4</text><text x="793" y="538">3</text><text x="870" y="424">5</text>
+  </g>
+</svg>

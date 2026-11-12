@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">RAG 품질을 검색 적중과 답변 충실성으로 나누는 평가 흐름</title>
+  <desc id="desc">질문 네 개에서 정답 문서와 검색 문서를 비교해 검색 적중률 75퍼센트를 구한다. 답변 주장 여덟 개 중 근거가 뒷받침하는 여섯 개를 세어 충실성 75퍼센트를 구한다. 두 조건을 모두 통과한 질문은 두 개여서 전체 통과율은 50퍼센트다.</desc>
+  <rect width="1200" height="680" rx="24" fill="#f7fafc"/>
+  <text x="54" y="58" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="30" font-weight="700" fill="#17324d">RAG 품질 평가: 검색과 생성을 따로 잰다</text>
+  <text x="54" y="92" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#52677a">같은 75% 두 개라도 두 조건을 함께 통과한 질문은 50%일 수 있다</text>
+
+  <rect x="54" y="136" width="320" height="410" rx="20" fill="#ffffff" stroke="#9fb8d0" stroke-width="2"/>
+  <text x="82" y="178" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#1d4f78">1. 검색 적중</text>
+  <text x="82" y="207" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#52677a">정답 문서 = 첫 검색 문서?</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16">
+    <rect x="82" y="238" width="264" height="52" rx="11" fill="#e8f5ee"/><text x="103" y="271" fill="#166534">Q1 · D1 = D1</text><text x="321" y="271" text-anchor="end" font-weight="700" fill="#166534">1</text>
+    <rect x="82" y="302" width="264" height="52" rx="11" fill="#fff1f2"/><text x="103" y="335" fill="#9f1239">Q2 · D2 ≠ D3</text><text x="321" y="335" text-anchor="end" font-weight="700" fill="#9f1239">0</text>
+    <rect x="82" y="366" width="264" height="52" rx="11" fill="#e8f5ee"/><text x="103" y="399" fill="#166534">Q3 · D3 = D3</text><text x="321" y="399" text-anchor="end" font-weight="700" fill="#166534">1</text>
+    <rect x="82" y="430" width="264" height="52" rx="11" fill="#e8f5ee"/><text x="103" y="463" fill="#166534">Q4 · D4 = D4</text><text x="321" y="463" text-anchor="end" font-weight="700" fill="#166534">1</text>
+  </g>
+  <text x="214" y="520" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#1d4f78">3 / 4 = 75%</text>
+
+  <path d="M398 340 H438" stroke="#476b8e" stroke-width="5" stroke-linecap="round"/><path d="M425 326 L441 340 L425 354" fill="none" stroke="#476b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="466" y="136" width="320" height="410" rx="20" fill="#ffffff" stroke="#c9b7e8" stroke-width="2"/>
+  <text x="494" y="178" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#5b3e91">2. 답변 충실성</text>
+  <text x="494" y="207" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#52677a">근거가 뒷받침한 주장 수</text>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif" font-size="16">
+    <rect x="494" y="238" width="264" height="52" rx="11" fill="#f3efff"/><text x="515" y="271" fill="#5b3e91">Q1 · 주장 2개</text><text x="733" y="271" text-anchor="end" font-weight="700" fill="#5b3e91">2 / 2</text>
+    <rect x="494" y="302" width="264" height="52" rx="11" fill="#fff7df"/><text x="515" y="335" fill="#865d12">Q2 · 주장 2개</text><text x="733" y="335" text-anchor="end" font-weight="700" fill="#865d12">1 / 2</text>
+    <rect x="494" y="366" width="264" height="52" rx="11" fill="#f3efff"/><text x="515" y="399" fill="#5b3e91">Q3 · 주장 2개</text><text x="733" y="399" text-anchor="end" font-weight="700" fill="#5b3e91">2 / 2</text>
+    <rect x="494" y="430" width="264" height="52" rx="11" fill="#fff7df"/><text x="515" y="463" fill="#865d12">Q4 · 주장 2개</text><text x="733" y="463" text-anchor="end" font-weight="700" fill="#865d12">1 / 2</text>
+  </g>
+  <text x="626" y="520" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="22" font-weight="700" fill="#5b3e91">6 / 8 = 75%</text>
+
+  <path d="M810 340 H850" stroke="#476b8e" stroke-width="5" stroke-linecap="round"/><path d="M837 326 L853 340 L837 354" fill="none" stroke="#476b8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="878" y="136" width="268" height="410" rx="20" fill="#ffffff" stroke="#8cc5a5" stroke-width="2"/>
+  <text x="906" y="178" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="21" font-weight="700" fill="#166534">3. 전체 통과</text>
+  <text x="906" y="207" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="15" fill="#52677a">적중 AND 모든 주장 충실</text>
+  <circle cx="930" cy="265" r="14" fill="#38a169"/><text x="960" y="271" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#166534">Q1 통과</text>
+  <circle cx="930" cy="321" r="14" fill="#e98a9a"/><text x="960" y="327" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#9f1239">Q2 실패</text>
+  <circle cx="930" cy="377" r="14" fill="#38a169"/><text x="960" y="383" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#166534">Q3 통과</text>
+  <circle cx="930" cy="433" r="14" fill="#e9b949"/><text x="960" y="439" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#865d12">Q4 실패</text>
+  <text x="1012" y="506" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="25" font-weight="700" fill="#166534">2 / 4 = 50%</text>
+
+  <text x="600" y="613" text-anchor="middle" font-family="Arial, 'Noto Sans KR', sans-serif" font-size="17" fill="#52677a">Q2는 검색 단계 · Q4는 생성 단계부터 점검한다</text>
+</svg>

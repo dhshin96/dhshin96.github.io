@@ -127,7 +127,7 @@ for feature, name in enumerate(names):
 
 ## 다음 글 예고
 
-다음 글에서는 **교차검증**을 다룬다. 한 번의 검증 분리 결과에만 기대지 않고 여러 폴드에서 학습과 평가를 반복해 평균 점수와 흔들림을 계산한다.
+다음 글인 [K-겹 교차검증 평균과 표준편차 손계산]({{ '/posts/machine-learning-k-fold-cross-validation/' | relative_url }})에서는 한 번의 검증 분리 결과에만 기대지 않고 여러 폴드에서 학습과 평가를 반복해 평균 점수와 흔들림을 계산한다.
 
 ## 참고 자료
 

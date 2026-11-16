@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">4겹 교차검증의 학습과 검증 순환</title>
+  <desc id="desc">12개 자료를 네 폴드로 나누고 한 폴드씩 번갈아 검증에 사용한다. 폴드별 평균절대오차는 0.322, 0.289, 0.517, 0.464이며 평균은 0.398, 표준편차는 0.095다.</desc>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <text x="40" y="48" fill="#0f172a" font-family="Arial, sans-serif" font-size="26" font-weight="700">4개 폴드가 한 번씩 검증석을 맡는다</text>
+  <text x="40" y="78" fill="#475569" font-family="Arial, sans-serif" font-size="16">파란색은 학습 · 주황색은 검증 · 매 반복마다 모델을 처음부터 학습</text>
+
+  <g font-family="Arial, sans-serif">
+    <text x="42" y="139" fill="#334155" font-size="17" font-weight="700">1회</text>
+    <text x="42" y="215" fill="#334155" font-size="17" font-weight="700">2회</text>
+    <text x="42" y="291" fill="#334155" font-size="17" font-weight="700">3회</text>
+    <text x="42" y="367" fill="#334155" font-size="17" font-weight="700">4회</text>
+
+    <g stroke-width="2">
+      <rect x="96" y="106" width="142" height="48" rx="10" fill="#ffedd5" stroke="#f97316"/>
+      <rect x="248" y="106" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="400" y="106" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="552" y="106" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+
+      <rect x="96" y="182" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="248" y="182" width="142" height="48" rx="10" fill="#ffedd5" stroke="#f97316"/>
+      <rect x="400" y="182" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="552" y="182" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+
+      <rect x="96" y="258" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="248" y="258" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="400" y="258" width="142" height="48" rx="10" fill="#ffedd5" stroke="#f97316"/>
+      <rect x="552" y="258" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+
+      <rect x="96" y="334" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="248" y="334" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="400" y="334" width="142" height="48" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+      <rect x="552" y="334" width="142" height="48" rx="10" fill="#ffedd5" stroke="#f97316"/>
+    </g>
+
+    <g text-anchor="middle" font-size="15" font-weight="700">
+      <text x="167" y="136" fill="#9a3412">검증 폴드 1</text><text x="319" y="136" fill="#1e3a8a">학습 폴드 2</text><text x="471" y="136" fill="#1e3a8a">학습 폴드 3</text><text x="623" y="136" fill="#1e3a8a">학습 폴드 4</text>
+      <text x="167" y="212" fill="#1e3a8a">학습 폴드 1</text><text x="319" y="212" fill="#9a3412">검증 폴드 2</text><text x="471" y="212" fill="#1e3a8a">학습 폴드 3</text><text x="623" y="212" fill="#1e3a8a">학습 폴드 4</text>
+      <text x="167" y="288" fill="#1e3a8a">학습 폴드 1</text><text x="319" y="288" fill="#1e3a8a">학습 폴드 2</text><text x="471" y="288" fill="#9a3412">검증 폴드 3</text><text x="623" y="288" fill="#1e3a8a">학습 폴드 4</text>
+      <text x="167" y="364" fill="#1e3a8a">학습 폴드 1</text><text x="319" y="364" fill="#1e3a8a">학습 폴드 2</text><text x="471" y="364" fill="#1e3a8a">학습 폴드 3</text><text x="623" y="364" fill="#9a3412">검증 폴드 4</text>
+    </g>
+
+    <g fill="#334155" font-size="16" font-weight="700">
+      <text x="728" y="136">MAE 0.322</text>
+      <text x="728" y="212">MAE 0.289</text>
+      <text x="728" y="288">MAE 0.517</text>
+      <text x="728" y="364">MAE 0.464</text>
+    </g>
+  </g>
+
+  <path d="M480 404 V438" stroke="#64748b" stroke-width="3"/>
+  <path d="M472 428 L480 440 L488 428" fill="none" stroke="#64748b" stroke-width="3"/>
+  <rect x="166" y="448" width="628" height="76" rx="18" fill="#e2e8f0"/>
+  <text x="480" y="480" text-anchor="middle" fill="#0f172a" font-family="Arial, sans-serif" font-size="20" font-weight="700">평균 MAE 0.398 · 표준편차 0.095</text>
+  <text x="480" y="507" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="15">평균과 함께 폴드별 흔들림을 확인한다</text>
+</svg>

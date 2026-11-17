@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" role="img" aria-labelledby="title desc">
+  <title id="title">멀티헤드 어텐션과 위치 인코딩 계산</title>
+  <desc id="desc">첫째 헤드는 세 값의 가중합 15.6405를 만들고 둘째 헤드는 2.0을 만든다. 두 출력을 이어 붙인 뒤, 입력에는 위치마다 다른 4차원 사인 코사인 벡터를 더한다.</desc>
+  <rect width="980" height="600" rx="22" fill="#f8fbf9"/>
+  <text x="42" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#183d32">여러 관점의 가중합 + 순서를 나타내는 좌표</text>
+  <text x="42" y="82" font-family="Arial, sans-serif" font-size="16" fill="#48665d">MultiHead = Concat(head₁, head₂) · Wᴼ, 입력 = 토큰 임베딩 + 위치 인코딩</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="42" y="118" width="390" height="184" rx="18" fill="#edf4f8" stroke="#9eb9ca" stroke-width="2"/>
+    <text x="237" y="152" text-anchor="middle" font-size="19" font-weight="700" fill="#255f8c">헤드 1: 첫 위치를 크게 보기</text>
+    <text x="70" y="190" font-size="16" fill="#29485f">가중치</text>
+    <text x="168" y="190" font-size="17" font-weight="700" fill="#255f8c">[0.5760, 0.2840, 0.1400]</text>
+    <text x="70" y="230" font-size="16" fill="#29485f">값</text>
+    <text x="168" y="230" font-size="17" fill="#29485f">[10, 20, 30]</text>
+    <rect x="92" y="252" width="290" height="34" rx="10" fill="#bfe4d4"/>
+    <text x="237" y="275" text-anchor="middle" font-size="18" font-weight="700" fill="#1d674e">출력 15.6405</text>
+
+    <rect x="548" y="118" width="390" height="184" rx="18" fill="#fff8ed" stroke="#e5b981" stroke-width="2"/>
+    <text x="743" y="152" text-anchor="middle" font-size="19" font-weight="700" fill="#a95516">헤드 2: 양끝을 함께 보기</text>
+    <text x="576" y="190" font-size="16" fill="#6f4b2f">가중치</text>
+    <text x="674" y="190" font-size="17" font-weight="700" fill="#a95516">[0.4011, 0.1978, 0.4011]</text>
+    <text x="576" y="230" font-size="16" fill="#6f4b2f">값</text>
+    <text x="674" y="230" font-size="17" fill="#6f4b2f">[1, 2, 3]</text>
+    <rect x="598" y="252" width="290" height="34" rx="10" fill="#f3d2a8"/>
+    <text x="743" y="275" text-anchor="middle" font-size="18" font-weight="700" fill="#8e4915">출력 2.0</text>
+
+    <path d="M237 302v38h195" fill="none" stroke="#829e94" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M743 302v38H548" fill="none" stroke="#829e94" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="344" y="326" width="292" height="58" rx="16" fill="#ffffff" stroke="#82a69a" stroke-width="2"/>
+    <text x="490" y="362" text-anchor="middle" font-size="20" font-weight="700" fill="#183d32">이어 붙이기 [15.6405, 2.0]</text>
+
+    <rect x="42" y="426" width="896" height="126" rx="20" fill="#ffffff" stroke="#b9cbd8" stroke-width="2"/>
+    <text x="70" y="462" font-size="18" font-weight="700" fill="#255f8c">같은 토큰 임베딩</text>
+    <text x="246" y="462" font-size="18" fill="#48665d">+</text>
+    <text x="280" y="462" font-size="18" font-weight="700" fill="#a95516">위치마다 다른 좌표</text>
+    <text x="70" y="502" font-size="16" fill="#29485f">위치 0</text>
+    <text x="150" y="502" font-size="17" font-weight="700" fill="#1d674e">[0.0000, 1.0000, 0.0000, 1.0000]</text>
+    <text x="536" y="502" font-size="16" fill="#29485f">위치 1</text>
+    <text x="616" y="502" font-size="17" font-weight="700" fill="#a95516">[0.8415, 0.5403, 0.0100, 1.0000]</text>
+    <text x="490" y="534" text-anchor="middle" font-size="15" fill="#48665d">사인·코사인의 여러 주기가 각 자리에 구별되는 벡터를 만든다.</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#829e94"/></marker>
+  </defs>
+</svg>

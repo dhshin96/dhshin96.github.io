@@ -160,7 +160,7 @@ output = 20.0
 
 ## 다음 글 예고
 
-다음 글에서는 셀프 어텐션을 여러 방향에서 병렬로 계산하는 멀티헤드 어텐션과, 순서 정보를 더하는 위치 인코딩을 살펴본다.
+다음 글에서는 [셀프 어텐션을 여러 방향에서 병렬로 계산하는 멀티헤드 어텐션과 순서 정보를 더하는 위치 인코딩]({{ '/posts/deep-learning-multi-head-attention-positional-encoding/' | relative_url }})을 살펴본다.
 
 ## 참고 자료
 

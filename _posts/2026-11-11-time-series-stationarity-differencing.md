@@ -125,7 +125,7 @@ print(f"차분 전체 분산: {variance(differences):.2f}")
 
 ## 다음 글 예고
 
-다음 글에서는 **ARIMA의 $p$, $d$, $q$**가 각각 무엇을 뜻하는지 살펴본다. 이번 글의 1차 차분이 $d=1$로 기록되는 이유부터 시작해 AR과 MA 항을 구분한다.
+다음 글인 [ARIMA $p$, $d$, $q$로 값과 오차 연결하기]({{ '/posts/time-series-arima-pdq/' | relative_url }})에서는 이번 글의 1차 차분이 $d=1$로 기록되는 이유부터 시작해 AR과 MA 항을 구분한다.
 
 ## 참고 자료
 

@@ -159,7 +159,7 @@ position 2: [0.9093, -0.4161, 0.02, 0.9998]
 
 ## 다음 글 예고
 
-다음 글에서는 멀티헤드 셀프 어텐션을 잔차 연결, 층 정규화, 위치별 피드포워드 신경망과 묶어 Transformer 인코더 블록 하나를 완성한다.
+다음 글에서는 [멀티헤드 셀프 어텐션을 잔차 연결, 층 정규화, 위치별 피드포워드 신경망과 묶어 Transformer 인코더 블록 하나를 완성한다]({{ '/posts/deep-learning-transformer-encoder-block/' | relative_url }}).
 
 ## 참고 자료
 
